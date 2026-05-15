@@ -1,6 +1,20 @@
+<div align="center">
+
 # LLM Behavioral Personality
 
-[English README](README.md)
+**一个用于测量语言模型 thought-level 行为模式的框架**
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c)](https://pytorch.org/)
+![Status](https://img.shields.io/badge/Status-Work%20in%20progress-orange)
+
+[English](README.md) | [中文](README.zh-CN.md)
+
+</div>
+
+---
+
+## 概览
 
 本项目研究大语言模型是否具有稳定、可测量的 **行为模式**，这些行为模式是否类似人类人格特质，以及它们是否相比表层的 *response style*，更适合通过模型内部的 *thought process* 捕捉。
 

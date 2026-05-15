@@ -1,6 +1,20 @@
+<div align="center">
+
 # LLM Behavioral Personality
 
-[中文说明](README.zh-CN.md)
+**A framework for measuring thought-level behavioral modes in language models**
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c)](https://pytorch.org/)
+![Status](https://img.shields.io/badge/Status-Work%20in%20progress-orange)
+
+[English](README.md) | [中文](README.zh-CN.md)
+
+</div>
+
+---
+
+## Overview
 
 This project investigates whether large language models (LLMs) exhibit stable, measurable **behavioral modes** analogous to human personality traits, and whether those modes are better captured by the model's internal *thought process* than by its surface *response style*.
 
