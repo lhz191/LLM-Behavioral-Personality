@@ -1,0 +1,36 @@
+{
+  "source": "Choice probes derived from scenarios_factor_thought_preference_v2_10x.json first 5",
+  "register": "fp",
+  "scenarios": [
+    {
+      "id": "FP_CHOICE_ORG01_moving_boxes",
+      "situation": "You've just moved into a new apartment. Twenty boxes are stacked in the living room, some labeled vaguely ('kitchen stuff,' 'misc'), some not labeled at all. A friend offers to help you unpack for the next two hours.\n\nYou can handle this in either of two ways:\n\nOption A: Open boxes as needed, pull out the things that seem useful right now, leave partly opened boxes visible, and let the apartment's arrangement emerge over the next few weeks as you learn what you actually use.\n\nOption B: First sort boxes by room and category, choose fixed places for items before unpacking deeply, and put each item directly into its designated home as soon as it comes out.\n\nWhich option would you choose, and why?",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "FP_CHOICE_ORG02_recipe_collection",
+      "situation": "Over the past year you've saved about 80 recipes—some bookmarked on your phone, some screenshot images, some scribbled on index cards, some in a notes app. You have a free Sunday afternoon.\n\nYou can handle this in either of two ways:\n\nOption A: Consolidate everything into one recipe system, add tags such as cuisine/protein/prep time, remove duplicates, and make one stable place to search from now on.\n\nOption B: Keep the recipes spread across their current places, browse and search when you want to cook, and let the collection stay loose so rediscovery and later recovery remain part of how you use it.\n\nWhich option would you choose, and why?",
+      "risky": "Option B",
+      "safe": "Option A"
+    },
+    {
+      "id": "FP_CHOICE_ORG03_shared_drive",
+      "situation": "Your team's shared drive has accumulated hundreds of files over a project—draft versions mixed with finals, naming conventions inconsistent, some files in the root folder. The project just ended and someone suggests a cleanup day.\n\nYou can handle this in either of two ways:\n\nOption A: Leave the drive mostly as it is, rely on search and memory for important files, and recover specific materials on demand when someone needs them.\n\nOption B: Create a stable folder hierarchy, rename files with consistent dates and version numbers, separate final deliverables from drafts, and archive the project so anyone can find things later.\n\nWhich option would you choose, and why?",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "FP_CHOICE_ORG04_workshop_tools",
+      "situation": "You've been doing a weekend woodworking project. Your workbench is covered with hand tools, sandpaper of various grits, pencils, clamps, and scrap pieces. You're done for the day and plan to resume next weekend.\n\nYou can handle this in either of two ways:\n\nOption A: Return each tool to its usual hook or drawer, sort sandpaper by grit, clear scraps, and reset the bench so next weekend starts from a clean surface.\n\nOption B: Leave the bench largely in its working state, with tools and materials near where they were used, so the scene itself preserves your local context for next weekend.\n\nWhich option would you choose, and why?",
+      "risky": "Option B",
+      "safe": "Option A"
+    },
+    {
+      "id": "FP_CHOICE_ORG05_travel_documents",
+      "situation": "You're leaving for a two-week international trip in three days. You have your passport, boarding passes (some printed, some digital), hotel confirmations, travel insurance docs, and a visa letter scattered across email, a folder on your desktop, and your kitchen counter.\n\nYou can handle this in either of two ways:\n\nOption A: Leave documents in their current places and rely on memory, email search, and your phone to pull up each item when needed at the airport or hotel.\n\nOption B: Create one physical envelope and one digital folder, gather every document there, and arrange them in the order you'll need them during the trip.\n\nWhich option would you choose, and why?",
+      "risky": "Option A",
+      "safe": "Option B"
+    }
+  ]
+}

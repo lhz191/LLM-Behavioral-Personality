@@ -1,0 +1,66 @@
+{
+  "config": {
+    "layer": 11,
+    "scenario_file": "conscientiousness/bfi2c/bfi2c_organization/scenarios_task_factor_thought_preference_n40.json",
+    "fields": [
+      "thought",
+      "response"
+    ],
+    "system_prompt": "You are the person in this situation. Start your response with a thought, then describe what you would actually do in first person and explain why. Be concrete about your actions.",
+    "split_half_samples": 5000,
+    "seed": 13
+  },
+  "metrics": {
+    "thought": {
+      "fields": [
+        "risky_thought",
+        "safe_thought"
+      ],
+      "overall": {
+        "n": 40,
+        "axis_norm": 1.2673052549362183,
+        "mean_norm": 2.062694877386093,
+        "pairwise": {
+          "mean": 0.3615590094599144,
+          "median": 0.3651566654443741,
+          "min": -0.0011174260871484876,
+          "max": 0.6650010943412781,
+          "p10": 0.24473570734262468,
+          "p25": 0.300001360476017,
+          "p75": 0.4214900881052017,
+          "p90": 0.4829785764217377
+        },
+        "split_half": 0.9192278482317925
+      },
+      "by_item": {},
+      "item_axis_cosine_matrix": {}
+    },
+    "response": {
+      "fields": [
+        "risky",
+        "safe"
+      ],
+      "overall": {
+        "n": 40,
+        "axis_norm": 1.1939617395401,
+        "mean_norm": 1.5961817175149917,
+        "pairwise": {
+          "mean": 0.5457901320014245,
+          "median": 0.5406067371368408,
+          "min": 0.3200317621231079,
+          "max": 0.8482053279876709,
+          "p10": 0.448644357919693,
+          "p25": 0.4919179081916809,
+          "p75": 0.5985163301229477,
+          "p90": 0.6472478985786438
+        },
+        "split_half": 0.9605012922644616
+      },
+      "by_item": {},
+      "item_axis_cosine_matrix": {}
+    }
+  },
+  "response_vs_thought": {
+    "axis_cosine": 0.14996153116226196
+  }
+}

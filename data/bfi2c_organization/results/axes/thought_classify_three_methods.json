@@ -1,0 +1,4304 @@
+{
+  "config": {
+    "layer": 11,
+    "axis_files": [
+      "fp=conscientiousness/bfi2c/bfi2c_organization/scenarios_factor_thought_preference_v2_10x.json",
+      "task=conscientiousness/bfi2c/bfi2c_organization/scenarios_task_factor_thought_preference_v2_n40.json",
+      "advice=conscientiousness/bfi2c/bfi2c_organization/scenarios_advice_factor_thought_preference_v2_n40.json"
+    ],
+    "eval_files": [
+      "fp=conscientiousness/bfi2c/bfi2c_organization/scenarios_factor_thought_preference_v2_10x.json",
+      "task=conscientiousness/bfi2c/bfi2c_organization/scenarios_task_factor_thought_preference_v2_n40.json",
+      "advice=conscientiousness/bfi2c/bfi2c_organization/scenarios_advice_factor_thought_preference_v2_n40.json"
+    ],
+    "first_n_axis": 10,
+    "first_n_eval": 10,
+    "methods": {
+      "thought_mean_raw": "cos(mean_hidden(thought_tokens | situation), axis)",
+      "thought_mean_shift": "cos(mean_hidden(thought_tokens | situation) - last_hidden(situation_prompt), axis)",
+      "last_token_shift": "cos(last_hidden(situation+thought) - last_hidden(situation_prompt), axis)"
+    }
+  },
+  "axes": {
+    "fp": {
+      "path": "/mnt/shared-storage-user/liuhaoze/llm_behavior_test/conscientiousness/bfi2c/bfi2c_organization/scenarios_factor_thought_preference_v2_10x.json",
+      "system_prompt": "You are the person in this situation. Start your response with a thought, then describe what you would actually do in first person and explain why. Be concrete about your actions.",
+      "n": 10,
+      "axis_norm": 1.5096794366836548
+    },
+    "task": {
+      "path": "/mnt/shared-storage-user/liuhaoze/llm_behavior_test/conscientiousness/bfi2c/bfi2c_organization/scenarios_task_factor_thought_preference_v2_n40.json",
+      "system_prompt": "You are an assistant. Start your response with a thought, then give your answer.",
+      "n": 10,
+      "axis_norm": 1.439523458480835
+    },
+    "advice": {
+      "path": "/mnt/shared-storage-user/liuhaoze/llm_behavior_test/conscientiousness/bfi2c/bfi2c_organization/scenarios_advice_factor_thought_preference_v2_n40.json",
+      "system_prompt": "You are an assistant. Start your response with a thought, then give your answer.",
+      "n": 10,
+      "axis_norm": 1.2369922399520874
+    }
+  },
+  "evaluations": {
+    "fp": {
+      "expected_axis": "fp",
+      "n_thoughts": 20,
+      "methods": {
+        "thought_mean_raw": {
+          "best_abs_accuracy": 0.95,
+          "best_positive_accuracy": 0.45
+        },
+        "thought_mean_shift": {
+          "best_abs_accuracy": 0.85,
+          "best_positive_accuracy": 0.55
+        },
+        "last_token_shift": {
+          "best_abs_accuracy": 0.5,
+          "best_positive_accuracy": 0.9
+        }
+      },
+      "records": [
+        {
+          "id": "BFI2C_ORG01_moving_boxes",
+          "thought_label": "risky",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.14102885127067566,
+                  "abs_cos": 0.14102885127067566,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.1530580073595047,
+                  "abs_cos": 0.1530580073595047,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.11709899455308914,
+                  "abs_cos": 0.11709899455308914,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.06545019894838333,
+                  "abs_cos": 0.06545019894838333,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.014334251172840595,
+                  "abs_cos": 0.014334251172840595,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.02407708577811718,
+                  "abs_cos": 0.02407708577811718,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.03855372220277786,
+                  "abs_cos": 0.03855372220277786,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.012058369815349579,
+                  "abs_cos": 0.012058369815349579,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": 0.0031239257659763098,
+                  "abs_cos": 0.0031239257659763098,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG01_moving_boxes",
+          "thought_label": "safe",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.1263246238231659,
+                  "abs_cos": 0.1263246238231659,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": 0.002865762449800968,
+                  "abs_cos": 0.002865762449800968,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.09632984548807144,
+                  "abs_cos": 0.09632984548807144,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.11638601124286652,
+                  "abs_cos": 0.11638601124286652,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.08495812118053436,
+                  "abs_cos": 0.08495812118053436,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.12030214816331863,
+                  "abs_cos": 0.12030214816331863,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.010693029500544071,
+                  "abs_cos": 0.010693029500544071,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.024583442136645317,
+                  "abs_cos": 0.024583442136645317,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.045799944549798965,
+                  "abs_cos": 0.045799944549798965,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG02_recipe_collection",
+          "thought_label": "risky",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.21895278990268707,
+                  "abs_cos": 0.21895278990268707,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.1053580492734909,
+                  "abs_cos": 0.1053580492734909,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.061590149998664856,
+                  "abs_cos": 0.061590149998664856,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.12769410014152527,
+                  "abs_cos": 0.12769410014152527,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.009247295558452606,
+                  "abs_cos": 0.009247295558452606,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.009619186632335186,
+                  "abs_cos": 0.009619186632335186,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04056819900870323,
+                  "abs_cos": 0.04056819900870323,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.007667043711990118,
+                  "abs_cos": 0.007667043711990118,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.0013440795009955764,
+                  "abs_cos": 0.0013440795009955764,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG02_recipe_collection",
+          "thought_label": "safe",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.15732187032699585,
+                  "abs_cos": 0.15732187032699585,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.08114033192396164,
+                  "abs_cos": 0.08114033192396164,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.12388816475868225,
+                  "abs_cos": 0.12388816475868225,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.13240459561347961,
+                  "abs_cos": 0.13240459561347961,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.13764452934265137,
+                  "abs_cos": 0.13764452934265137,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.1361289769411087,
+                  "abs_cos": 0.1361289769411087,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.014966346323490143,
+                  "abs_cos": 0.014966346323490143,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.015313707292079926,
+                  "abs_cos": 0.015313707292079926,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.03558361530303955,
+                  "abs_cos": 0.03558361530303955,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG03_shared_drive",
+          "thought_label": "risky",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.18956799805164337,
+                  "abs_cos": 0.18956799805164337,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.1075170636177063,
+                  "abs_cos": 0.1075170636177063,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.10982494056224823,
+                  "abs_cos": 0.10982494056224823,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.10992388427257538,
+                  "abs_cos": 0.10992388427257538,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.006377656478434801,
+                  "abs_cos": 0.006377656478434801,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": 0.026196172460913658,
+                  "abs_cos": 0.026196172460913658,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04564768821001053,
+                  "abs_cos": 0.04564768821001053,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -7.405814540106803e-05,
+                  "abs_cos": 7.405814540106803e-05,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": 0.014861539006233215,
+                  "abs_cos": 0.014861539006233215,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG03_shared_drive",
+          "thought_label": "safe",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.23485548794269562,
+                  "abs_cos": 0.23485548794269562,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.09485910832881927,
+                  "abs_cos": 0.09485910832881927,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.16307467222213745,
+                  "abs_cos": 0.16307467222213745,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.1776546835899353,
+                  "abs_cos": 0.1776546835899353,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.14185336232185364,
+                  "abs_cos": 0.14185336232185364,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.15772125124931335,
+                  "abs_cos": 0.15772125124931335,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.01840079389512539,
+                  "abs_cos": 0.01840079389512539,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.017597757279872894,
+                  "abs_cos": 0.017597757279872894,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.039206717163324356,
+                  "abs_cos": 0.039206717163324356,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG04_workshop_tools",
+          "thought_label": "risky",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.12015334516763687,
+                  "abs_cos": 0.12015334516763687,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.08139341324567795,
+                  "abs_cos": 0.08139341324567795,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.011208555661141872,
+                  "abs_cos": 0.011208555661141872,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.060179516673088074,
+                  "abs_cos": 0.060179516673088074,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.023914439603686333,
+                  "abs_cos": 0.023914439603686333,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.041389212012290955,
+                  "abs_cos": 0.041389212012290955,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.051219601184129715,
+                  "abs_cos": 0.051219601184129715,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.006470776163041592,
+                  "abs_cos": 0.006470776163041592,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": 0.0008324019727297127,
+                  "abs_cos": 0.0008324019727297127,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG04_workshop_tools",
+          "thought_label": "safe",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.11729515343904495,
+                  "abs_cos": 0.11729515343904495,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": 0.0028580070938915014,
+                  "abs_cos": 0.0028580070938915014,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.09691248089075089,
+                  "abs_cos": 0.09691248089075089,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.10562419891357422,
+                  "abs_cos": 0.10562419891357422,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.08036959171295166,
+                  "abs_cos": 0.08036959171295166,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.11826889961957932,
+                  "abs_cos": 0.11826889961957932,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.0006540906615555286,
+                  "abs_cos": 0.0006540906615555286,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.010248739272356033,
+                  "abs_cos": 0.010248739272356033,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.031025193631649017,
+                  "abs_cos": 0.031025193631649017,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG05_travel_documents",
+          "thought_label": "risky",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.17162248492240906,
+                  "abs_cos": 0.17162248492240906,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.09697265923023224,
+                  "abs_cos": 0.09697265923023224,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.1015663892030716,
+                  "abs_cos": 0.1015663892030716,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.10066848993301392,
+                  "abs_cos": 0.10066848993301392,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.01883084885776043,
+                  "abs_cos": 0.01883084885776043,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": 0.02408600226044655,
+                  "abs_cos": 0.02408600226044655,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0355231873691082,
+                  "abs_cos": 0.0355231873691082,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0137215880677104,
+                  "abs_cos": 0.0137215880677104,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.0017058131052181125,
+                  "abs_cos": 0.0017058131052181125,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG05_travel_documents",
+          "thought_label": "safe",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.19779948890209198,
+                  "abs_cos": 0.19779948890209198,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.015150216408073902,
+                  "abs_cos": 0.015150216408073902,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.0724940299987793,
+                  "abs_cos": 0.0724940299987793,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.16527040302753448,
+                  "abs_cos": 0.16527040302753448,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.09953292459249496,
+                  "abs_cos": 0.09953292459249496,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.101203054189682,
+                  "abs_cos": 0.101203054189682,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0008051599143072963,
+                  "abs_cos": 0.0008051599143072963,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.021809939295053482,
+                  "abs_cos": 0.021809939295053482,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.03683152794837952,
+                  "abs_cos": 0.03683152794837952,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG06_class_notes",
+          "thought_label": "risky",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.19215138256549835,
+                  "abs_cos": 0.19215138256549835,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.12599793076515198,
+                  "abs_cos": 0.12599793076515198,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.10132449120283127,
+                  "abs_cos": 0.10132449120283127,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.1148982048034668,
+                  "abs_cos": 0.1148982048034668,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.008517085574567318,
+                  "abs_cos": 0.008517085574567318,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.024678003042936325,
+                  "abs_cos": 0.024678003042936325,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.03241761401295662,
+                  "abs_cos": 0.03241761401295662,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.00883763749152422,
+                  "abs_cos": 0.00883763749152422,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.0025862818583846092,
+                  "abs_cos": 0.0025862818583846092,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG06_class_notes",
+          "thought_label": "safe",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.18375231325626373,
+                  "abs_cos": 0.18375231325626373,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.04266780614852905,
+                  "abs_cos": 0.04266780614852905,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.12308748066425323,
+                  "abs_cos": 0.12308748066425323,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.15409517288208008,
+                  "abs_cos": 0.15409517288208008,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.11445724219083786,
+                  "abs_cos": 0.11445724219083786,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.135741725564003,
+                  "abs_cos": 0.135741725564003,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.025467580184340477,
+                  "abs_cos": 0.025467580184340477,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.020954689010977745,
+                  "abs_cos": 0.020954689010977745,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.03918803855776787,
+                  "abs_cos": 0.03918803855776787,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG07_pantry_restock",
+          "thought_label": "risky",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.18981952965259552,
+                  "abs_cos": 0.18981952965259552,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.0900924950838089,
+                  "abs_cos": 0.0900924950838089,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.05051750689744949,
+                  "abs_cos": 0.05051750689744949,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.10138841718435287,
+                  "abs_cos": 0.10138841718435287,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.023470347747206688,
+                  "abs_cos": 0.023470347747206688,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.01795818656682968,
+                  "abs_cos": 0.01795818656682968,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.039865393191576004,
+                  "abs_cos": 0.039865393191576004,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.017104847356677055,
+                  "abs_cos": 0.017104847356677055,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": 0.004425282124429941,
+                  "abs_cos": 0.004425282124429941,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG07_pantry_restock",
+          "thought_label": "safe",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.19576333463191986,
+                  "abs_cos": 0.19576333463191986,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.051363278180360794,
+                  "abs_cos": 0.051363278180360794,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.12307199835777283,
+                  "abs_cos": 0.12307199835777283,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.16343751549720764,
+                  "abs_cos": 0.16343751549720764,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.12112420797348022,
+                  "abs_cos": 0.12112420797348022,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.13783510029315948,
+                  "abs_cos": 0.13783510029315948,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.01175014954060316,
+                  "abs_cos": 0.01175014954060316,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.019362716004252434,
+                  "abs_cos": 0.019362716004252434,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.04237063601613045,
+                  "abs_cos": 0.04237063601613045,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG08_email_backlog",
+          "thought_label": "risky",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.15522775053977966,
+                  "abs_cos": 0.15522775053977966,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.09558675438165665,
+                  "abs_cos": 0.09558675438165665,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.04620443657040596,
+                  "abs_cos": 0.04620443657040596,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0771649181842804,
+                  "abs_cos": 0.0771649181842804,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.022286107763648033,
+                  "abs_cos": 0.022286107763648033,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.02210971713066101,
+                  "abs_cos": 0.02210971713066101,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.025458823889493942,
+                  "abs_cos": 0.025458823889493942,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.017434069886803627,
+                  "abs_cos": 0.017434069886803627,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.013111789710819721,
+                  "abs_cos": 0.013111789710819721,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG08_email_backlog",
+          "thought_label": "safe",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.17356185615062714,
+                  "abs_cos": 0.17356185615062714,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.031490255147218704,
+                  "abs_cos": 0.031490255147218704,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.10287509858608246,
+                  "abs_cos": 0.10287509858608246,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.14370769262313843,
+                  "abs_cos": 0.14370769262313843,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.10669652372598648,
+                  "abs_cos": 0.10669652372598648,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.12100313603878021,
+                  "abs_cos": 0.12100313603878021,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.01982221007347107,
+                  "abs_cos": 0.01982221007347107,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.02600526250898838,
+                  "abs_cos": 0.02600526250898838,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.03828350827097893,
+                  "abs_cos": 0.03828350827097893,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG09_photography_backlog",
+          "thought_label": "risky",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.17369699478149414,
+                  "abs_cos": 0.17369699478149414,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.11878219991922379,
+                  "abs_cos": 0.11878219991922379,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.059636760503053665,
+                  "abs_cos": 0.059636760503053665,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.09089989215135574,
+                  "abs_cos": 0.09089989215135574,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.000589336093980819,
+                  "abs_cos": 0.000589336093980819,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.014182405546307564,
+                  "abs_cos": 0.014182405546307564,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04101192578673363,
+                  "abs_cos": 0.04101192578673363,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0065309093333780766,
+                  "abs_cos": 0.0065309093333780766,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.001472230302169919,
+                  "abs_cos": 0.001472230302169919,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG09_photography_backlog",
+          "thought_label": "safe",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.16986846923828125,
+                  "abs_cos": 0.16986846923828125,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.05466838181018829,
+                  "abs_cos": 0.05466838181018829,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.10561555624008179,
+                  "abs_cos": 0.10561555624008179,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.15042252838611603,
+                  "abs_cos": 0.15042252838611603,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.12196843326091766,
+                  "abs_cos": 0.12196843326091766,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.13078846037387848,
+                  "abs_cos": 0.13078846037387848,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.01570160500705242,
+                  "abs_cos": 0.01570160500705242,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.0192814152687788,
+                  "abs_cos": 0.0192814152687788,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.04865746572613716,
+                  "abs_cos": 0.04865746572613716,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG10_desk_piles",
+          "thought_label": "risky",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.20646986365318298,
+                  "abs_cos": 0.20646986365318298,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.11558643728494644,
+                  "abs_cos": 0.11558643728494644,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.0642416924238205,
+                  "abs_cos": 0.0642416924238205,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.11870100349187851,
+                  "abs_cos": 0.11870100349187851,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0004357547441031784,
+                  "abs_cos": 0.0004357547441031784,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.005373932421207428,
+                  "abs_cos": 0.005373932421207428,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.042590104043483734,
+                  "abs_cos": 0.042590104043483734,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.012874617241322994,
+                  "abs_cos": 0.012874617241322994,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": 0.0033780967351049185,
+                  "abs_cos": 0.0033780967351049185,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "BFI2C_ORG10_desk_piles",
+          "thought_label": "safe",
+          "expected_axis": "fp",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.17115727066993713,
+                  "abs_cos": 0.17115727066993713,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.04327669367194176,
+                  "abs_cos": 0.04327669367194176,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.06132879853248596,
+                  "abs_cos": 0.06132879853248596,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.150817409157753,
+                  "abs_cos": 0.150817409157753,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.11642409861087799,
+                  "abs_cos": 0.11642409861087799,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.09616082161664963,
+                  "abs_cos": 0.09616082161664963,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "advice"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.018293701112270355,
+                  "abs_cos": 0.018293701112270355,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.02152654528617859,
+                  "abs_cos": 0.02152654528617859,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.03789764270186424,
+                  "abs_cos": 0.03789764270186424,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        }
+      ]
+    },
+    "task": {
+      "expected_axis": "task",
+      "n_thoughts": 20,
+      "methods": {
+        "thought_mean_raw": {
+          "best_abs_accuracy": 0.9,
+          "best_positive_accuracy": 0.55
+        },
+        "thought_mean_shift": {
+          "best_abs_accuracy": 1.0,
+          "best_positive_accuracy": 0.5
+        },
+        "last_token_shift": {
+          "best_abs_accuracy": 0.2,
+          "best_positive_accuracy": 0.0
+        }
+      },
+      "records": [
+        {
+          "id": "ORG_task_01_incident_review",
+          "thought_label": "risky",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.05815522372722626,
+                  "abs_cos": 0.05815522372722626,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.2503274381160736,
+                  "abs_cos": 0.2503274381160736,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.053832028061151505,
+                  "abs_cos": 0.053832028061151505,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04286256432533264,
+                  "abs_cos": 0.04286256432533264,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.11882510036230087,
+                  "abs_cos": 0.11882510036230087,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.01523884292691946,
+                  "abs_cos": 0.01523884292691946,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04747697710990906,
+                  "abs_cos": 0.04747697710990906,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.02056419663131237,
+                  "abs_cos": 0.02056419663131237,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.034672848880290985,
+                  "abs_cos": 0.034672848880290985,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_01_incident_review",
+          "thought_label": "safe",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.11499727517366409,
+                  "abs_cos": 0.11499727517366409,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.1625608503818512,
+                  "abs_cos": 0.1625608503818512,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.0705273374915123,
+                  "abs_cos": 0.0705273374915123,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.07315561920404434,
+                  "abs_cos": 0.07315561920404434,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.16137391328811646,
+                  "abs_cos": 0.16137391328811646,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.09747733920812607,
+                  "abs_cos": 0.09747733920812607,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.004439271986484528,
+                  "abs_cos": 0.004439271986484528,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.050494227558374405,
+                  "abs_cos": 0.050494227558374405,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.05011491850018501,
+                  "abs_cos": 0.05011491850018501,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_02_vendor_comparison",
+          "thought_label": "risky",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.05096595734357834,
+                  "abs_cos": 0.05096595734357834,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.18658055365085602,
+                  "abs_cos": 0.18658055365085602,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.038619741797447205,
+                  "abs_cos": 0.038619741797447205,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.033731043338775635,
+                  "abs_cos": 0.033731043338775635,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.056649353355169296,
+                  "abs_cos": 0.056649353355169296,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.026218127459287643,
+                  "abs_cos": 0.026218127459287643,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.05199912190437317,
+                  "abs_cos": 0.05199912190437317,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.005021284334361553,
+                  "abs_cos": 0.005021284334361553,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.022103294730186462,
+                  "abs_cos": 0.022103294730186462,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_02_vendor_comparison",
+          "thought_label": "safe",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.08558329939842224,
+                  "abs_cos": 0.08558329939842224,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.10439705848693848,
+                  "abs_cos": 0.10439705848693848,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.08797162026166916,
+                  "abs_cos": 0.08797162026166916,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.058364566415548325,
+                  "abs_cos": 0.058364566415548325,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.13905730843544006,
+                  "abs_cos": 0.13905730843544006,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.10998959839344025,
+                  "abs_cos": 0.10998959839344025,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.014902675524353981,
+                  "abs_cos": 0.014902675524353981,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0558866411447525,
+                  "abs_cos": 0.0558866411447525,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.05332263186573982,
+                  "abs_cos": 0.05332263186573982,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_03_incident_review",
+          "thought_label": "risky",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.07262954860925674,
+                  "abs_cos": 0.07262954860925674,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.2650710940361023,
+                  "abs_cos": 0.2650710940361023,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.05328477919101715,
+                  "abs_cos": 0.05328477919101715,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.060890886932611465,
+                  "abs_cos": 0.060890886932611465,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.12030281871557236,
+                  "abs_cos": 0.12030281871557236,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.005723395850509405,
+                  "abs_cos": 0.005723395850509405,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.057585228234529495,
+                  "abs_cos": 0.057585228234529495,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.01293245330452919,
+                  "abs_cos": 0.01293245330452919,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.017528075724840164,
+                  "abs_cos": 0.017528075724840164,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_03_incident_review",
+          "thought_label": "safe",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.0914255678653717,
+                  "abs_cos": 0.0914255678653717,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.11459004133939743,
+                  "abs_cos": 0.11459004133939743,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.048076435923576355,
+                  "abs_cos": 0.048076435923576355,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.04794113337993622,
+                  "abs_cos": 0.04794113337993622,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.13209915161132812,
+                  "abs_cos": 0.13209915161132812,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.07371599972248077,
+                  "abs_cos": 0.07371599972248077,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.032044392079114914,
+                  "abs_cos": 0.032044392079114914,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0330948568880558,
+                  "abs_cos": 0.0330948568880558,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.03745230287313461,
+                  "abs_cos": 0.03745230287313461,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_04_vendor_comparison",
+          "thought_label": "risky",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.061451494693756104,
+                  "abs_cos": 0.061451494693756104,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.21585075557231903,
+                  "abs_cos": 0.21585075557231903,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.06191602721810341,
+                  "abs_cos": 0.06191602721810341,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04827696830034256,
+                  "abs_cos": 0.04827696830034256,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.079798124730587,
+                  "abs_cos": 0.079798124730587,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.005626876838505268,
+                  "abs_cos": 0.005626876838505268,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.06003187224268913,
+                  "abs_cos": 0.06003187224268913,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.0014605496544390917,
+                  "abs_cos": 0.0014605496544390917,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.019479701295495033,
+                  "abs_cos": 0.019479701295495033,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_04_vendor_comparison",
+          "thought_label": "safe",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.06952480226755142,
+                  "abs_cos": 0.06952480226755142,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.07035751640796661,
+                  "abs_cos": 0.07035751640796661,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.01729491911828518,
+                  "abs_cos": 0.01729491911828518,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.044386863708496094,
+                  "abs_cos": 0.044386863708496094,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.12301640212535858,
+                  "abs_cos": 0.12301640212535858,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.0627010241150856,
+                  "abs_cos": 0.0627010241150856,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.023652656003832817,
+                  "abs_cos": 0.023652656003832817,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.03672312945127487,
+                  "abs_cos": 0.03672312945127487,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.052783217281103134,
+                  "abs_cos": 0.052783217281103134,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_05_incident_review",
+          "thought_label": "risky",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.02942526899278164,
+                  "abs_cos": 0.02942526899278164,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.2639978229999542,
+                  "abs_cos": 0.2639978229999542,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.04483264312148094,
+                  "abs_cos": 0.04483264312148094,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.031918514519929886,
+                  "abs_cos": 0.031918514519929886,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.12831300497055054,
+                  "abs_cos": 0.12831300497055054,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.008384665474295616,
+                  "abs_cos": 0.008384665474295616,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.050132252275943756,
+                  "abs_cos": 0.050132252275943756,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.02587231993675232,
+                  "abs_cos": 0.02587231993675232,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.018341634422540665,
+                  "abs_cos": 0.018341634422540665,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_05_incident_review",
+          "thought_label": "safe",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.11279965937137604,
+                  "abs_cos": 0.11279965937137604,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.16058680415153503,
+                  "abs_cos": 0.16058680415153503,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.0735323429107666,
+                  "abs_cos": 0.0735323429107666,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.06244445964694023,
+                  "abs_cos": 0.06244445964694023,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.15757350623607635,
+                  "abs_cos": 0.15757350623607635,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.08816393464803696,
+                  "abs_cos": 0.08816393464803696,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.02443687617778778,
+                  "abs_cos": 0.02443687617778778,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.04517426714301109,
+                  "abs_cos": 0.04517426714301109,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.031522102653980255,
+                  "abs_cos": 0.031522102653980255,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_06_vendor_comparison",
+          "thought_label": "risky",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.07275519520044327,
+                  "abs_cos": 0.07275519520044327,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.2362317591905594,
+                  "abs_cos": 0.2362317591905594,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.07527350634336472,
+                  "abs_cos": 0.07527350634336472,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.05586951598525047,
+                  "abs_cos": 0.05586951598525047,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.10946854203939438,
+                  "abs_cos": 0.10946854203939438,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.010881566442549229,
+                  "abs_cos": 0.010881566442549229,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0638393759727478,
+                  "abs_cos": 0.0638393759727478,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.01795412413775921,
+                  "abs_cos": 0.01795412413775921,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.0074546621181070805,
+                  "abs_cos": 0.0074546621181070805,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_06_vendor_comparison",
+          "thought_label": "safe",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.07223299145698547,
+                  "abs_cos": 0.07223299145698547,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.04865622892975807,
+                  "abs_cos": 0.04865622892975807,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.034410469233989716,
+                  "abs_cos": 0.034410469233989716,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.04552434757351875,
+                  "abs_cos": 0.04552434757351875,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.09329360723495483,
+                  "abs_cos": 0.09329360723495483,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.0662282258272171,
+                  "abs_cos": 0.0662282258272171,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.023473722860217094,
+                  "abs_cos": 0.023473722860217094,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.037574153393507004,
+                  "abs_cos": 0.037574153393507004,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.04017513245344162,
+                  "abs_cos": 0.04017513245344162,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_07_incident_review",
+          "thought_label": "risky",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0675445944070816,
+                  "abs_cos": 0.0675445944070816,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.30568036437034607,
+                  "abs_cos": 0.30568036437034607,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.04216157644987106,
+                  "abs_cos": 0.04216157644987106,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.056026436388492584,
+                  "abs_cos": 0.056026436388492584,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.1618618220090866,
+                  "abs_cos": 0.1618618220090866,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.011466060765087605,
+                  "abs_cos": 0.011466060765087605,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0481703095138073,
+                  "abs_cos": 0.0481703095138073,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.019747622311115265,
+                  "abs_cos": 0.019747622311115265,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.02827959693968296,
+                  "abs_cos": 0.02827959693968296,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_07_incident_review",
+          "thought_label": "safe",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.10830777138471603,
+                  "abs_cos": 0.10830777138471603,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.12133520096540451,
+                  "abs_cos": 0.12133520096540451,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.0640382468700409,
+                  "abs_cos": 0.0640382468700409,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.06428537517786026,
+                  "abs_cos": 0.06428537517786026,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.1328447163105011,
+                  "abs_cos": 0.1328447163105011,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.08394385874271393,
+                  "abs_cos": 0.08394385874271393,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.019542546942830086,
+                  "abs_cos": 0.019542546942830086,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.04505041614174843,
+                  "abs_cos": 0.04505041614174843,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.04094703495502472,
+                  "abs_cos": 0.04094703495502472,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_08_vendor_comparison",
+          "thought_label": "risky",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.06866110861301422,
+                  "abs_cos": 0.06866110861301422,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.19648921489715576,
+                  "abs_cos": 0.19648921489715576,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.058269694447517395,
+                  "abs_cos": 0.058269694447517395,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04846511036157608,
+                  "abs_cos": 0.04846511036157608,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.07840895652770996,
+                  "abs_cos": 0.07840895652770996,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.00031216212664730847,
+                  "abs_cos": 0.00031216212664730847,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04822158068418503,
+                  "abs_cos": 0.04822158068418503,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.01234407164156437,
+                  "abs_cos": 0.01234407164156437,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.016535792499780655,
+                  "abs_cos": 0.016535792499780655,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_08_vendor_comparison",
+          "thought_label": "safe",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.058806415647268295,
+                  "abs_cos": 0.058806415647268295,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.039100922644138336,
+                  "abs_cos": 0.039100922644138336,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.04820704832673073,
+                  "abs_cos": 0.04820704832673073,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.0394023098051548,
+                  "abs_cos": 0.0394023098051548,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.0859300047159195,
+                  "abs_cos": 0.0859300047159195,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.0730375275015831,
+                  "abs_cos": 0.0730375275015831,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.027232708409428596,
+                  "abs_cos": 0.027232708409428596,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.02728397399187088,
+                  "abs_cos": 0.02728397399187088,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.038941964507102966,
+                  "abs_cos": 0.038941964507102966,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_09_incident_review",
+          "thought_label": "risky",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.08084453642368317,
+                  "abs_cos": 0.08084453642368317,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.31342610716819763,
+                  "abs_cos": 0.31342610716819763,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.0592801608145237,
+                  "abs_cos": 0.0592801608145237,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.06936811655759811,
+                  "abs_cos": 0.06936811655759811,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.16518044471740723,
+                  "abs_cos": 0.16518044471740723,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.0036906274035573006,
+                  "abs_cos": 0.0036906274035573006,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0682893618941307,
+                  "abs_cos": 0.0682893618941307,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.02492811530828476,
+                  "abs_cos": 0.02492811530828476,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.012684856541454792,
+                  "abs_cos": 0.012684856541454792,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_09_incident_review",
+          "thought_label": "safe",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.08654197305440903,
+                  "abs_cos": 0.08654197305440903,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.11630517244338989,
+                  "abs_cos": 0.11630517244338989,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.06970694661140442,
+                  "abs_cos": 0.06970694661140442,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.04254943132400513,
+                  "abs_cos": 0.04254943132400513,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.1252443641424179,
+                  "abs_cos": 0.1252443641424179,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.08326581120491028,
+                  "abs_cos": 0.08326581120491028,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0394810251891613,
+                  "abs_cos": 0.0394810251891613,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0219893679022789,
+                  "abs_cos": 0.0219893679022789,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.03450097516179085,
+                  "abs_cos": 0.03450097516179085,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_10_vendor_comparison",
+          "thought_label": "risky",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.051765553653240204,
+                  "abs_cos": 0.051765553653240204,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.240125834941864,
+                  "abs_cos": 0.240125834941864,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.04368283227086067,
+                  "abs_cos": 0.04368283227086067,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04546574875712395,
+                  "abs_cos": 0.04546574875712395,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.10430287569761276,
+                  "abs_cos": 0.10430287569761276,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.01620241440832615,
+                  "abs_cos": 0.01620241440832615,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.049952901899814606,
+                  "abs_cos": 0.049952901899814606,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.005377412308007479,
+                  "abs_cos": 0.005377412308007479,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.03357838839292526,
+                  "abs_cos": 0.03357838839292526,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_task_10_vendor_comparison",
+          "thought_label": "safe",
+          "expected_axis": "task",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.11376990377902985,
+                  "abs_cos": 0.11376990377902985,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.12028876692056656,
+                  "abs_cos": 0.12028876692056656,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.06668844819068909,
+                  "abs_cos": 0.06668844819068909,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.06515216082334518,
+                  "abs_cos": 0.06515216082334518,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.1379779875278473,
+                  "abs_cos": 0.1379779875278473,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.08918656408786774,
+                  "abs_cos": 0.08918656408786774,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.003913510590791702,
+                  "abs_cos": 0.003913510590791702,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.049720559269189835,
+                  "abs_cos": 0.049720559269189835,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.05675920844078064,
+                  "abs_cos": 0.05675920844078064,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        }
+      ]
+    },
+    "advice": {
+      "expected_axis": "advice",
+      "n_thoughts": 20,
+      "methods": {
+        "thought_mean_raw": {
+          "best_abs_accuracy": 0.8,
+          "best_positive_accuracy": 0.4
+        },
+        "thought_mean_shift": {
+          "best_abs_accuracy": 0.65,
+          "best_positive_accuracy": 0.15
+        },
+        "last_token_shift": {
+          "best_abs_accuracy": 0.5,
+          "best_positive_accuracy": 0.0
+        }
+      },
+      "records": [
+        {
+          "id": "ORG_advice_01_research_notes_system",
+          "thought_label": "risky",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.17875459790229797,
+                  "abs_cos": 0.17875459790229797,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.16949863731861115,
+                  "abs_cos": 0.16949863731861115,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.2153453677892685,
+                  "abs_cos": 0.2153453677892685,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.1041567251086235,
+                  "abs_cos": 0.1041567251086235,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.044082898646593094,
+                  "abs_cos": 0.044082898646593094,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.08777739852666855,
+                  "abs_cos": 0.08777739852666855,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.03352876380085945,
+                  "abs_cos": 0.03352876380085945,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.0006754969363100827,
+                  "abs_cos": 0.0006754969363100827,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.013787789270281792,
+                  "abs_cos": 0.013787789270281792,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_01_research_notes_system",
+          "thought_label": "safe",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": -0.011087807826697826,
+                  "abs_cos": 0.011087807826697826,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": 0.038427792489528656,
+                  "abs_cos": 0.038427792489528656,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.12130403518676758,
+                  "abs_cos": 0.12130403518676758,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.030123023316264153,
+                  "abs_cos": 0.030123023316264153,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.04924711957573891,
+                  "abs_cos": 0.04924711957573891,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.14735954999923706,
+                  "abs_cos": 0.14735954999923706,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.01231427863240242,
+                  "abs_cos": 0.01231427863240242,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.003284269943833351,
+                  "abs_cos": 0.003284269943833351,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.044943202286958694,
+                  "abs_cos": 0.044943202286958694,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_02_software_team_ticket_backlog",
+          "thought_label": "risky",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.18185433745384216,
+                  "abs_cos": 0.18185433745384216,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.16585426032543182,
+                  "abs_cos": 0.16585426032543182,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.2485005110502243,
+                  "abs_cos": 0.2485005110502243,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.13104493916034698,
+                  "abs_cos": 0.13104493916034698,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.06256785243749619,
+                  "abs_cos": 0.06256785243749619,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.13299202919006348,
+                  "abs_cos": 0.13299202919006348,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.02997860126197338,
+                  "abs_cos": 0.02997860126197338,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.007622682489454746,
+                  "abs_cos": 0.007622682489454746,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.02148178033530712,
+                  "abs_cos": 0.02148178033530712,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_02_software_team_ticket_backlog",
+          "thought_label": "safe",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.036162640899419785,
+                  "abs_cos": 0.036162640899419785,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.09408404678106308,
+                  "abs_cos": 0.09408404678106308,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.05617539957165718,
+                  "abs_cos": 0.05617539957165718,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.011961041018366814,
+                  "abs_cos": 0.011961041018366814,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0015888446941971779,
+                  "abs_cos": 0.0015888446941971779,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.1083664819598198,
+                  "abs_cos": 0.1083664819598198,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.018316853791475296,
+                  "abs_cos": 0.018316853791475296,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.011274066753685474,
+                  "abs_cos": 0.011274066753685474,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.05090847611427307,
+                  "abs_cos": 0.05090847611427307,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_03_freelance_invoicing",
+          "thought_label": "risky",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.11694169789552689,
+                  "abs_cos": 0.11694169789552689,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.12280604243278503,
+                  "abs_cos": 0.12280604243278503,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.18365304172039032,
+                  "abs_cos": 0.18365304172039032,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.05932195857167244,
+                  "abs_cos": 0.05932195857167244,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.009410419501364231,
+                  "abs_cos": 0.009410419501364231,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.06526077538728714,
+                  "abs_cos": 0.06526077538728714,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.02491682767868042,
+                  "abs_cos": 0.02491682767868042,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.003993613179773092,
+                  "abs_cos": 0.003993613179773092,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.022579435259103775,
+                  "abs_cos": 0.022579435259103775,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_03_freelance_invoicing",
+          "thought_label": "safe",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04010705277323723,
+                  "abs_cos": 0.04010705277323723,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.04826747998595238,
+                  "abs_cos": 0.04826747998595238,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.10203000903129578,
+                  "abs_cos": 0.10203000903129578,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0038359062746167183,
+                  "abs_cos": 0.0038359062746167183,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.042367830872535706,
+                  "abs_cos": 0.042367830872535706,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.13294589519500732,
+                  "abs_cos": 0.13294589519500732,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.018885230645537376,
+                  "abs_cos": 0.018885230645537376,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.007294957060366869,
+                  "abs_cos": 0.007294957060366869,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.0432855486869812,
+                  "abs_cos": 0.0432855486869812,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_04_travel_documents",
+          "thought_label": "risky",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.17401190102100372,
+                  "abs_cos": 0.17401190102100372,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.14839491248130798,
+                  "abs_cos": 0.14839491248130798,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.15060466527938843,
+                  "abs_cos": 0.15060466527938843,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.11812704056501389,
+                  "abs_cos": 0.11812704056501389,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.04014630615711212,
+                  "abs_cos": 0.04014630615711212,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.06310208886861801,
+                  "abs_cos": 0.06310208886861801,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0388975515961647,
+                  "abs_cos": 0.0388975515961647,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.003915811888873577,
+                  "abs_cos": 0.003915811888873577,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.016081150621175766,
+                  "abs_cos": 0.016081150621175766,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_04_travel_documents",
+          "thought_label": "safe",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.021157093346118927,
+                  "abs_cos": 0.021157093346118927,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.04820387810468674,
+                  "abs_cos": 0.04820387810468674,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.10355845838785172,
+                  "abs_cos": 0.10355845838785172,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0016149154398590326,
+                  "abs_cos": 0.0016149154398590326,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0365321971476078,
+                  "abs_cos": 0.0365321971476078,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.12628896534442902,
+                  "abs_cos": 0.12628896534442902,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.019370602443814278,
+                  "abs_cos": 0.019370602443814278,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0004527051351033151,
+                  "abs_cos": 0.0004527051351033151,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.041389286518096924,
+                  "abs_cos": 0.041389286518096924,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_05_customer_support_knowledge_base",
+          "thought_label": "risky",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.17284850776195526,
+                  "abs_cos": 0.17284850776195526,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.1282406896352768,
+                  "abs_cos": 0.1282406896352768,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.20802536606788635,
+                  "abs_cos": 0.20802536606788635,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.11668983101844788,
+                  "abs_cos": 0.11668983101844788,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.029562564566731453,
+                  "abs_cos": 0.029562564566731453,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.09234733879566193,
+                  "abs_cos": 0.09234733879566193,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.036806486546993256,
+                  "abs_cos": 0.036806486546993256,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.004597595892846584,
+                  "abs_cos": 0.004597595892846584,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.022532567381858826,
+                  "abs_cos": 0.022532567381858826,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_05_customer_support_knowledge_base",
+          "thought_label": "safe",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.030141839757561684,
+                  "abs_cos": 0.030141839757561684,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.0484834685921669,
+                  "abs_cos": 0.0484834685921669,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.09007514268159866,
+                  "abs_cos": 0.09007514268159866,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.007952919229865074,
+                  "abs_cos": 0.007952919229865074,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.03072369657456875,
+                  "abs_cos": 0.03072369657456875,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.1328011453151703,
+                  "abs_cos": 0.1328011453151703,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.01572718843817711,
+                  "abs_cos": 0.01572718843817711,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.001723897410556674,
+                  "abs_cos": 0.001723897410556674,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.052591241896152496,
+                  "abs_cos": 0.052591241896152496,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_06_personal_health_records",
+          "thought_label": "risky",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.171033576130867,
+                  "abs_cos": 0.171033576130867,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.12172021716833115,
+                  "abs_cos": 0.12172021716833115,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.1671994924545288,
+                  "abs_cos": 0.1671994924545288,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.1003170982003212,
+                  "abs_cos": 0.1003170982003212,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.013314428739249706,
+                  "abs_cos": 0.013314428739249706,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.0631331354379654,
+                  "abs_cos": 0.0631331354379654,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.031322870403528214,
+                  "abs_cos": 0.031322870403528214,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.00013991828018333763,
+                  "abs_cos": 0.00013991828018333763,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.020026423037052155,
+                  "abs_cos": 0.020026423037052155,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_06_personal_health_records",
+          "thought_label": "safe",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.03451003134250641,
+                  "abs_cos": 0.03451003134250641,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.06123007833957672,
+                  "abs_cos": 0.06123007833957672,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.10192674398422241,
+                  "abs_cos": 0.10192674398422241,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.0018228747649118304,
+                  "abs_cos": 0.0018228747649118304,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0305499080568552,
+                  "abs_cos": 0.0305499080568552,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.1340678483247757,
+                  "abs_cos": 0.1340678483247757,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.010253868997097015,
+                  "abs_cos": 0.010253868997097015,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0029884043615311384,
+                  "abs_cos": 0.0029884043615311384,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.04443362355232239,
+                  "abs_cos": 0.04443362355232239,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_07_event_planning_vendors",
+          "thought_label": "risky",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.16773799061775208,
+                  "abs_cos": 0.16773799061775208,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.13986089825630188,
+                  "abs_cos": 0.13986089825630188,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.23878663778305054,
+                  "abs_cos": 0.23878663778305054,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.10074392706155777,
+                  "abs_cos": 0.10074392706155777,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.024637935683131218,
+                  "abs_cos": 0.024637935683131218,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.11508127301931381,
+                  "abs_cos": 0.11508127301931381,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.04372594505548477,
+                  "abs_cos": 0.04372594505548477,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.0026250635273754597,
+                  "abs_cos": 0.0026250635273754597,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.005319533869624138,
+                  "abs_cos": 0.005319533869624138,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_07_event_planning_vendors",
+          "thought_label": "safe",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.008205060847103596,
+                  "abs_cos": 0.008205060847103596,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.07787134498357773,
+                  "abs_cos": 0.07787134498357773,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.09678592532873154,
+                  "abs_cos": 0.09678592532873154,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.018413875252008438,
+                  "abs_cos": 0.018413875252008438,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.02336784265935421,
+                  "abs_cos": 0.02336784265935421,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.137761190533638,
+                  "abs_cos": 0.137761190533638,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.010794161818921566,
+                  "abs_cos": 0.010794161818921566,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0011294500436633825,
+                  "abs_cos": 0.0011294500436633825,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.04703235998749733,
+                  "abs_cos": 0.04703235998749733,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_08_study_materials_exam_prep",
+          "thought_label": "risky",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.17826110124588013,
+                  "abs_cos": 0.17826110124588013,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.17192913591861725,
+                  "abs_cos": 0.17192913591861725,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.17916437983512878,
+                  "abs_cos": 0.17916437983512878,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.11613857746124268,
+                  "abs_cos": 0.11613857746124268,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.055832624435424805,
+                  "abs_cos": 0.055832624435424805,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.07866328209638596,
+                  "abs_cos": 0.07866328209638596,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.045824117958545685,
+                  "abs_cos": 0.045824117958545685,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.0012106875656172633,
+                  "abs_cos": 0.0012106875656172633,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.0006748352898284793,
+                  "abs_cos": 0.0006748352898284793,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_08_study_materials_exam_prep",
+          "thought_label": "safe",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.035834528505802155,
+                  "abs_cos": 0.035834528505802155,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.08429588377475739,
+                  "abs_cos": 0.08429588377475739,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.05955800786614418,
+                  "abs_cos": 0.05955800786614418,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "task",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.005915392655879259,
+                  "abs_cos": 0.005915392655879259,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.010471383109688759,
+                  "abs_cos": 0.010471383109688759,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.10575418174266815,
+                  "abs_cos": 0.10575418174266815,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.01273217611014843,
+                  "abs_cos": 0.01273217611014843,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0001608210732229054,
+                  "abs_cos": 0.0001608210732229054,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.052616484463214874,
+                  "abs_cos": 0.052616484463214874,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_09_creative_project_assets",
+          "thought_label": "risky",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.18864195048809052,
+                  "abs_cos": 0.18864195048809052,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.19514499604701996,
+                  "abs_cos": 0.19514499604701996,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.2199578732252121,
+                  "abs_cos": 0.2199578732252121,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.11739636957645416,
+                  "abs_cos": 0.11739636957645416,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.07681427896022797,
+                  "abs_cos": 0.07681427896022797,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.10753855854272842,
+                  "abs_cos": 0.10753855854272842,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.03056243620812893,
+                  "abs_cos": 0.03056243620812893,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": -0.0015847802860662341,
+                  "abs_cos": 0.0015847802860662341,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.008188636973500252,
+                  "abs_cos": 0.008188636973500252,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_09_creative_project_assets",
+          "thought_label": "safe",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.009180238470435143,
+                  "abs_cos": 0.009180238470435143,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.07314032316207886,
+                  "abs_cos": 0.07314032316207886,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.0749601498246193,
+                  "abs_cos": 0.0749601498246193,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.018958959728479385,
+                  "abs_cos": 0.018958959728479385,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.017618170008063316,
+                  "abs_cos": 0.017618170008063316,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.11571688205003738,
+                  "abs_cos": 0.11571688205003738,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.002777461428195238,
+                  "abs_cos": 0.002777461428195238,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.006922380067408085,
+                  "abs_cos": 0.006922380067408085,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.05543281137943268,
+                  "abs_cos": 0.05543281137943268,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_10_team_communication_channels",
+          "thought_label": "risky",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.15871185064315796,
+                  "abs_cos": 0.15871185064315796,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.15073174238204956,
+                  "abs_cos": 0.15073174238204956,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.17953231930732727,
+                  "abs_cos": 0.17953231930732727,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "advice"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.10075131058692932,
+                  "abs_cos": 0.10075131058692932,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.039953913539648056,
+                  "abs_cos": 0.039953913539648056,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": 0.07300812751054764,
+                  "abs_cos": 0.07300812751054764,
+                  "pole": "risky/low-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.031587738543748856,
+                  "abs_cos": 0.031587738543748856,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.0051886579021811485,
+                  "abs_cos": 0.0051886579021811485,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.01584685780107975,
+                  "abs_cos": 0.01584685780107975,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "fp",
+              "best_positive_axis": "fp"
+            }
+          }
+        },
+        {
+          "id": "ORG_advice_10_team_communication_channels",
+          "thought_label": "safe",
+          "expected_axis": "advice",
+          "methods": {
+            "thought_mean_raw": {
+              "scores": {
+                "fp": {
+                  "cos": 0.015477178618311882,
+                  "abs_cos": 0.015477178618311882,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.04828943312168121,
+                  "abs_cos": 0.04828943312168121,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.0964081734418869,
+                  "abs_cos": 0.0964081734418869,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "task"
+            },
+            "thought_mean_shift": {
+              "scores": {
+                "fp": {
+                  "cos": -0.003121524816378951,
+                  "abs_cos": 0.003121524816378951,
+                  "pole": "safe/high-pole"
+                },
+                "task": {
+                  "cos": -0.03295441344380379,
+                  "abs_cos": 0.03295441344380379,
+                  "pole": "safe/high-pole"
+                },
+                "advice": {
+                  "cos": -0.12602102756500244,
+                  "abs_cos": 0.12602102756500244,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            },
+            "last_token_shift": {
+              "scores": {
+                "fp": {
+                  "cos": 0.026061618700623512,
+                  "abs_cos": 0.026061618700623512,
+                  "pole": "risky/low-pole"
+                },
+                "task": {
+                  "cos": 0.011984612792730331,
+                  "abs_cos": 0.011984612792730331,
+                  "pole": "risky/low-pole"
+                },
+                "advice": {
+                  "cos": -0.03203682601451874,
+                  "abs_cos": 0.03203682601451874,
+                  "pole": "safe/high-pole"
+                }
+              },
+              "best_abs_axis": "advice",
+              "best_positive_axis": "fp"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

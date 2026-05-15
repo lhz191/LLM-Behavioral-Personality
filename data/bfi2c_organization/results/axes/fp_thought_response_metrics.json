@@ -1,0 +1,311 @@
+{
+  "config": {
+    "layer": 11,
+    "scenario_file": "conscientiousness/bfi2c/bfi2c_organization/scenarios_factor_thought_modelgen_10x_v2.json",
+    "fields": [
+      "thought",
+      "response"
+    ],
+    "system_prompt": "You are the person in this situation. Start your response with a thought, then describe what you would actually do in first person and explain why. Be concrete about your actions.",
+    "split_half_samples": 5000,
+    "seed": 13
+  },
+  "metrics": {
+    "thought": {
+      "fields": [
+        "risky_thought",
+        "safe_thought"
+      ],
+      "overall": {
+        "n": 40,
+        "axis_norm": 1.4301735162734985,
+        "mean_norm": 2.393775862455368,
+        "pairwise": {
+          "mean": 0.34013687166839074,
+          "median": 0.3377593755722046,
+          "min": 0.08875632286071777,
+          "max": 0.5860536694526672,
+          "p10": 0.23534577488899233,
+          "p25": 0.28783053904771805,
+          "p75": 0.39406371861696243,
+          "p90": 0.43905889689922334
+        },
+        "split_half": 0.9117934006690979,
+        "cosine_with_old_4item_thought_axis": 0.43133997917175293
+      },
+      "by_item": {
+        "18": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_spice_rack",
+            "BFI2C_ORG02_digital_photo_library",
+            "BFI2C_ORG03_shared_workshop_tools",
+            "BFI2C_ORG04_class_notes_end_of_semester",
+            "BFI2C_ORG05_email_inbox",
+            "BFI2C_ORG06_camping_gear_return",
+            "BFI2C_ORG07_recipe_collection",
+            "BFI2C_ORG08_art_supply_desk",
+            "BFI2C_ORG09_household_bills_paperwork",
+            "BFI2C_ORG10_music_playlist_library"
+          ],
+          "axis_norm": 1.699676513671875,
+          "mean_norm": 2.5971100091934205,
+          "pairwise_mean": 0.36235366993480256,
+          "pairwise_median": 0.35957005620002747,
+          "pairwise_min": 0.19115884602069855,
+          "pairwise_max": 0.5860536694526672,
+          "split_half": 0.7422419478968968
+        },
+        "3": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_moving_boxes",
+            "BFI2C_ORG02_recipe_collection",
+            "BFI2C_ORG03_desk_papers",
+            "BFI2C_ORG04_digital_photos",
+            "BFI2C_ORG05_shared_kitchen",
+            "BFI2C_ORG06_workshop_tools",
+            "BFI2C_ORG07_email_inbox",
+            "BFI2C_ORG08_travel_packing",
+            "BFI2C_ORG09_class_notes",
+            "BFI2C_ORG10_closet_seasonal"
+          ],
+          "axis_norm": 1.5446914434432983,
+          "mean_norm": 2.3811842918396,
+          "pairwise_mean": 0.3549919582075543,
+          "pairwise_median": 0.3468407094478607,
+          "pairwise_min": 0.20642299950122833,
+          "pairwise_max": 0.48588070273399353,
+          "split_half": 0.7339184473431299
+        },
+        "33": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_after_cooking",
+            "BFI2C_ORG02_shared_office_desk",
+            "BFI2C_ORG03_bedroom_laundry",
+            "BFI2C_ORG04_car_trunk_gear",
+            "BFI2C_ORG05_digital_photo_dump",
+            "BFI2C_ORG06_bathroom_counter",
+            "BFI2C_ORG07_workshop_tools",
+            "BFI2C_ORG08_bookshelf_overflow",
+            "BFI2C_ORG09_junk_drawer",
+            "BFI2C_ORG10_entryway_pile"
+          ],
+          "axis_norm": 1.492164134979248,
+          "mean_norm": 2.2775251865386963,
+          "pairwise_mean": 0.3677848517894745,
+          "pairwise_median": 0.3530663251876831,
+          "pairwise_min": 0.27029499411582947,
+          "pairwise_max": 0.5075943470001221,
+          "split_half": 0.7444280873215388
+        },
+        "48": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_after_cooking",
+            "BFI2C_ORG02_craft_project_table",
+            "BFI2C_ORG03_garage_after_bike_repair",
+            "BFI2C_ORG04_desk_after_study_session",
+            "BFI2C_ORG05_living_room_after_game_night",
+            "BFI2C_ORG06_unpacking_groceries",
+            "BFI2C_ORG07_clothes_after_laundry",
+            "BFI2C_ORG08_art_supplies_after_painting",
+            "BFI2C_ORG09_workshop_presentation_materials",
+            "BFI2C_ORG10_moving_boxes_half_unpacked"
+          ],
+          "axis_norm": 1.5248697996139526,
+          "mean_norm": 2.319283962249756,
+          "pairwise_mean": 0.37103614442878297,
+          "pairwise_median": 0.37422752380371094,
+          "pairwise_min": 0.22478167712688446,
+          "pairwise_max": 0.5610109567642212,
+          "split_half": 0.7442217578017523
+        }
+      },
+      "item_axis_cosine_matrix": {
+        "18": {
+          "18": 1.0,
+          "3": 0.7887466549873352,
+          "33": 0.7812535762786865,
+          "48": 0.7518221139907837
+        },
+        "3": {
+          "18": 0.7887466549873352,
+          "3": 1.0,
+          "33": 0.7985585927963257,
+          "48": 0.74457186460495
+        },
+        "33": {
+          "18": 0.7812535762786865,
+          "3": 0.7985585927963257,
+          "33": 1.0,
+          "48": 0.8150616884231567
+        },
+        "48": {
+          "18": 0.7518221139907837,
+          "3": 0.74457186460495,
+          "33": 0.8150616884231567,
+          "48": 0.9999998807907104
+        }
+      }
+    },
+    "response": {
+      "fields": [
+        "risky",
+        "safe"
+      ],
+      "overall": {
+        "n": 40,
+        "axis_norm": 1.5650513172149658,
+        "mean_norm": 2.6924205660820006,
+        "pairwise": {
+          "mean": 0.3177726926595474,
+          "median": 0.3153275102376938,
+          "min": -0.002353995805606246,
+          "max": 0.7278777956962585,
+          "p10": 0.1860129490494728,
+          "p25": 0.24489612504839897,
+          "p75": 0.3878228887915611,
+          "p90": 0.457660523056984
+        },
+        "split_half": 0.9070750873208046
+      },
+      "by_item": {
+        "18": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_spice_rack",
+            "BFI2C_ORG02_digital_photo_library",
+            "BFI2C_ORG03_shared_workshop_tools",
+            "BFI2C_ORG04_class_notes_end_of_semester",
+            "BFI2C_ORG05_email_inbox",
+            "BFI2C_ORG06_camping_gear_return",
+            "BFI2C_ORG07_recipe_collection",
+            "BFI2C_ORG08_art_supply_desk",
+            "BFI2C_ORG09_household_bills_paperwork",
+            "BFI2C_ORG10_music_playlist_library"
+          ],
+          "axis_norm": 1.8015861511230469,
+          "mean_norm": 2.865729069709778,
+          "pairwise_mean": 0.32698084546460043,
+          "pairwise_median": 0.3289538323879242,
+          "pairwise_min": 0.1448955535888672,
+          "pairwise_max": 0.5422294735908508,
+          "split_half": 0.7087985915797097
+        },
+        "3": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_moving_boxes",
+            "BFI2C_ORG02_recipe_collection",
+            "BFI2C_ORG03_desk_papers",
+            "BFI2C_ORG04_digital_photos",
+            "BFI2C_ORG05_shared_kitchen",
+            "BFI2C_ORG06_workshop_tools",
+            "BFI2C_ORG07_email_inbox",
+            "BFI2C_ORG08_travel_packing",
+            "BFI2C_ORG09_class_notes",
+            "BFI2C_ORG10_closet_seasonal"
+          ],
+          "axis_norm": 1.4247736930847168,
+          "mean_norm": 2.463219332695007,
+          "pairwise_mean": 0.2575856238189671,
+          "pairwise_median": 0.25049129128456116,
+          "pairwise_min": 0.02765764854848385,
+          "pairwise_max": 0.4993377923965454,
+          "split_half": 0.6394642965188102
+        },
+        "33": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_after_cooking",
+            "BFI2C_ORG02_shared_office_desk",
+            "BFI2C_ORG03_bedroom_laundry",
+            "BFI2C_ORG04_car_trunk_gear",
+            "BFI2C_ORG05_digital_photo_dump",
+            "BFI2C_ORG06_bathroom_counter",
+            "BFI2C_ORG07_workshop_tools",
+            "BFI2C_ORG08_bookshelf_overflow",
+            "BFI2C_ORG09_junk_drawer",
+            "BFI2C_ORG10_entryway_pile"
+          ],
+          "axis_norm": 1.6416493654251099,
+          "mean_norm": 2.6303903818130494,
+          "pairwise_mean": 0.3379698524872462,
+          "pairwise_median": 0.34004902839660645,
+          "pairwise_min": 0.18598045408725739,
+          "pairwise_max": 0.5544628500938416,
+          "split_half": 0.7254769792632451
+        },
+        "48": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_after_cooking",
+            "BFI2C_ORG02_craft_project_table",
+            "BFI2C_ORG03_garage_after_bike_repair",
+            "BFI2C_ORG04_desk_after_study_session",
+            "BFI2C_ORG05_living_room_after_game_night",
+            "BFI2C_ORG06_unpacking_groceries",
+            "BFI2C_ORG07_clothes_after_laundry",
+            "BFI2C_ORG08_art_supplies_after_painting",
+            "BFI2C_ORG09_workshop_presentation_materials",
+            "BFI2C_ORG10_moving_boxes_half_unpacked"
+          ],
+          "axis_norm": 2.0087239742279053,
+          "mean_norm": 2.8103434801101685,
+          "pairwise_mean": 0.4505204174253676,
+          "pairwise_median": 0.43908295035362244,
+          "pairwise_min": 0.29350584745407104,
+          "pairwise_max": 0.7278777956962585,
+          "split_half": 0.8086219060988653
+        }
+      },
+      "item_axis_cosine_matrix": {
+        "18": {
+          "18": 1.0,
+          "3": 0.7687305212020874,
+          "33": 0.8212906718254089,
+          "48": 0.7636902332305908
+        },
+        "3": {
+          "18": 0.7687305212020874,
+          "3": 1.0,
+          "33": 0.753004252910614,
+          "48": 0.6961824297904968
+        },
+        "33": {
+          "18": 0.8212906718254089,
+          "3": 0.753004252910614,
+          "33": 1.0,
+          "48": 0.8104551434516907
+        },
+        "48": {
+          "18": 0.7636902332305908,
+          "3": 0.6961824297904968,
+          "33": 0.8104551434516907,
+          "48": 1.0
+        }
+      }
+    }
+  },
+  "response_vs_thought": {
+    "axis_cosine": 0.48939618468284607
+  },
+  "old_4item_thought": {
+    "n": 4,
+    "axis_norm": 1.6451268196105957,
+    "mean_norm": 2.3045772910118103,
+    "pairwise": {
+      "mean": 0.3442605460683505,
+      "median": 0.3421657383441925,
+      "min": 0.22882871329784393,
+      "max": 0.42228519916534424,
+      "p10": 0.2688559517264366,
+      "p25": 0.3153887912631035,
+      "p75": 0.40328249335289,
+      "p90": 0.4217599481344223
+    },
+    "split_half": 0.5150097409884135
+  }
+}
