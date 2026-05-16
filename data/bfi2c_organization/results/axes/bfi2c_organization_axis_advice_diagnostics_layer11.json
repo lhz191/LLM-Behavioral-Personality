@@ -1,0 +1,1068 @@
+{
+  "config": {
+    "config_id": "bfi2c_organization",
+    "layer": 11,
+    "scenario_file": "/mnt/shared-storage-user/liuhaoze/llm_behavior_test/LLM-Behavioral-Personality/data/bfi2c_organization/scenarios/axis/axis_advice.json",
+    "fields": [
+      "thought",
+      "response"
+    ],
+    "item_field": "bfi2_item",
+    "system_prompt": "You are an assistant. Start your response with a thought, then give your answer.",
+    "split_half_samples": 5000,
+    "seed": 13,
+    "pca_mode": "both",
+    "n_components": 10
+  },
+  "comparison": {
+    "overall": {
+      "n": {
+        "thought": 40,
+        "response": 40
+      },
+      "axis_norm": {
+        "thought": 1.3842780590057373,
+        "response": 2.052199363708496
+      },
+      "mean_norm": {
+        "thought": 2.362754672765732,
+        "response": 3.217814427614212
+      },
+      "split_half": {
+        "thought": 0.9071639836788178,
+        "response": 0.9288748770236969
+      },
+      "pairwise_mean": {
+        "thought": 0.32438399678526014,
+        "response": 0.38474686759022564
+      },
+      "pairwise_median": {
+        "thought": 0.31948696076869965,
+        "response": 0.38138429820537567
+      },
+      "pairwise_min": {
+        "thought": 0.035650014877319336,
+        "response": 0.11887937039136887
+      },
+      "pairwise_max": {
+        "thought": 0.7162169218063354,
+        "response": 0.8530099987983704
+      },
+      "pairwise_p10": {
+        "thought": 0.20905032902956008,
+        "response": 0.2546659141778946
+      },
+      "pairwise_p25": {
+        "thought": 0.2638990804553032,
+        "response": 0.30518709123134613
+      },
+      "pairwise_p75": {
+        "thought": 0.3805127516388893,
+        "response": 0.46021344512701035
+      },
+      "pairwise_p90": {
+        "thought": 0.44099735319614414,
+        "response": 0.5116694211959839
+      }
+    },
+    "pca": {
+      "centered_pca": {
+        "mean_axis_norm": {
+          "thought": 1.3775266408920288,
+          "response": 2.0632705688476562
+        },
+        "pc1_cosine_with_mean_axis_oriented": {
+          "thought": 0.3473890423774719,
+          "response": 0.4211265444755554
+        },
+        "pc1_variance_or_energy": {
+          "thought": 0.08323497325181961,
+          "response": 0.08500160276889801
+        },
+        "pc1_cumulative_variance_or_energy": {
+          "thought": 0.08323497325181961,
+          "response": 0.08500160276889801
+        }
+      },
+      "uncentered_pca": {
+        "mean_axis_norm": {
+          "thought": 1.3775266408920288,
+          "response": 2.0632705688476562
+        },
+        "pc1_cosine_with_mean_axis_oriented": {
+          "thought": 0.9980244040489197,
+          "response": 0.9985519051551819
+        },
+        "pc1_variance_or_energy": {
+          "thought": 0.3533249795436859,
+          "response": 0.4281659424304962
+        },
+        "pc1_cumulative_variance_or_energy": {
+          "thought": 0.3533249795436859,
+          "response": 0.4281659424304962
+        }
+      }
+    },
+    "response_vs_thought": {
+      "axis_cosine": 0.4904373586177826
+    }
+  },
+  "details_by_field": {
+    "thought": {
+      "fields": [
+        "risky_thought",
+        "safe_thought"
+      ],
+      "overall": {
+        "n": 40,
+        "axis_norm": 1.3842780590057373,
+        "mean_norm": 2.362754672765732,
+        "pairwise": {
+          "mean": 0.32438399678526014,
+          "median": 0.31948696076869965,
+          "min": 0.035650014877319336,
+          "max": 0.7162169218063354,
+          "p10": 0.20905032902956008,
+          "p25": 0.2638990804553032,
+          "p75": 0.3805127516388893,
+          "p90": 0.44099735319614414
+        },
+        "split_half": 0.9071639836788178
+      },
+      "by_item": {},
+      "item_axis_cosine_matrix": {},
+      "pca": {
+        "centered_pca": {
+          "mean_axis_norm": 1.3775266408920288,
+          "pc1_cosine_with_mean_axis_oriented": 0.3473890423774719,
+          "component_info": [
+            {
+              "pc": 1,
+              "explained_variance_ratio": 0.08323497325181961,
+              "cumulative_explained_variance_ratio": 0.08323497325181961,
+              "cosine_with_mean_axis": 0.3473890423774719,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_31_recipe_collection",
+                "ORG_advice_16_research_papers",
+                "ORG_advice_01_recipe_collection",
+                "ORG_advice_11_recipe_collection",
+                "ORG_advice_21_recipe_collection"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_13_sprint_bugs",
+                "ORG_advice_06_shared_kitchen_pantry"
+              ]
+            },
+            {
+              "pc": 2,
+              "explained_variance_ratio": 0.07863346487283707,
+              "cumulative_explained_variance_ratio": 0.16186843812465668,
+              "cosine_with_mean_axis": -0.18201571702957153,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_34_wedding_vendor_contacts",
+                "ORG_advice_04_wedding_vendor_comms",
+                "ORG_advice_08_travel_documents",
+                "ORG_advice_27_event_vendor_contacts"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_16_research_papers",
+                "ORG_advice_20_band_setlists",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_25_shared_kitchen_pantry"
+              ]
+            },
+            {
+              "pc": 3,
+              "explained_variance_ratio": 0.059981197118759155,
+              "cumulative_explained_variance_ratio": 0.22184963524341583,
+              "cosine_with_mean_axis": -0.07456649094820023,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_26_research_paper_notes",
+                "ORG_advice_07_freelance_client_projects",
+                "ORG_advice_30_health_records"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_02_bug_tracking_startup",
+                "ORG_advice_13_sprint_bugs",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_33_team_bug_tracking",
+                "ORG_advice_09_customer_support_queue"
+              ]
+            },
+            {
+              "pc": 4,
+              "explained_variance_ratio": 0.05426384508609772,
+              "cumulative_explained_variance_ratio": 0.27611348032951355,
+              "cosine_with_mean_axis": -0.009430994279682636,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_20_band_setlists",
+                "ORG_advice_15_wedding_vendors",
+                "ORG_advice_10_study_materials_exam",
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_05_research_paper_notes"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_24_freelance_invoices",
+                "ORG_advice_30_health_records",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_01_recipe_collection"
+              ]
+            },
+            {
+              "pc": 5,
+              "explained_variance_ratio": 0.04811519756913185,
+              "cumulative_explained_variance_ratio": 0.3242286741733551,
+              "cosine_with_mean_axis": -0.06470548361539841,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_38_travel_itinerary",
+                "ORG_advice_36_household_maintenance",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_04_wedding_vendor_comms",
+                "ORG_advice_14_medication_tracking"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_26_research_paper_notes",
+                "ORG_advice_05_research_paper_notes",
+                "ORG_advice_37_customer_support_knowledge",
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_12_freelance_invoices"
+              ]
+            },
+            {
+              "pc": 6,
+              "explained_variance_ratio": 0.046244192868471146,
+              "cumulative_explained_variance_ratio": 0.37047287821769714,
+              "cosine_with_mean_axis": -0.04408089071512222,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_10_study_materials_exam",
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_40_study_materials_exam",
+                "ORG_advice_19_customer_feedback",
+                "ORG_advice_09_customer_support_queue"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_37_customer_support_knowledge",
+                "ORG_advice_04_wedding_vendor_comms",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_31_recipe_collection",
+                "ORG_advice_25_shared_kitchen_pantry"
+              ]
+            },
+            {
+              "pc": 7,
+              "explained_variance_ratio": 0.03802892565727234,
+              "cumulative_explained_variance_ratio": 0.4085018038749695,
+              "cosine_with_mean_axis": -0.08557400852441788,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_21_recipe_collection",
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_01_recipe_collection",
+                "ORG_advice_08_travel_documents"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_36_household_maintenance",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_19_customer_feedback",
+                "ORG_advice_24_freelance_invoices",
+                "ORG_advice_37_customer_support_knowledge"
+              ]
+            },
+            {
+              "pc": 8,
+              "explained_variance_ratio": 0.03601301461458206,
+              "cumulative_explained_variance_ratio": 0.44451481103897095,
+              "cosine_with_mean_axis": -0.14400596916675568,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_36_household_maintenance",
+                "ORG_advice_10_study_materials_exam",
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_35_research_paper_notes"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_09_customer_support_queue",
+                "ORG_advice_20_band_setlists",
+                "ORG_advice_18_travel_documents",
+                "ORG_advice_12_freelance_invoices"
+              ]
+            },
+            {
+              "pc": 9,
+              "explained_variance_ratio": 0.032928697764873505,
+              "cumulative_explained_variance_ratio": 0.47744351625442505,
+              "cosine_with_mean_axis": -0.031763024628162384,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_26_research_paper_notes",
+                "ORG_advice_14_medication_tracking",
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_05_research_paper_notes",
+                "ORG_advice_16_research_papers"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_21_recipe_collection",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_40_study_materials_exam",
+                "ORG_advice_30_health_records"
+              ]
+            },
+            {
+              "pc": 10,
+              "explained_variance_ratio": 0.03110138326883316,
+              "cumulative_explained_variance_ratio": 0.508544921875,
+              "cosine_with_mean_axis": 0.13041140139102936,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_38_travel_itinerary",
+                "ORG_advice_20_band_setlists",
+                "ORG_advice_18_travel_documents",
+                "ORG_advice_32_freelance_invoices",
+                "ORG_advice_36_household_maintenance"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_09_customer_support_queue",
+                "ORG_advice_39_creative_project_assets"
+              ]
+            }
+          ]
+        },
+        "uncentered_pca": {
+          "mean_axis_norm": 1.3775266408920288,
+          "pc1_cosine_with_mean_axis_oriented": 0.9980244040489197,
+          "component_info": [
+            {
+              "pc": 1,
+              "energy_ratio": 0.3533249795436859,
+              "cumulative_energy_ratio": 0.3533249795436859,
+              "cosine_with_mean_axis": 0.9980244040489197,
+              "projection_mean": 1.3748050928115845,
+              "projection_std": 0.2766856253147125,
+              "top_positive_projection_ids": [
+                "ORG_advice_31_recipe_collection",
+                "ORG_advice_32_freelance_invoices",
+                "ORG_advice_16_research_papers",
+                "ORG_advice_01_recipe_collection",
+                "ORG_advice_11_recipe_collection"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_04_wedding_vendor_comms",
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_07_freelance_client_projects",
+                "ORG_advice_30_health_records"
+              ]
+            },
+            {
+              "pc": 2,
+              "energy_ratio": 0.052657321095466614,
+              "cumulative_energy_ratio": 0.4059823155403137,
+              "cosine_with_mean_axis": 0.010837981477379799,
+              "projection_mean": 0.014929604716598988,
+              "projection_std": 0.5411776900291443,
+              "top_positive_projection_ids": [
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_20_band_setlists",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_13_sprint_bugs"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_34_wedding_vendor_contacts",
+                "ORG_advice_08_travel_documents",
+                "ORG_advice_21_recipe_collection",
+                "ORG_advice_35_research_paper_notes",
+                "ORG_advice_27_event_vendor_contacts"
+              ]
+            },
+            {
+              "pc": 3,
+              "energy_ratio": 0.04570866748690605,
+              "cumulative_energy_ratio": 0.4516909718513489,
+              "cosine_with_mean_axis": -0.053382229059934616,
+              "projection_mean": -0.07353542745113373,
+              "projection_std": 0.49901083111763,
+              "top_positive_projection_ids": [
+                "ORG_advice_16_research_papers",
+                "ORG_advice_31_recipe_collection",
+                "ORG_advice_11_recipe_collection",
+                "ORG_advice_01_recipe_collection",
+                "ORG_advice_35_research_paper_notes"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_04_wedding_vendor_comms",
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_34_wedding_vendor_contacts",
+                "ORG_advice_27_event_vendor_contacts",
+                "ORG_advice_15_wedding_vendors"
+              ]
+            },
+            {
+              "pc": 4,
+              "energy_ratio": 0.0390717014670372,
+              "cumulative_energy_ratio": 0.4907626807689667,
+              "cosine_with_mean_axis": 0.017604399472475052,
+              "projection_mean": 0.024250522255897522,
+              "projection_std": 0.4657135307788849,
+              "top_positive_projection_ids": [
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_26_research_paper_notes",
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_30_health_records",
+                "ORG_advice_07_freelance_client_projects"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_02_bug_tracking_startup",
+                "ORG_advice_13_sprint_bugs",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_33_team_bug_tracking",
+                "ORG_advice_09_customer_support_queue"
+              ]
+            },
+            {
+              "pc": 5,
+              "energy_ratio": 0.03575881943106651,
+              "cumulative_energy_ratio": 0.5265215039253235,
+              "cosine_with_mean_axis": -0.0017269206000491977,
+              "projection_mean": -0.0023788809776306152,
+              "projection_std": 0.446129709482193,
+              "top_positive_projection_ids": [
+                "ORG_advice_24_freelance_invoices",
+                "ORG_advice_30_health_records",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_01_recipe_collection",
+                "ORG_advice_23_travel_documents"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_20_band_setlists",
+                "ORG_advice_15_wedding_vendors",
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_10_study_materials_exam",
+                "ORG_advice_05_research_paper_notes"
+              ]
+            },
+            {
+              "pc": 6,
+              "energy_ratio": 0.03153948113322258,
+              "cumulative_energy_ratio": 0.5580610036849976,
+              "cosine_with_mean_axis": -0.007712937891483307,
+              "projection_mean": -0.010624763555824757,
+              "projection_std": 0.41885465383529663,
+              "top_positive_projection_ids": [
+                "ORG_advice_26_research_paper_notes",
+                "ORG_advice_05_research_paper_notes",
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_40_study_materials_exam",
+                "ORG_advice_37_customer_support_knowledge"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_38_travel_itinerary",
+                "ORG_advice_36_household_maintenance",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_04_wedding_vendor_comms",
+                "ORG_advice_14_medication_tracking"
+              ]
+            },
+            {
+              "pc": 7,
+              "energy_ratio": 0.03038974106311798,
+              "cumulative_energy_ratio": 0.5884507298469543,
+              "cosine_with_mean_axis": -0.005866456311196089,
+              "projection_mean": -0.008081205189228058,
+              "projection_std": 0.4112021327018738,
+              "top_positive_projection_ids": [
+                "ORG_advice_37_customer_support_knowledge",
+                "ORG_advice_04_wedding_vendor_comms",
+                "ORG_advice_31_recipe_collection",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_06_shared_kitchen_pantry"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_10_study_materials_exam",
+                "ORG_advice_19_customer_feedback",
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_40_study_materials_exam",
+                "ORG_advice_09_customer_support_queue"
+              ]
+            },
+            {
+              "pc": 8,
+              "energy_ratio": 0.024914968758821487,
+              "cumulative_energy_ratio": 0.6133657097816467,
+              "cosine_with_mean_axis": -0.004979521967470646,
+              "projection_mean": -0.006859433837234974,
+              "projection_std": 0.3723335862159729,
+              "top_positive_projection_ids": [
+                "ORG_advice_36_household_maintenance",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_37_customer_support_knowledge",
+                "ORG_advice_24_freelance_invoices",
+                "ORG_advice_19_customer_feedback"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_21_recipe_collection",
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_01_recipe_collection",
+                "ORG_advice_18_travel_documents"
+              ]
+            },
+            {
+              "pc": 9,
+              "energy_ratio": 0.023147622123360634,
+              "cumulative_energy_ratio": 0.636513352394104,
+              "cosine_with_mean_axis": -0.011260639876127243,
+              "projection_mean": -0.015511828474700451,
+              "projection_std": 0.35861051082611084,
+              "top_positive_projection_ids": [
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_09_customer_support_queue",
+                "ORG_advice_19_customer_feedback",
+                "ORG_advice_20_band_setlists",
+                "ORG_advice_34_wedding_vendor_contacts"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_10_study_materials_exam",
+                "ORG_advice_36_household_maintenance",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_02_bug_tracking_startup",
+                "ORG_advice_23_travel_documents"
+              ]
+            },
+            {
+              "pc": 10,
+              "energy_ratio": 0.02167699672281742,
+              "cumulative_energy_ratio": 0.6581903696060181,
+              "cosine_with_mean_axis": -0.0023610407952219248,
+              "projection_mean": -0.003252404974773526,
+              "projection_std": 0.3473411500453949,
+              "top_positive_projection_ids": [
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_21_recipe_collection",
+                "ORG_advice_30_health_records",
+                "ORG_advice_40_study_materials_exam"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_26_research_paper_notes",
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_14_medication_tracking",
+                "ORG_advice_05_research_paper_notes",
+                "ORG_advice_16_research_papers"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "response": {
+      "fields": [
+        "risky",
+        "safe"
+      ],
+      "overall": {
+        "n": 40,
+        "axis_norm": 2.052199363708496,
+        "mean_norm": 3.217814427614212,
+        "pairwise": {
+          "mean": 0.38474686759022564,
+          "median": 0.38138429820537567,
+          "min": 0.11887937039136887,
+          "max": 0.8530099987983704,
+          "p10": 0.2546659141778946,
+          "p25": 0.30518709123134613,
+          "p75": 0.46021344512701035,
+          "p90": 0.5116694211959839
+        },
+        "split_half": 0.9288748770236969
+      },
+      "by_item": {},
+      "item_axis_cosine_matrix": {},
+      "pca": {
+        "centered_pca": {
+          "mean_axis_norm": 2.0632705688476562,
+          "pc1_cosine_with_mean_axis_oriented": 0.4211265444755554,
+          "component_info": [
+            {
+              "pc": 1,
+              "explained_variance_ratio": 0.08500160276889801,
+              "cumulative_explained_variance_ratio": 0.08500160276889801,
+              "cosine_with_mean_axis": -0.4211265444755554,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_13_sprint_bugs",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_40_study_materials_exam"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_15_wedding_vendors",
+                "ORG_advice_34_wedding_vendor_contacts",
+                "ORG_advice_27_event_vendor_contacts",
+                "ORG_advice_18_travel_documents",
+                "ORG_advice_37_customer_support_knowledge"
+              ]
+            },
+            {
+              "pc": 2,
+              "explained_variance_ratio": 0.07897821813821793,
+              "cumulative_explained_variance_ratio": 0.16397982835769653,
+              "cosine_with_mean_axis": 0.33704644441604614,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_24_freelance_invoices",
+                "ORG_advice_12_freelance_invoices",
+                "ORG_advice_30_health_records",
+                "ORG_advice_07_freelance_client_projects",
+                "ORG_advice_23_travel_documents"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_13_sprint_bugs",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_02_bug_tracking_startup",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_33_team_bug_tracking"
+              ]
+            },
+            {
+              "pc": 3,
+              "explained_variance_ratio": 0.06383616477251053,
+              "cumulative_explained_variance_ratio": 0.22781598567962646,
+              "cosine_with_mean_axis": -0.1051027849316597,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_10_study_materials_exam",
+                "ORG_advice_34_wedding_vendor_contacts",
+                "ORG_advice_08_travel_documents",
+                "ORG_advice_36_household_maintenance"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_37_customer_support_knowledge",
+                "ORG_advice_01_recipe_collection",
+                "ORG_advice_33_team_bug_tracking",
+                "ORG_advice_21_recipe_collection"
+              ]
+            },
+            {
+              "pc": 4,
+              "explained_variance_ratio": 0.05263588950037956,
+              "cumulative_explained_variance_ratio": 0.28045186400413513,
+              "cosine_with_mean_axis": 0.07259365916252136,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_11_recipe_collection",
+                "ORG_advice_31_recipe_collection",
+                "ORG_advice_21_recipe_collection",
+                "ORG_advice_08_travel_documents",
+                "ORG_advice_01_recipe_collection"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_24_freelance_invoices",
+                "ORG_advice_12_freelance_invoices",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_32_freelance_invoices",
+                "ORG_advice_03_tax_receipts"
+              ]
+            },
+            {
+              "pc": 5,
+              "explained_variance_ratio": 0.04848716780543327,
+              "cumulative_explained_variance_ratio": 0.3289390206336975,
+              "cosine_with_mean_axis": 0.06904516369104385,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_20_band_setlists",
+                "ORG_advice_14_medication_tracking",
+                "ORG_advice_26_research_paper_notes",
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_37_customer_support_knowledge"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_18_travel_documents",
+                "ORG_advice_08_travel_documents",
+                "ORG_advice_32_freelance_invoices",
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_27_event_vendor_contacts"
+              ]
+            },
+            {
+              "pc": 6,
+              "explained_variance_ratio": 0.04257175698876381,
+              "cumulative_explained_variance_ratio": 0.371510773897171,
+              "cosine_with_mean_axis": -0.01797717809677124,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_07_freelance_client_projects",
+                "ORG_advice_30_health_records",
+                "ORG_advice_36_household_maintenance"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_35_research_paper_notes",
+                "ORG_advice_40_study_materials_exam",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_38_travel_itinerary"
+              ]
+            },
+            {
+              "pc": 7,
+              "explained_variance_ratio": 0.03962698578834534,
+              "cumulative_explained_variance_ratio": 0.41113775968551636,
+              "cosine_with_mean_axis": 0.14596883952617645,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_36_household_maintenance",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_38_travel_itinerary"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_09_customer_support_queue",
+                "ORG_advice_03_tax_receipts",
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_01_recipe_collection",
+                "ORG_advice_32_freelance_invoices"
+              ]
+            },
+            {
+              "pc": 8,
+              "explained_variance_ratio": 0.03875671327114105,
+              "cumulative_explained_variance_ratio": 0.449894517660141,
+              "cosine_with_mean_axis": -0.004673434421420097,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_33_team_bug_tracking",
+                "ORG_advice_30_health_records",
+                "ORG_advice_22_sprint_bug_tracking"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_26_research_paper_notes",
+                "ORG_advice_14_medication_tracking",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_05_research_paper_notes"
+              ]
+            },
+            {
+              "pc": 9,
+              "explained_variance_ratio": 0.036147989332675934,
+              "cumulative_explained_variance_ratio": 0.48604249954223633,
+              "cosine_with_mean_axis": -0.08568189293146133,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_13_sprint_bugs",
+                "ORG_advice_07_freelance_client_projects",
+                "ORG_advice_02_bug_tracking_startup",
+                "ORG_advice_16_research_papers"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_37_customer_support_knowledge",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_28_customer_support_knowledge"
+              ]
+            },
+            {
+              "pc": 10,
+              "explained_variance_ratio": 0.03321804478764534,
+              "cumulative_explained_variance_ratio": 0.5192605257034302,
+              "cosine_with_mean_axis": -0.07294303178787231,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_advice_18_travel_documents",
+                "ORG_advice_10_study_materials_exam",
+                "ORG_advice_08_travel_documents",
+                "ORG_advice_38_travel_itinerary",
+                "ORG_advice_14_medication_tracking"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_15_wedding_vendors",
+                "ORG_advice_35_research_paper_notes",
+                "ORG_advice_27_event_vendor_contacts"
+              ]
+            }
+          ]
+        },
+        "uncentered_pca": {
+          "mean_axis_norm": 2.0632705688476562,
+          "pc1_cosine_with_mean_axis_oriented": 0.9985519051551819,
+          "component_info": [
+            {
+              "pc": 1,
+              "energy_ratio": 0.4281659424304962,
+              "cumulative_energy_ratio": 0.4281659424304962,
+              "cosine_with_mean_axis": 0.9985519051551819,
+              "projection_mean": 2.0602829456329346,
+              "projection_std": 0.45304998755455017,
+              "top_positive_projection_ids": [
+                "ORG_advice_34_wedding_vendor_contacts",
+                "ORG_advice_15_wedding_vendors",
+                "ORG_advice_37_customer_support_knowledge",
+                "ORG_advice_21_recipe_collection",
+                "ORG_advice_12_freelance_invoices"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_02_bug_tracking_startup",
+                "ORG_advice_13_sprint_bugs",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_40_study_materials_exam",
+                "ORG_advice_03_tax_receipts"
+              ]
+            },
+            {
+              "pc": 2,
+              "energy_ratio": 0.048178594559431076,
+              "cumulative_energy_ratio": 0.4763445258140564,
+              "cosine_with_mean_axis": 0.008054978214204311,
+              "projection_mean": 0.016619587317109108,
+              "projection_std": 0.7074278593063354,
+              "top_positive_projection_ids": [
+                "ORG_advice_24_freelance_invoices",
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_23_travel_documents",
+                "ORG_advice_12_freelance_invoices",
+                "ORG_advice_29_creative_project_assets"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_15_wedding_vendors",
+                "ORG_advice_27_event_vendor_contacts",
+                "ORG_advice_34_wedding_vendor_contacts",
+                "ORG_advice_20_band_setlists",
+                "ORG_advice_33_team_bug_tracking"
+              ]
+            },
+            {
+              "pc": 3,
+              "energy_ratio": 0.038749124854803085,
+              "cumulative_energy_ratio": 0.5150936245918274,
+              "cosine_with_mean_axis": -0.020757626742124557,
+              "projection_mean": -0.04282858967781067,
+              "projection_std": 0.6331616044044495,
+              "top_positive_projection_ids": [
+                "ORG_advice_34_wedding_vendor_contacts",
+                "ORG_advice_27_event_vendor_contacts",
+                "ORG_advice_15_wedding_vendors",
+                "ORG_advice_38_travel_itinerary",
+                "ORG_advice_19_customer_feedback"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_33_team_bug_tracking",
+                "ORG_advice_13_sprint_bugs",
+                "ORG_advice_37_customer_support_knowledge"
+              ]
+            },
+            {
+              "pc": 4,
+              "energy_ratio": 0.03451332822442055,
+              "cumulative_energy_ratio": 0.54960697889328,
+              "cosine_with_mean_axis": -0.03784424066543579,
+              "projection_mean": -0.07808293402194977,
+              "projection_std": 0.5938075184822083,
+              "top_positive_projection_ids": [
+                "ORG_advice_24_freelance_invoices",
+                "ORG_advice_12_freelance_invoices",
+                "ORG_advice_37_customer_support_knowledge",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_07_freelance_client_projects"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_13_sprint_bugs",
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_17_shared_pantry"
+              ]
+            },
+            {
+              "pc": 5,
+              "energy_ratio": 0.030611751601099968,
+              "cumulative_energy_ratio": 0.5802187323570251,
+              "cosine_with_mean_axis": 0.014497865922749043,
+              "projection_mean": 0.029913026839494705,
+              "projection_std": 0.5632580518722534,
+              "top_positive_projection_ids": [
+                "ORG_advice_24_freelance_invoices",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_12_freelance_invoices",
+                "ORG_advice_32_freelance_invoices"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_11_recipe_collection",
+                "ORG_advice_31_recipe_collection",
+                "ORG_advice_21_recipe_collection",
+                "ORG_advice_01_recipe_collection",
+                "ORG_advice_08_travel_documents"
+              ]
+            },
+            {
+              "pc": 6,
+              "energy_ratio": 0.028282614424824715,
+              "cumulative_energy_ratio": 0.6085013747215271,
+              "cosine_with_mean_axis": 0.011608990840613842,
+              "projection_mean": 0.02395251765847206,
+              "projection_std": 0.5416396260261536,
+              "top_positive_projection_ids": [
+                "ORG_advice_18_travel_documents",
+                "ORG_advice_32_freelance_invoices",
+                "ORG_advice_08_travel_documents",
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_06_shared_kitchen_pantry"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_20_band_setlists",
+                "ORG_advice_14_medication_tracking",
+                "ORG_advice_26_research_paper_notes",
+                "ORG_advice_30_health_records",
+                "ORG_advice_37_customer_support_knowledge"
+              ]
+            },
+            {
+              "pc": 7,
+              "energy_ratio": 0.02512342855334282,
+              "cumulative_energy_ratio": 0.633624792098999,
+              "cosine_with_mean_axis": 0.001466855057515204,
+              "projection_mean": 0.0030265122186392546,
+              "projection_std": 0.5109832882881165,
+              "top_positive_projection_ids": [
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_07_freelance_client_projects",
+                "ORG_advice_30_health_records",
+                "ORG_advice_36_household_maintenance"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_35_research_paper_notes",
+                "ORG_advice_40_study_materials_exam",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_39_creative_project_assets",
+                "ORG_advice_38_travel_itinerary"
+              ]
+            },
+            {
+              "pc": 8,
+              "energy_ratio": 0.022883493453264236,
+              "cumulative_energy_ratio": 0.6565082669258118,
+              "cosine_with_mean_axis": 0.0008475765935145319,
+              "projection_mean": 0.001748771988786757,
+              "projection_std": 0.48767808079719543,
+              "top_positive_projection_ids": [
+                "ORG_advice_26_research_paper_notes",
+                "ORG_advice_14_medication_tracking",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_32_freelance_invoices"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_30_health_records",
+                "ORG_advice_33_team_bug_tracking"
+              ]
+            },
+            {
+              "pc": 9,
+              "energy_ratio": 0.022678716108202934,
+              "cumulative_energy_ratio": 0.679186999797821,
+              "cosine_with_mean_axis": -0.01086360402405262,
+              "projection_mean": -0.02241455391049385,
+              "projection_std": 0.48497653007507324,
+              "top_positive_projection_ids": [
+                "ORG_advice_29_creative_project_assets",
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_36_household_maintenance",
+                "ORG_advice_38_travel_itinerary",
+                "ORG_advice_28_customer_support_knowledge"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_17_shared_pantry",
+                "ORG_advice_09_customer_support_queue",
+                "ORG_advice_32_freelance_invoices",
+                "ORG_advice_03_tax_receipts",
+                "ORG_advice_01_recipe_collection"
+              ]
+            },
+            {
+              "pc": 10,
+              "energy_ratio": 0.021044500172138214,
+              "cumulative_energy_ratio": 0.7002314925193787,
+              "cosine_with_mean_axis": 0.007913118228316307,
+              "projection_mean": 0.0163269080221653,
+              "projection_std": 0.4673899710178375,
+              "top_positive_projection_ids": [
+                "ORG_advice_22_sprint_bug_tracking",
+                "ORG_advice_13_sprint_bugs",
+                "ORG_advice_16_research_papers",
+                "ORG_advice_02_bug_tracking_startup",
+                "ORG_advice_33_team_bug_tracking"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_advice_37_customer_support_knowledge",
+                "ORG_advice_28_customer_support_knowledge",
+                "ORG_advice_25_shared_kitchen_pantry",
+                "ORG_advice_06_shared_kitchen_pantry",
+                "ORG_advice_17_shared_pantry"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

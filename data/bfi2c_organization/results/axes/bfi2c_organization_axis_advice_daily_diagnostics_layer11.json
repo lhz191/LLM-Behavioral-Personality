@@ -1,0 +1,1816 @@
+{
+  "config": {
+    "config_id": "bfi2c_organization",
+    "layer": 11,
+    "scenario_file": "/mnt/shared-storage-user/liuhaoze/llm_behavior_test/LLM-Behavioral-Personality/data/bfi2c_organization/scenarios/axis/axis_advice_daily.json",
+    "fields": [
+      "thought",
+      "response"
+    ],
+    "item_field": "bfi2_item",
+    "system_prompt": "You are an assistant. Start your response with a thought, then give your answer.",
+    "split_half_samples": 5000,
+    "seed": 13,
+    "pca_mode": "both",
+    "n_components": 10
+  },
+  "comparison": {
+    "overall": {
+      "n": {
+        "thought": 40,
+        "response": 40
+      },
+      "axis_norm": {
+        "thought": 1.4794089794158936,
+        "response": 2.0031890869140625
+      },
+      "mean_norm": {
+        "thought": 2.5873559415340424,
+        "response": 3.435309201478958
+      },
+      "split_half": {
+        "thought": 0.9011975870132446,
+        "response": 0.9065412708282471
+      },
+      "pairwise_mean": {
+        "thought": 0.30482374733636297,
+        "response": 0.3158140530762
+      },
+      "pairwise_median": {
+        "thought": 0.30638059973716736,
+        "response": 0.30836302042007446
+      },
+      "pairwise_min": {
+        "thought": -0.11375192552804947,
+        "response": 0.01400393433868885
+      },
+      "pairwise_max": {
+        "thought": 0.6429280638694763,
+        "response": 0.7475878596305847
+      },
+      "pairwise_p10": {
+        "thought": 0.16281607747077942,
+        "response": 0.163568614423275
+      },
+      "pairwise_p25": {
+        "thought": 0.2266780249774456,
+        "response": 0.237744502723217
+      },
+      "pairwise_p75": {
+        "thought": 0.3824581876397133,
+        "response": 0.384439118206501
+      },
+      "pairwise_p90": {
+        "thought": 0.4583803862333298,
+        "response": 0.46994789838790907
+      }
+    },
+    "pca": {
+      "centered_pca": {
+        "mean_axis_norm": {
+          "thought": 1.4798799753189087,
+          "response": 2.0145325660705566
+        },
+        "pc1_cosine_with_mean_axis_oriented": {
+          "thought": 0.29330602288246155,
+          "response": 0.44770652055740356
+        },
+        "pc1_variance_or_energy": {
+          "thought": 0.10189845412969589,
+          "response": 0.09871194511651993
+        },
+        "pc1_cumulative_variance_or_energy": {
+          "thought": 0.10189845412969589,
+          "response": 0.09871194511651993
+        }
+      },
+      "uncentered_pca": {
+        "mean_axis_norm": {
+          "thought": 1.4798799753189087,
+          "response": 2.0145325660705566
+        },
+        "pc1_cosine_with_mean_axis_oriented": {
+          "thought": 0.9969121217727661,
+          "response": 0.9968684911727905
+        },
+        "pc1_variance_or_energy": {
+          "thought": 0.34744566679000854,
+          "response": 0.36431002616882324
+        },
+        "pc1_cumulative_variance_or_energy": {
+          "thought": 0.34744566679000854,
+          "response": 0.36431002616882324
+        }
+      }
+    },
+    "response_vs_thought": {
+      "axis_cosine": 0.6100572347640991
+    }
+  },
+  "details_by_field": {
+    "thought": {
+      "fields": [
+        "risky_thought",
+        "safe_thought"
+      ],
+      "overall": {
+        "n": 40,
+        "axis_norm": 1.4794089794158936,
+        "mean_norm": 2.5873559415340424,
+        "pairwise": {
+          "mean": 0.30482374733636297,
+          "median": 0.30638059973716736,
+          "min": -0.11375192552804947,
+          "max": 0.6429280638694763,
+          "p10": 0.16281607747077942,
+          "p25": 0.2266780249774456,
+          "p75": 0.3824581876397133,
+          "p90": 0.4583803862333298
+        },
+        "split_half": 0.9011975870132446
+      },
+      "by_item": {
+        "18": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_drawers",
+            "BFI2C_ORG02_digital_photos",
+            "BFI2C_ORG03_morning_routine",
+            "BFI2C_ORG04_grocery_shopping",
+            "BFI2C_ORG05_desk_papers",
+            "BFI2C_ORG06_email_inbox",
+            "BFI2C_ORG07_closet_clothes",
+            "BFI2C_ORG08_bookshelf",
+            "BFI2C_ORG09_todo_tasks",
+            "BFI2C_ORG10_computer_desktop"
+          ],
+          "axis_norm": 1.633565068244934,
+          "mean_norm": 2.5687092781066894,
+          "pairwise_mean": 0.3347920089960098,
+          "pairwise_median": 0.34028276801109314,
+          "pairwise_min": 0.10686373710632324,
+          "pairwise_max": 0.5745163559913635,
+          "split_half": 0.7205243711433713
+        },
+        "3": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_messy_desk_advice",
+            "BFI2C_ORG02_grocery_no_list",
+            "BFI2C_ORG03_digital_files_chaos",
+            "BFI2C_ORG04_morning_routine_scatter",
+            "BFI2C_ORG05_closet_mixed_seasons",
+            "BFI2C_ORG06_email_inbox_zero",
+            "BFI2C_ORG07_spice_cabinet_jumble",
+            "BFI2C_ORG08_phone_apps_everywhere",
+            "BFI2C_ORG09_loose_receipts_tax",
+            "BFI2C_ORG10_meal_planning_wing_it"
+          ],
+          "axis_norm": 1.5776035785675049,
+          "mean_norm": 2.6239528179168703,
+          "pairwise_mean": 0.284363666921854,
+          "pairwise_median": 0.2959498465061188,
+          "pairwise_min": -0.05268066003918648,
+          "pairwise_max": 0.5316755771636963,
+          "split_half": 0.6766092365696317
+        },
+        "33": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_counter_clutter",
+            "BFI2C_ORG02_desk_cable_tangle",
+            "BFI2C_ORG03_fridge_leftovers",
+            "BFI2C_ORG04_bathroom_products",
+            "BFI2C_ORG05_grocery_list",
+            "BFI2C_ORG06_bedside_pile",
+            "BFI2C_ORG07_closet_folding",
+            "BFI2C_ORG08_car_interior",
+            "BFI2C_ORG09_digital_photos",
+            "BFI2C_ORG10_entryway_shoes"
+          ],
+          "axis_norm": 1.71414053440094,
+          "mean_norm": 2.6411704540252687,
+          "pairwise_mean": 0.35402296980222064,
+          "pairwise_median": 0.3525201380252838,
+          "pairwise_min": 0.1838470697402954,
+          "pairwise_max": 0.5844410061836243,
+          "split_half": 0.7365278800328573
+        },
+        "48": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_after_cooking",
+            "BFI2C_ORG02_desk_papers_pile",
+            "BFI2C_ORG03_craft_supplies_table",
+            "BFI2C_ORG04_laundry_clean_pile",
+            "BFI2C_ORG05_bathroom_counter",
+            "BFI2C_ORG06_grocery_bags_unpacking",
+            "BFI2C_ORG07_shoes_by_door",
+            "BFI2C_ORG08_kids_toys_evening",
+            "BFI2C_ORG09_workbench_tools",
+            "BFI2C_ORG10_bedside_books_cups"
+          ],
+          "axis_norm": 1.5854628086090088,
+          "mean_norm": 2.5155912160873415,
+          "pairwise_mean": 0.3278045549988747,
+          "pairwise_median": 0.33949533104896545,
+          "pairwise_min": 0.07359350472688675,
+          "pairwise_max": 0.5131015777587891,
+          "split_half": 0.7121602670540885
+        }
+      },
+      "item_axis_cosine_matrix": {
+        "18": {
+          "18": 1.0,
+          "3": 0.7995772361755371,
+          "33": 0.7715778350830078,
+          "48": 0.6840487122535706
+        },
+        "3": {
+          "18": 0.7995772361755371,
+          "3": 1.0,
+          "33": 0.8064005374908447,
+          "48": 0.7452810406684875
+        },
+        "33": {
+          "18": 0.7715778350830078,
+          "3": 0.8064005374908447,
+          "33": 1.0,
+          "48": 0.7973339557647705
+        },
+        "48": {
+          "18": 0.6840487122535706,
+          "3": 0.7452810406684875,
+          "33": 0.7973339557647705,
+          "48": 1.0
+        }
+      },
+      "pca": {
+        "centered_pca": {
+          "mean_axis_norm": 1.4798799753189087,
+          "pc1_cosine_with_mean_axis_oriented": 0.29330602288246155,
+          "component_info": [
+            {
+              "pc": 1,
+              "explained_variance_ratio": 0.10189845412969589,
+              "cumulative_explained_variance_ratio": 0.10189845412969589,
+              "cosine_with_mean_axis": -0.29330602288246155,
+              "cosine_with_item_axes": {
+                "18": 0.024136705324053764,
+                "3": -0.2001728117465973,
+                "33": -0.39853212237358093,
+                "48": -0.4854562282562256
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.03878685086965561,
+                  "mean_centered_projection": 0.472844660282135,
+                  "std_centered_projection": 0.6195040345191956
+                },
+                "3": {
+                  "mean_raw_projection": -0.3198621869087219,
+                  "mean_centered_projection": 0.11419551074504852,
+                  "std_centered_projection": 0.7344246506690979
+                },
+                "33": {
+                  "mean_raw_projection": -0.6733709573745728,
+                  "mean_centered_projection": -0.23931321501731873,
+                  "std_centered_projection": 0.5549792051315308
+                },
+                "48": {
+                  "mean_raw_projection": -0.7817845344543457,
+                  "mean_centered_projection": -0.34772688150405884,
+                  "std_centered_projection": 0.44677165150642395
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG04_grocery_shopping",
+                "BFI2C_ORG07_closet_clothes",
+                "BFI2C_ORG03_morning_routine",
+                "BFI2C_ORG06_email_inbox"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG06_bedside_pile",
+                "BFI2C_ORG01_messy_desk_advice",
+                "BFI2C_ORG09_workbench_tools",
+                "BFI2C_ORG03_craft_supplies_table",
+                "BFI2C_ORG08_car_interior"
+              ]
+            },
+            {
+              "pc": 2,
+              "explained_variance_ratio": 0.0760638490319252,
+              "cumulative_explained_variance_ratio": 0.1779623031616211,
+              "cosine_with_mean_axis": 0.3823854923248291,
+              "cosine_with_item_axes": {
+                "18": 0.3748047649860382,
+                "3": 0.47872620820999146,
+                "33": 0.3117620348930359,
+                "48": 0.22944845259189606
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.6022988557815552,
+                  "mean_centered_projection": 0.036414239555597305,
+                  "std_centered_projection": 0.6176124215126038
+                },
+                "3": {
+                  "mean_raw_projection": 0.7649711966514587,
+                  "mean_centered_projection": 0.19908663630485535,
+                  "std_centered_projection": 0.47702375054359436
+                },
+                "33": {
+                  "mean_raw_projection": 0.5267618298530579,
+                  "mean_centered_projection": -0.0391228012740612,
+                  "std_centered_projection": 0.6474883556365967
+                },
+                "48": {
+                  "mean_raw_projection": 0.3695065975189209,
+                  "mean_centered_projection": -0.19637805223464966,
+                  "std_centered_projection": 0.5180442929267883
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG01_messy_desk_advice",
+                "BFI2C_ORG09_digital_photos",
+                "BFI2C_ORG01_kitchen_drawers",
+                "BFI2C_ORG05_bathroom_counter",
+                "BFI2C_ORG06_email_inbox_zero"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG08_car_interior",
+                "BFI2C_ORG09_todo_tasks",
+                "BFI2C_ORG06_grocery_bags_unpacking",
+                "BFI2C_ORG06_bedside_pile",
+                "BFI2C_ORG03_craft_supplies_table"
+              ]
+            },
+            {
+              "pc": 3,
+              "explained_variance_ratio": 0.05608464032411575,
+              "cumulative_explained_variance_ratio": 0.23404693603515625,
+              "cosine_with_mean_axis": 0.26516181230545044,
+              "cosine_with_item_axes": {
+                "18": 0.32236331701278687,
+                "3": 0.09718620032072067,
+                "33": 0.3669606149196625,
+                "48": 0.1715584099292755
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.5180271863937378,
+                  "mean_centered_projection": 0.1256195604801178,
+                  "std_centered_projection": 0.28181979060173035
+                },
+                "3": {
+                  "mean_raw_projection": 0.15529680252075195,
+                  "mean_centered_projection": -0.23711082339286804,
+                  "std_centered_projection": 0.5710794925689697
+                },
+                "33": {
+                  "mean_raw_projection": 0.6200268268585205,
+                  "mean_centered_projection": 0.2276192009449005,
+                  "std_centered_projection": 0.48038408160209656
+                },
+                "48": {
+                  "mean_raw_projection": 0.2762797474861145,
+                  "mean_centered_projection": -0.11612790822982788,
+                  "std_centered_projection": 0.49211859703063965
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG10_entryway_shoes",
+                "BFI2C_ORG02_desk_cable_tangle",
+                "BFI2C_ORG08_car_interior",
+                "BFI2C_ORG05_desk_papers",
+                "BFI2C_ORG07_shoes_by_door"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG03_digital_files_chaos",
+                "BFI2C_ORG03_craft_supplies_table",
+                "BFI2C_ORG06_email_inbox_zero",
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG04_bathroom_products"
+              ]
+            },
+            {
+              "pc": 4,
+              "explained_variance_ratio": 0.05093633756041527,
+              "cumulative_explained_variance_ratio": 0.2849832773208618,
+              "cosine_with_mean_axis": -0.02269335463643074,
+              "cosine_with_item_axes": {
+                "18": -0.10873043537139893,
+                "3": -0.017113612964749336,
+                "33": -0.13842763006687164,
+                "48": 0.18729984760284424
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": -0.174726203083992,
+                  "mean_centered_projection": -0.14114278554916382,
+                  "std_centered_projection": 0.500980019569397
+                },
+                "3": {
+                  "mean_raw_projection": -0.027346353977918625,
+                  "mean_centered_projection": 0.00623707752674818,
+                  "std_centered_projection": 0.5294402837753296
+                },
+                "33": {
+                  "mean_raw_projection": -0.23389112949371338,
+                  "mean_centered_projection": -0.200307697057724,
+                  "std_centered_projection": 0.399714857339859
+                },
+                "48": {
+                  "mean_raw_projection": 0.301629900932312,
+                  "mean_centered_projection": 0.3352133631706238,
+                  "std_centered_projection": 0.24299141764640808
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG04_grocery_shopping",
+                "BFI2C_ORG09_workbench_tools",
+                "BFI2C_ORG05_grocery_list",
+                "BFI2C_ORG01_messy_desk_advice"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG04_bathroom_products",
+                "BFI2C_ORG05_closet_mixed_seasons",
+                "BFI2C_ORG08_bookshelf",
+                "BFI2C_ORG10_computer_desktop",
+                "BFI2C_ORG06_bedside_pile"
+              ]
+            },
+            {
+              "pc": 5,
+              "explained_variance_ratio": 0.04863102734088898,
+              "cumulative_explained_variance_ratio": 0.3336142897605896,
+              "cosine_with_mean_axis": 0.0441509447991848,
+              "cosine_with_item_axes": {
+                "18": 0.13925421237945557,
+                "3": 0.13083593547344208,
+                "33": 0.01170348096638918,
+                "48": -0.11876823753118515
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.22377686202526093,
+                  "mean_centered_projection": 0.15843883156776428,
+                  "std_centered_projection": 0.45354726910591125
+                },
+                "3": {
+                  "mean_raw_projection": 0.209066703915596,
+                  "mean_centered_projection": 0.14372864365577698,
+                  "std_centered_projection": 0.48393312096595764
+                },
+                "33": {
+                  "mean_raw_projection": 0.019774537533521652,
+                  "mean_centered_projection": -0.04556355997920036,
+                  "std_centered_projection": 0.4775189757347107
+                },
+                "48": {
+                  "mean_raw_projection": -0.1912657767534256,
+                  "mean_centered_projection": -0.256603866815567,
+                  "std_centered_projection": 0.31495922803878784
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG06_email_inbox_zero",
+                "BFI2C_ORG10_computer_desktop",
+                "BFI2C_ORG05_desk_papers",
+                "BFI2C_ORG08_phone_apps_everywhere",
+                "BFI2C_ORG09_digital_photos"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG07_closet_folding",
+                "BFI2C_ORG06_grocery_bags_unpacking",
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG04_bathroom_products",
+                "BFI2C_ORG07_closet_clothes"
+              ]
+            },
+            {
+              "pc": 6,
+              "explained_variance_ratio": 0.04253365471959114,
+              "cumulative_explained_variance_ratio": 0.37614795565605164,
+              "cosine_with_mean_axis": 0.04051991179585457,
+              "cosine_with_item_axes": {
+                "18": -0.018176289275288582,
+                "3": 0.12770746648311615,
+                "33": 0.11471901088953018,
+                "48": -0.07999998331069946
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": -0.029208708554506302,
+                  "mean_centered_projection": -0.08917330205440521,
+                  "std_centered_projection": 0.35063737630844116
+                },
+                "3": {
+                  "mean_raw_projection": 0.20406770706176758,
+                  "mean_centered_projection": 0.1441030502319336,
+                  "std_centered_projection": 0.4179975092411041
+                },
+                "33": {
+                  "mean_raw_projection": 0.1938324272632599,
+                  "mean_centered_projection": 0.13386781513690948,
+                  "std_centered_projection": 0.2808854579925537
+                },
+                "48": {
+                  "mean_raw_projection": -0.12883299589157104,
+                  "mean_centered_projection": -0.18879760801792145,
+                  "std_centered_projection": 0.5581392645835876
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG03_craft_supplies_table",
+                "BFI2C_ORG05_closet_mixed_seasons",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG05_grocery_list",
+                "BFI2C_ORG08_car_interior"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG06_grocery_bags_unpacking",
+                "BFI2C_ORG04_laundry_clean_pile",
+                "BFI2C_ORG10_computer_desktop",
+                "BFI2C_ORG06_email_inbox",
+                "BFI2C_ORG02_digital_photos"
+              ]
+            },
+            {
+              "pc": 7,
+              "explained_variance_ratio": 0.040167998522520065,
+              "cumulative_explained_variance_ratio": 0.4163159430027008,
+              "cosine_with_mean_axis": -0.2144249975681305,
+              "cosine_with_item_axes": {
+                "18": -0.32164105772972107,
+                "3": -0.08154882490634918,
+                "33": -0.15168361365795135,
+                "48": -0.22716441750526428
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": -0.5168665647506714,
+                  "mean_centered_projection": -0.1995433270931244,
+                  "std_centered_projection": 0.3601451814174652
+                },
+                "3": {
+                  "mean_raw_projection": -0.1303093582391739,
+                  "mean_centered_projection": 0.1870139092206955,
+                  "std_centered_projection": 0.342542439699173
+                },
+                "33": {
+                  "mean_raw_projection": -0.2562888562679291,
+                  "mean_centered_projection": 0.0610344298183918,
+                  "std_centered_projection": 0.2452489733695984
+                },
+                "48": {
+                  "mean_raw_projection": -0.3658283054828644,
+                  "mean_centered_projection": -0.048505015671253204,
+                  "std_centered_projection": 0.5826354026794434
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG04_morning_routine_scatter",
+                "BFI2C_ORG07_shoes_by_door",
+                "BFI2C_ORG09_todo_tasks",
+                "BFI2C_ORG04_bathroom_products",
+                "BFI2C_ORG04_laundry_clean_pile"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG01_kitchen_after_cooking",
+                "BFI2C_ORG01_kitchen_drawers",
+                "BFI2C_ORG06_email_inbox",
+                "BFI2C_ORG10_computer_desktop"
+              ]
+            },
+            {
+              "pc": 8,
+              "explained_variance_ratio": 0.034179575741291046,
+              "cumulative_explained_variance_ratio": 0.45049554109573364,
+              "cosine_with_mean_axis": 0.20630688965320587,
+              "cosine_with_item_axes": {
+                "18": 0.15453357994556427,
+                "3": 0.2502676844596863,
+                "33": 0.18438348174095154,
+                "48": 0.16235452890396118
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.24833038449287415,
+                  "mean_centered_projection": -0.05697908252477646,
+                  "std_centered_projection": 0.3820643723011017
+                },
+                "3": {
+                  "mean_raw_projection": 0.3999103307723999,
+                  "mean_centered_projection": 0.09460089355707169,
+                  "std_centered_projection": 0.44207867980003357
+                },
+                "33": {
+                  "mean_raw_projection": 0.3115394711494446,
+                  "mean_centered_projection": 0.0062299491837620735,
+                  "std_centered_projection": 0.41720452904701233
+                },
+                "48": {
+                  "mean_raw_projection": 0.2614576518535614,
+                  "mean_centered_projection": -0.04385177418589592,
+                  "std_centered_projection": 0.2990560829639435
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG02_desk_cable_tangle",
+                "BFI2C_ORG09_loose_receipts_tax",
+                "BFI2C_ORG05_bathroom_counter",
+                "BFI2C_ORG10_computer_desktop"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG05_desk_papers",
+                "BFI2C_ORG04_bathroom_products",
+                "BFI2C_ORG02_desk_papers_pile",
+                "BFI2C_ORG10_entryway_shoes",
+                "BFI2C_ORG03_morning_routine"
+              ]
+            },
+            {
+              "pc": 9,
+              "explained_variance_ratio": 0.03165503218770027,
+              "cumulative_explained_variance_ratio": 0.4821505844593048,
+              "cosine_with_mean_axis": -0.02167210541665554,
+              "cosine_with_item_axes": {
+                "18": -0.16701805591583252,
+                "3": -0.05065756291151047,
+                "33": 0.046150583773851395,
+                "48": 0.08884309977293015
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": -0.26839250326156616,
+                  "mean_centered_projection": -0.23632042109966278,
+                  "std_centered_projection": 0.321267306804657
+                },
+                "3": {
+                  "mean_raw_projection": -0.08094723522663116,
+                  "mean_centered_projection": -0.04887514188885689,
+                  "std_centered_projection": 0.3748570680618286
+                },
+                "33": {
+                  "mean_raw_projection": 0.07797733694314957,
+                  "mean_centered_projection": 0.11004942655563354,
+                  "std_centered_projection": 0.3670988380908966
+                },
+                "48": {
+                  "mean_raw_projection": 0.14307400584220886,
+                  "mean_centered_projection": 0.17514613270759583,
+                  "std_centered_projection": 0.30629876255989075
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG10_entryway_shoes",
+                "BFI2C_ORG04_laundry_clean_pile",
+                "BFI2C_ORG07_closet_folding",
+                "BFI2C_ORG07_shoes_by_door",
+                "BFI2C_ORG03_craft_supplies_table"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG04_morning_routine_scatter",
+                "BFI2C_ORG01_kitchen_drawers",
+                "BFI2C_ORG03_morning_routine",
+                "BFI2C_ORG09_todo_tasks",
+                "BFI2C_ORG08_bookshelf"
+              ]
+            },
+            {
+              "pc": 10,
+              "explained_variance_ratio": 0.030368641018867493,
+              "cumulative_explained_variance_ratio": 0.5125192403793335,
+              "cosine_with_mean_axis": -0.0005053048953413963,
+              "cosine_with_item_axes": {
+                "18": 0.006319297943264246,
+                "3": 0.05255578085780144,
+                "33": 0.04517071694135666,
+                "48": -0.10770425200462341
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.01015491783618927,
+                  "mean_centered_projection": 0.01090269349515438,
+                  "std_centered_projection": 0.3076419234275818
+                },
+                "3": {
+                  "mean_raw_projection": 0.08398045599460602,
+                  "mean_centered_projection": 0.08472825586795807,
+                  "std_centered_projection": 0.38071611523628235
+                },
+                "33": {
+                  "mean_raw_projection": 0.07632169872522354,
+                  "mean_centered_projection": 0.0770694687962532,
+                  "std_centered_projection": 0.45526230335235596
+                },
+                "48": {
+                  "mean_raw_projection": -0.17344821989536285,
+                  "mean_centered_projection": -0.172700434923172,
+                  "std_centered_projection": 0.2451942414045334
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG03_fridge_leftovers",
+                "BFI2C_ORG03_morning_routine",
+                "BFI2C_ORG03_digital_files_chaos",
+                "BFI2C_ORG10_entryway_shoes",
+                "BFI2C_ORG06_email_inbox_zero"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG05_closet_mixed_seasons",
+                "BFI2C_ORG09_digital_photos",
+                "BFI2C_ORG05_bathroom_counter",
+                "BFI2C_ORG08_bookshelf",
+                "BFI2C_ORG05_grocery_list"
+              ]
+            }
+          ]
+        },
+        "uncentered_pca": {
+          "mean_axis_norm": 1.4798799753189087,
+          "pc1_cosine_with_mean_axis_oriented": 0.9969121217727661,
+          "component_info": [
+            {
+              "pc": 1,
+              "energy_ratio": 0.34744566679000854,
+              "cumulative_energy_ratio": 0.34744566679000854,
+              "cosine_with_mean_axis": 0.9969121217727661,
+              "projection_mean": 1.4753103256225586,
+              "projection_std": 0.3970015347003937,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG01_messy_desk_advice",
+                "BFI2C_ORG01_kitchen_drawers",
+                "BFI2C_ORG05_desk_papers",
+                "BFI2C_ORG09_workbench_tools",
+                "BFI2C_ORG10_entryway_shoes"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG03_morning_routine",
+                "BFI2C_ORG09_todo_tasks",
+                "BFI2C_ORG04_grocery_shopping",
+                "BFI2C_ORG03_digital_files_chaos"
+              ]
+            },
+            {
+              "pc": 2,
+              "energy_ratio": 0.06483056396245956,
+              "cumulative_energy_ratio": 0.4122762382030487,
+              "cosine_with_mean_axis": -0.036894042044878006,
+              "projection_mean": -0.05459878593683243,
+              "projection_std": 0.6576874256134033,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG06_bedside_pile",
+                "BFI2C_ORG03_craft_supplies_table",
+                "BFI2C_ORG08_car_interior",
+                "BFI2C_ORG09_workbench_tools",
+                "BFI2C_ORG04_morning_routine_scatter"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG07_closet_clothes",
+                "BFI2C_ORG04_grocery_shopping",
+                "BFI2C_ORG03_fridge_leftovers",
+                "BFI2C_ORG06_email_inbox"
+              ]
+            },
+            {
+              "pc": 3,
+              "energy_ratio": 0.04479370638728142,
+              "cumulative_energy_ratio": 0.45706993341445923,
+              "cosine_with_mean_axis": -0.04067801311612129,
+              "projection_mean": -0.0601985864341259,
+              "projection_std": 0.5452536940574646,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG03_digital_files_chaos",
+                "BFI2C_ORG01_messy_desk_advice",
+                "BFI2C_ORG05_bathroom_counter",
+                "BFI2C_ORG06_email_inbox_zero",
+                "BFI2C_ORG09_digital_photos"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG08_car_interior",
+                "BFI2C_ORG09_todo_tasks",
+                "BFI2C_ORG06_grocery_bags_unpacking",
+                "BFI2C_ORG09_loose_receipts_tax",
+                "BFI2C_ORG06_bedside_pile"
+              ]
+            },
+            {
+              "pc": 4,
+              "energy_ratio": 0.03444415703415871,
+              "cumulative_energy_ratio": 0.49151408672332764,
+              "cosine_with_mean_axis": 0.01373751275241375,
+              "projection_mean": 0.020329881459474564,
+              "projection_std": 0.4806075692176819,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG04_bathroom_products",
+                "BFI2C_ORG10_computer_desktop",
+                "BFI2C_ORG08_bookshelf",
+                "BFI2C_ORG06_bedside_pile",
+                "BFI2C_ORG05_closet_mixed_seasons"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG04_grocery_shopping",
+                "BFI2C_ORG09_workbench_tools",
+                "BFI2C_ORG07_shoes_by_door",
+                "BFI2C_ORG02_desk_papers_pile"
+              ]
+            },
+            {
+              "pc": 5,
+              "energy_ratio": 0.03382071107625961,
+              "cumulative_energy_ratio": 0.5253347754478455,
+              "cosine_with_mean_axis": 0.029423294588923454,
+              "projection_mean": 0.04354294389486313,
+              "projection_std": 0.47467106580734253,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG03_craft_supplies_table",
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG03_digital_files_chaos",
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG10_meal_planning_wing_it"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG10_entryway_shoes",
+                "BFI2C_ORG05_closet_mixed_seasons",
+                "BFI2C_ORG04_bathroom_products",
+                "BFI2C_ORG02_desk_cable_tangle",
+                "BFI2C_ORG07_shoes_by_door"
+              ]
+            },
+            {
+              "pc": 6,
+              "energy_ratio": 0.03250550106167793,
+              "cumulative_energy_ratio": 0.5578402876853943,
+              "cosine_with_mean_axis": -0.017048582434654236,
+              "projection_mean": -0.025229889899492264,
+              "projection_std": 0.46662238240242004,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG06_email_inbox_zero",
+                "BFI2C_ORG05_desk_papers",
+                "BFI2C_ORG09_digital_photos",
+                "BFI2C_ORG08_phone_apps_everywhere",
+                "BFI2C_ORG09_loose_receipts_tax"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG07_closet_folding",
+                "BFI2C_ORG06_grocery_bags_unpacking",
+                "BFI2C_ORG01_kitchen_after_cooking",
+                "BFI2C_ORG07_closet_clothes"
+              ]
+            },
+            {
+              "pc": 7,
+              "energy_ratio": 0.028628159314393997,
+              "cumulative_energy_ratio": 0.5864684581756592,
+              "cosine_with_mean_axis": -0.0029755504801869392,
+              "projection_mean": -0.004403454251587391,
+              "projection_std": 0.4385264813899994,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG05_closet_mixed_seasons",
+                "BFI2C_ORG03_craft_supplies_table",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG05_grocery_list",
+                "BFI2C_ORG09_loose_receipts_tax"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG06_grocery_bags_unpacking",
+                "BFI2C_ORG04_laundry_clean_pile",
+                "BFI2C_ORG10_computer_desktop",
+                "BFI2C_ORG06_email_inbox",
+                "BFI2C_ORG01_kitchen_after_cooking"
+              ]
+            },
+            {
+              "pc": 8,
+              "energy_ratio": 0.025458529591560364,
+              "cumulative_energy_ratio": 0.6119269728660583,
+              "cosine_with_mean_axis": 0.018527289852499962,
+              "projection_mean": 0.027418160811066628,
+              "projection_std": 0.4126492738723755,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG04_morning_routine_scatter",
+                "BFI2C_ORG05_bathroom_counter",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG07_shoes_by_door",
+                "BFI2C_ORG04_laundry_clean_pile"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG05_desk_papers",
+                "BFI2C_ORG01_kitchen_after_cooking",
+                "BFI2C_ORG10_entryway_shoes",
+                "BFI2C_ORG02_desk_papers_pile"
+              ]
+            },
+            {
+              "pc": 9,
+              "energy_ratio": 0.021381359547376633,
+              "cumulative_energy_ratio": 0.6333083510398865,
+              "cosine_with_mean_axis": 0.006177777424454689,
+              "projection_mean": 0.009142378345131874,
+              "projection_std": 0.3788892328739166,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG04_morning_routine_scatter",
+                "BFI2C_ORG03_morning_routine",
+                "BFI2C_ORG01_kitchen_drawers",
+                "BFI2C_ORG04_bathroom_products",
+                "BFI2C_ORG09_todo_tasks"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG10_entryway_shoes",
+                "BFI2C_ORG07_shoes_by_door",
+                "BFI2C_ORG10_computer_desktop",
+                "BFI2C_ORG07_closet_folding",
+                "BFI2C_ORG04_laundry_clean_pile"
+              ]
+            },
+            {
+              "pc": 10,
+              "energy_ratio": 0.020779216662049294,
+              "cumulative_energy_ratio": 0.6540875434875488,
+              "cosine_with_mean_axis": 0.022665539756417274,
+              "projection_mean": 0.03354228287935257,
+              "projection_std": 0.3721160590648651,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG04_laundry_clean_pile",
+                "BFI2C_ORG03_digital_files_chaos",
+                "BFI2C_ORG05_desk_papers",
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG05_closet_mixed_seasons"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG01_messy_desk_advice",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG08_bookshelf",
+                "BFI2C_ORG01_kitchen_counter_clutter",
+                "BFI2C_ORG02_desk_cable_tangle"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "response": {
+      "fields": [
+        "risky",
+        "safe"
+      ],
+      "overall": {
+        "n": 40,
+        "axis_norm": 2.0031890869140625,
+        "mean_norm": 3.435309201478958,
+        "pairwise": {
+          "mean": 0.3158140530762,
+          "median": 0.30836302042007446,
+          "min": 0.01400393433868885,
+          "max": 0.7475878596305847,
+          "p10": 0.163568614423275,
+          "p25": 0.237744502723217,
+          "p75": 0.384439118206501,
+          "p90": 0.46994789838790907
+        },
+        "split_half": 0.9065412708282471
+      },
+      "by_item": {
+        "18": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_drawers",
+            "BFI2C_ORG02_digital_photos",
+            "BFI2C_ORG03_morning_routine",
+            "BFI2C_ORG04_grocery_shopping",
+            "BFI2C_ORG05_desk_papers",
+            "BFI2C_ORG06_email_inbox",
+            "BFI2C_ORG07_closet_clothes",
+            "BFI2C_ORG08_bookshelf",
+            "BFI2C_ORG09_todo_tasks",
+            "BFI2C_ORG10_computer_desktop"
+          ],
+          "axis_norm": 2.266618490219116,
+          "mean_norm": 3.4390498876571653,
+          "pairwise_mean": 0.3684259464343389,
+          "pairwise_median": 0.3392241597175598,
+          "pairwise_min": 0.19551320374011993,
+          "pairwise_max": 0.6438289880752563,
+          "split_half": 0.7496302425861359
+        },
+        "3": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_messy_desk_advice",
+            "BFI2C_ORG02_grocery_no_list",
+            "BFI2C_ORG03_digital_files_chaos",
+            "BFI2C_ORG04_morning_routine_scatter",
+            "BFI2C_ORG05_closet_mixed_seasons",
+            "BFI2C_ORG06_email_inbox_zero",
+            "BFI2C_ORG07_spice_cabinet_jumble",
+            "BFI2C_ORG08_phone_apps_everywhere",
+            "BFI2C_ORG09_loose_receipts_tax",
+            "BFI2C_ORG10_meal_planning_wing_it"
+          ],
+          "axis_norm": 2.3261616230010986,
+          "mean_norm": 3.622603678703308,
+          "pairwise_mean": 0.33985124395953287,
+          "pairwise_median": 0.3004051446914673,
+          "pairwise_min": 0.1217534989118576,
+          "pairwise_max": 0.6149441599845886,
+          "split_half": 0.7304824765712495
+        },
+        "33": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_counter_clutter",
+            "BFI2C_ORG02_desk_cable_tangle",
+            "BFI2C_ORG03_fridge_leftovers",
+            "BFI2C_ORG04_bathroom_products",
+            "BFI2C_ORG05_grocery_list",
+            "BFI2C_ORG06_bedside_pile",
+            "BFI2C_ORG07_closet_folding",
+            "BFI2C_ORG08_car_interior",
+            "BFI2C_ORG09_digital_photos",
+            "BFI2C_ORG10_entryway_shoes"
+          ],
+          "axis_norm": 2.2282960414886475,
+          "mean_norm": 3.465801978111267,
+          "pairwise_mean": 0.34569781422615053,
+          "pairwise_median": 0.3433540165424347,
+          "pairwise_min": 0.18771016597747803,
+          "pairwise_max": 0.5280936360359192,
+          "split_half": 0.7280770719997467
+        },
+        "48": {
+          "n": 10,
+          "ids": [
+            "BFI2C_ORG01_kitchen_after_cooking",
+            "BFI2C_ORG02_desk_papers_pile",
+            "BFI2C_ORG03_craft_supplies_table",
+            "BFI2C_ORG04_laundry_clean_pile",
+            "BFI2C_ORG05_bathroom_counter",
+            "BFI2C_ORG06_grocery_bags_unpacking",
+            "BFI2C_ORG07_shoes_by_door",
+            "BFI2C_ORG08_kids_toys_evening",
+            "BFI2C_ORG09_workbench_tools",
+            "BFI2C_ORG10_bedside_books_cups"
+          ],
+          "axis_norm": 1.949342131614685,
+          "mean_norm": 3.2137812614440917,
+          "pairwise_mean": 0.2882451992895868,
+          "pairwise_median": 0.2997329533100128,
+          "pairwise_min": 0.09956096112728119,
+          "pairwise_max": 0.46864238381385803,
+          "split_half": 0.6798947671103099
+        }
+      },
+      "item_axis_cosine_matrix": {
+        "18": {
+          "18": 1.0000001192092896,
+          "3": 0.8232318162918091,
+          "33": 0.7535552382469177,
+          "48": 0.7055128216743469
+        },
+        "3": {
+          "18": 0.8232318162918091,
+          "3": 1.0000001192092896,
+          "33": 0.8640537261962891,
+          "48": 0.7250120043754578
+        },
+        "33": {
+          "18": 0.7535552382469177,
+          "3": 0.8640537261962891,
+          "33": 0.9999998807907104,
+          "48": 0.7862445116043091
+        },
+        "48": {
+          "18": 0.7055128216743469,
+          "3": 0.7250120043754578,
+          "33": 0.7862445116043091,
+          "48": 0.9999999403953552
+        }
+      },
+      "pca": {
+        "centered_pca": {
+          "mean_axis_norm": 2.0145325660705566,
+          "pc1_cosine_with_mean_axis_oriented": 0.44770652055740356,
+          "component_info": [
+            {
+              "pc": 1,
+              "explained_variance_ratio": 0.09871194511651993,
+              "cumulative_explained_variance_ratio": 0.09871194511651993,
+              "cosine_with_mean_axis": 0.44770652055740356,
+              "cosine_with_item_axes": {
+                "18": 0.3800663948059082,
+                "3": 0.45654258131980896,
+                "33": 0.46720218658447266,
+                "48": 0.32377684116363525
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.8602867126464844,
+                  "mean_centered_projection": -0.04163270443677902,
+                  "std_centered_projection": 0.909650981426239
+                },
+                "3": {
+                  "mean_raw_projection": 1.0648910999298096,
+                  "mean_centered_projection": 0.1629715859889984,
+                  "std_centered_projection": 1.1192494630813599
+                },
+                "33": {
+                  "mean_raw_projection": 1.048414945602417,
+                  "mean_centered_projection": 0.14649564027786255,
+                  "std_centered_projection": 0.7219489216804504
+                },
+                "48": {
+                  "mean_raw_projection": 0.6340848207473755,
+                  "mean_centered_projection": -0.2678345739841461,
+                  "std_centered_projection": 0.6036728024482727
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG01_messy_desk_advice",
+                "BFI2C_ORG08_phone_apps_everywhere",
+                "BFI2C_ORG01_kitchen_drawers",
+                "BFI2C_ORG01_kitchen_counter_clutter",
+                "BFI2C_ORG05_desk_papers"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG04_grocery_shopping",
+                "BFI2C_ORG05_grocery_list",
+                "BFI2C_ORG03_craft_supplies_table",
+                "BFI2C_ORG10_meal_planning_wing_it"
+              ]
+            },
+            {
+              "pc": 2,
+              "explained_variance_ratio": 0.08197589218616486,
+              "cumulative_explained_variance_ratio": 0.18068784475326538,
+              "cosine_with_mean_axis": 0.1092265173792839,
+              "cosine_with_item_axes": {
+                "18": 0.33390527963638306,
+                "3": 0.22297954559326172,
+                "33": -0.029941540211439133,
+                "48": -0.16776518523693085
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.7558001279830933,
+                  "mean_centered_projection": 0.5357599258422852,
+                  "std_centered_projection": 0.522293746471405
+                },
+                "3": {
+                  "mean_raw_projection": 0.5201023817062378,
+                  "mean_centered_projection": 0.3000620901584625,
+                  "std_centered_projection": 0.8838505148887634
+                },
+                "33": {
+                  "mean_raw_projection": -0.06718964874744415,
+                  "mean_centered_projection": -0.2872300446033478,
+                  "std_centered_projection": 0.7264899015426636
+                },
+                "48": {
+                  "mean_raw_projection": -0.3285514712333679,
+                  "mean_centered_projection": -0.5485919117927551,
+                  "std_centered_projection": 0.470712274312973
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG06_email_inbox_zero",
+                "BFI2C_ORG03_digital_files_chaos",
+                "BFI2C_ORG09_digital_photos",
+                "BFI2C_ORG06_email_inbox",
+                "BFI2C_ORG02_digital_photos"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG02_desk_cable_tangle",
+                "BFI2C_ORG09_workbench_tools",
+                "BFI2C_ORG01_kitchen_after_cooking",
+                "BFI2C_ORG07_spice_cabinet_jumble",
+                "BFI2C_ORG07_closet_folding"
+              ]
+            },
+            {
+              "pc": 3,
+              "explained_variance_ratio": 0.06352172046899796,
+              "cumulative_explained_variance_ratio": 0.24420955777168274,
+              "cosine_with_mean_axis": 0.16569294035434723,
+              "cosine_with_item_axes": {
+                "18": -0.0778396800160408,
+                "3": 0.29188716411590576,
+                "33": 0.3357163965702057,
+                "48": 0.03940930962562561
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": -0.17619143426418304,
+                  "mean_centered_projection": -0.5099852085113525,
+                  "std_centered_projection": 0.6549659371376038
+                },
+                "3": {
+                  "mean_raw_projection": 0.6808303594589233,
+                  "mean_centered_projection": 0.34703654050827026,
+                  "std_centered_projection": 0.5200023651123047
+                },
+                "33": {
+                  "mean_raw_projection": 0.7533571124076843,
+                  "mean_centered_projection": 0.419563353061676,
+                  "std_centered_projection": 0.6207144260406494
+                },
+                "48": {
+                  "mean_raw_projection": 0.07717923820018768,
+                  "mean_centered_projection": -0.256614625453949,
+                  "std_centered_projection": 0.5287966728210449
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG03_fridge_leftovers",
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG05_grocery_list",
+                "BFI2C_ORG02_desk_cable_tangle",
+                "BFI2C_ORG07_shoes_by_door"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG07_closet_clothes",
+                "BFI2C_ORG08_bookshelf",
+                "BFI2C_ORG03_morning_routine",
+                "BFI2C_ORG09_todo_tasks",
+                "BFI2C_ORG06_grocery_bags_unpacking"
+              ]
+            },
+            {
+              "pc": 4,
+              "explained_variance_ratio": 0.05353556573390961,
+              "cumulative_explained_variance_ratio": 0.29774510860443115,
+              "cosine_with_mean_axis": 0.2252553254365921,
+              "cosine_with_item_axes": {
+                "18": 0.2506794035434723,
+                "3": 0.30052313208580017,
+                "33": 0.19029341638088226,
+                "48": 0.06113262474536896
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.5674170255661011,
+                  "mean_centered_projection": 0.11363282054662704,
+                  "std_centered_projection": 0.4025900661945343
+                },
+                "3": {
+                  "mean_raw_projection": 0.7009738087654114,
+                  "mean_centered_projection": 0.24718955159187317,
+                  "std_centered_projection": 0.6472415924072266
+                },
+                "33": {
+                  "mean_raw_projection": 0.42702388763427734,
+                  "mean_centered_projection": -0.026760363951325417,
+                  "std_centered_projection": 0.7858547568321228
+                },
+                "48": {
+                  "mean_raw_projection": 0.1197221428155899,
+                  "mean_centered_projection": -0.33406203985214233,
+                  "std_centered_projection": 0.5380299091339111
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG03_fridge_leftovers",
+                "BFI2C_ORG07_spice_cabinet_jumble",
+                "BFI2C_ORG05_closet_mixed_seasons",
+                "BFI2C_ORG08_phone_apps_everywhere",
+                "BFI2C_ORG07_closet_folding"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG10_bedside_books_cups",
+                "BFI2C_ORG06_bedside_pile",
+                "BFI2C_ORG08_car_interior",
+                "BFI2C_ORG05_bathroom_counter",
+                "BFI2C_ORG01_kitchen_counter_clutter"
+              ]
+            },
+            {
+              "pc": 5,
+              "explained_variance_ratio": 0.0476812981069088,
+              "cumulative_explained_variance_ratio": 0.34542641043663025,
+              "cosine_with_mean_axis": -0.019034551456570625,
+              "cosine_with_item_axes": {
+                "18": 0.11052494496107101,
+                "3": -0.024329595267772675,
+                "33": -0.013181176036596298,
+                "48": -0.16198419034481049
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.2501750588417053,
+                  "mean_centered_projection": 0.28852081298828125,
+                  "std_centered_projection": 0.5756111145019531
+                },
+                "3": {
+                  "mean_raw_projection": -0.05674900859594345,
+                  "mean_centered_projection": -0.01840333268046379,
+                  "std_centered_projection": 0.6429198384284973
+                },
+                "33": {
+                  "mean_raw_projection": -0.029578929767012596,
+                  "mean_centered_projection": 0.008766782470047474,
+                  "std_centered_projection": 0.7354421615600586
+                },
+                "48": {
+                  "mean_raw_projection": -0.3172299861907959,
+                  "mean_centered_projection": -0.27888423204421997,
+                  "std_centered_projection": 0.21045228838920593
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG01_kitchen_counter_clutter",
+                "BFI2C_ORG01_kitchen_drawers",
+                "BFI2C_ORG07_closet_clothes",
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG05_grocery_list"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG09_digital_photos",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG03_digital_files_chaos",
+                "BFI2C_ORG04_laundry_clean_pile",
+                "BFI2C_ORG10_entryway_shoes"
+              ]
+            },
+            {
+              "pc": 6,
+              "explained_variance_ratio": 0.0440821535885334,
+              "cumulative_explained_variance_ratio": 0.38950857520103455,
+              "cosine_with_mean_axis": -0.11033941060304642,
+              "cosine_with_item_axes": {
+                "18": -0.11570291221141815,
+                "3": -0.13562919199466705,
+                "33": -0.17329612374305725,
+                "48": 0.03983055427670479
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": -0.26189544796943665,
+                  "mean_centered_projection": -0.039613109081983566,
+                  "std_centered_projection": 0.6364983916282654
+                },
+                "3": {
+                  "mean_raw_projection": -0.3163566589355469,
+                  "mean_centered_projection": -0.09407436102628708,
+                  "std_centered_projection": 0.3732421100139618
+                },
+                "33": {
+                  "mean_raw_projection": -0.3888814449310303,
+                  "mean_centered_projection": -0.1665990650653839,
+                  "std_centered_projection": 0.4705701470375061
+                },
+                "48": {
+                  "mean_raw_projection": 0.0780041366815567,
+                  "mean_centered_projection": 0.30028653144836426,
+                  "std_centered_projection": 0.6960506439208984
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG01_kitchen_after_cooking",
+                "BFI2C_ORG06_email_inbox",
+                "BFI2C_ORG02_digital_photos",
+                "BFI2C_ORG01_kitchen_counter_clutter",
+                "BFI2C_ORG06_grocery_bags_unpacking"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG09_todo_tasks",
+                "BFI2C_ORG06_bedside_pile",
+                "BFI2C_ORG05_desk_papers",
+                "BFI2C_ORG05_closet_mixed_seasons",
+                "BFI2C_ORG10_bedside_books_cups"
+              ]
+            },
+            {
+              "pc": 7,
+              "explained_variance_ratio": 0.04281238839030266,
+              "cumulative_explained_variance_ratio": 0.4323209524154663,
+              "cosine_with_mean_axis": -0.026138264685869217,
+              "cosine_with_item_axes": {
+                "18": 0.05726446583867073,
+                "3": 0.04246954247355461,
+                "33": -0.05932532250881195,
+                "48": -0.15634065866470337
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": 0.12961910665035248,
+                  "mean_centered_projection": 0.1822754442691803,
+                  "std_centered_projection": 0.7777151465415955
+                },
+                "3": {
+                  "mean_raw_projection": 0.09906072169542313,
+                  "mean_centered_projection": 0.15171712636947632,
+                  "std_centered_projection": 0.45975789427757263
+                },
+                "33": {
+                  "mean_raw_projection": -0.13312767446041107,
+                  "mean_centered_projection": -0.08047132939100266,
+                  "std_centered_projection": 0.4707728624343872
+                },
+                "48": {
+                  "mean_raw_projection": -0.30617770552635193,
+                  "mean_centered_projection": -0.25352123379707336,
+                  "std_centered_projection": 0.41732415556907654
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG03_morning_routine",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG04_morning_routine_scatter",
+                "BFI2C_ORG01_kitchen_counter_clutter",
+                "BFI2C_ORG07_closet_folding"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG05_bathroom_counter",
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG08_car_interior",
+                "BFI2C_ORG02_digital_photos",
+                "BFI2C_ORG09_digital_photos"
+              ]
+            },
+            {
+              "pc": 8,
+              "explained_variance_ratio": 0.03908040374517441,
+              "cumulative_explained_variance_ratio": 0.4714013934135437,
+              "cosine_with_mean_axis": -0.15379130840301514,
+              "cosine_with_item_axes": {
+                "18": -0.19466963410377502,
+                "3": -0.11085622757673264,
+                "33": -0.09705080837011337,
+                "48": -0.16455994546413422
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": -0.4406379163265228,
+                  "mean_centered_projection": -0.13082031905651093,
+                  "std_centered_projection": 0.38951346278190613
+                },
+                "3": {
+                  "mean_raw_projection": -0.2585734724998474,
+                  "mean_centered_projection": 0.05124411731958389,
+                  "std_centered_projection": 0.6190746426582336
+                },
+                "33": {
+                  "mean_raw_projection": -0.21778476238250732,
+                  "mean_centered_projection": 0.09203291684389114,
+                  "std_centered_projection": 0.6542016267776489
+                },
+                "48": {
+                  "mean_raw_projection": -0.322274386882782,
+                  "mean_centered_projection": -0.012456715106964111,
+                  "std_centered_projection": 0.48057857155799866
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG07_closet_folding",
+                "BFI2C_ORG03_digital_files_chaos",
+                "BFI2C_ORG03_craft_supplies_table",
+                "BFI2C_ORG09_loose_receipts_tax",
+                "BFI2C_ORG04_morning_routine_scatter"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG02_desk_cable_tangle",
+                "BFI2C_ORG03_morning_routine",
+                "BFI2C_ORG02_desk_papers_pile",
+                "BFI2C_ORG07_spice_cabinet_jumble"
+              ]
+            },
+            {
+              "pc": 9,
+              "explained_variance_ratio": 0.03434848412871361,
+              "cumulative_explained_variance_ratio": 0.5057498812675476,
+              "cosine_with_mean_axis": -0.1655154973268509,
+              "cosine_with_item_axes": {
+                "18": -0.13922308385372162,
+                "3": -0.07739325612783432,
+                "33": -0.19278711080551147,
+                "48": -0.20704199373722076
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": -0.3151337802410126,
+                  "mean_centered_projection": 0.018302559852600098,
+                  "std_centered_projection": 0.5019229054450989
+                },
+                "3": {
+                  "mean_raw_projection": -0.18052074313163757,
+                  "mean_centered_projection": 0.1529155969619751,
+                  "std_centered_projection": 0.6015058159828186
+                },
+                "33": {
+                  "mean_raw_projection": -0.43261972069740295,
+                  "mean_centered_projection": -0.09918337315320969,
+                  "std_centered_projection": 0.371735155582428
+                },
+                "48": {
+                  "mean_raw_projection": -0.40547117590904236,
+                  "mean_centered_projection": -0.07203488051891327,
+                  "std_centered_projection": 0.5325524806976318
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG09_loose_receipts_tax",
+                "BFI2C_ORG08_bookshelf",
+                "BFI2C_ORG04_morning_routine_scatter",
+                "BFI2C_ORG07_shoes_by_door",
+                "BFI2C_ORG02_desk_papers_pile"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG10_bedside_books_cups",
+                "BFI2C_ORG07_closet_folding",
+                "BFI2C_ORG10_computer_desktop",
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG03_fridge_leftovers"
+              ]
+            },
+            {
+              "pc": 10,
+              "explained_variance_ratio": 0.03332022204995155,
+              "cumulative_explained_variance_ratio": 0.5390701293945312,
+              "cosine_with_mean_axis": -0.1941131204366684,
+              "cosine_with_item_axes": {
+                "18": -0.2380737066268921,
+                "3": -0.0945817232131958,
+                "33": -0.18327131867408752,
+                "48": -0.20089145004749298
+              },
+              "by_item_projection": {
+                "18": {
+                  "mean_raw_projection": -0.5388838052749634,
+                  "mean_centered_projection": -0.14783668518066406,
+                  "std_centered_projection": 0.4228397607803345
+                },
+                "3": {
+                  "mean_raw_projection": -0.2206130027770996,
+                  "mean_centered_projection": 0.17043426632881165,
+                  "std_centered_projection": 0.35943540930747986
+                },
+                "33": {
+                  "mean_raw_projection": -0.4112659990787506,
+                  "mean_centered_projection": -0.02021881379187107,
+                  "std_centered_projection": 0.3921043276786804
+                },
+                "48": {
+                  "mean_raw_projection": -0.39342597126960754,
+                  "mean_centered_projection": -0.0023787557147443295,
+                  "std_centered_projection": 0.727371335029602
+                }
+              },
+              "top_positive_projection_ids": [
+                "BFI2C_ORG05_bathroom_counter",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG08_phone_apps_everywhere",
+                "BFI2C_ORG10_bedside_books_cups",
+                "BFI2C_ORG03_craft_supplies_table"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG02_desk_papers_pile",
+                "BFI2C_ORG05_desk_papers",
+                "BFI2C_ORG08_car_interior",
+                "BFI2C_ORG10_computer_desktop",
+                "BFI2C_ORG08_kids_toys_evening"
+              ]
+            }
+          ]
+        },
+        "uncentered_pca": {
+          "mean_axis_norm": 2.0145325660705566,
+          "pc1_cosine_with_mean_axis_oriented": 0.9968684911727905,
+          "component_info": [
+            {
+              "pc": 1,
+              "energy_ratio": 0.36431002616882324,
+              "cumulative_energy_ratio": 0.36431002616882324,
+              "cosine_with_mean_axis": 0.9968684911727905,
+              "projection_mean": 2.0082240104675293,
+              "projection_std": 0.5422742366790771,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG01_messy_desk_advice",
+                "BFI2C_ORG08_phone_apps_everywhere",
+                "BFI2C_ORG03_fridge_leftovers",
+                "BFI2C_ORG02_desk_papers_pile",
+                "BFI2C_ORG05_desk_papers"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG03_craft_supplies_table",
+                "BFI2C_ORG06_grocery_bags_unpacking",
+                "BFI2C_ORG09_loose_receipts_tax",
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG08_bookshelf"
+              ]
+            },
+            {
+              "pc": 2,
+              "energy_ratio": 0.05595234036445618,
+              "cumulative_energy_ratio": 0.4202623665332794,
+              "cosine_with_mean_axis": -0.037597332149744034,
+              "projection_mean": -0.07574107497930527,
+              "projection_std": 0.8116815686225891,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG01_messy_desk_advice",
+                "BFI2C_ORG01_kitchen_counter_clutter",
+                "BFI2C_ORG02_desk_cable_tangle",
+                "BFI2C_ORG01_kitchen_drawers",
+                "BFI2C_ORG04_bathroom_products"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG04_grocery_shopping",
+                "BFI2C_ORG05_grocery_list",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG09_digital_photos"
+              ]
+            },
+            {
+              "pc": 3,
+              "energy_ratio": 0.051411811262369156,
+              "cumulative_energy_ratio": 0.4716741740703583,
+              "cosine_with_mean_axis": 0.04737773537635803,
+              "projection_mean": 0.0954439789056778,
+              "projection_std": 0.7755803465843201,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG03_fridge_leftovers",
+                "BFI2C_ORG09_workbench_tools",
+                "BFI2C_ORG07_spice_cabinet_jumble",
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG01_kitchen_after_cooking"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG06_email_inbox_zero",
+                "BFI2C_ORG06_email_inbox",
+                "BFI2C_ORG08_phone_apps_everywhere",
+                "BFI2C_ORG05_desk_papers",
+                "BFI2C_ORG03_digital_files_chaos"
+              ]
+            },
+            {
+              "pc": 4,
+              "energy_ratio": 0.04047764092683792,
+              "cumulative_energy_ratio": 0.512151837348938,
+              "cosine_with_mean_axis": -0.02156253159046173,
+              "projection_mean": -0.043438415974378586,
+              "projection_std": 0.692010760307312,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG03_fridge_leftovers",
+                "BFI2C_ORG09_loose_receipts_tax",
+                "BFI2C_ORG01_messy_desk_advice",
+                "BFI2C_ORG01_kitchen_counter_clutter"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG07_closet_clothes",
+                "BFI2C_ORG08_bookshelf",
+                "BFI2C_ORG09_todo_tasks",
+                "BFI2C_ORG06_grocery_bags_unpacking",
+                "BFI2C_ORG03_morning_routine"
+              ]
+            },
+            {
+              "pc": 5,
+              "energy_ratio": 0.03285549581050873,
+              "cumulative_energy_ratio": 0.5450073480606079,
+              "cosine_with_mean_axis": -0.026373811066150665,
+              "projection_mean": -0.05313090234994888,
+              "projection_std": 0.6224244832992554,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG03_fridge_leftovers",
+                "BFI2C_ORG08_phone_apps_everywhere",
+                "BFI2C_ORG05_closet_mixed_seasons",
+                "BFI2C_ORG07_spice_cabinet_jumble",
+                "BFI2C_ORG07_closet_folding"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG10_bedside_books_cups",
+                "BFI2C_ORG06_bedside_pile",
+                "BFI2C_ORG08_car_interior",
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG09_todo_tasks"
+              ]
+            },
+            {
+              "pc": 6,
+              "energy_ratio": 0.03136306628584862,
+              "cumulative_energy_ratio": 0.5763704180717468,
+              "cosine_with_mean_axis": 0.003978826571255922,
+              "projection_mean": 0.008015483617782593,
+              "projection_std": 0.6102825403213501,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG01_kitchen_counter_clutter",
+                "BFI2C_ORG02_grocery_no_list",
+                "BFI2C_ORG01_kitchen_drawers",
+                "BFI2C_ORG05_grocery_list",
+                "BFI2C_ORG07_closet_clothes"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG09_digital_photos",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG03_digital_files_chaos",
+                "BFI2C_ORG07_closet_folding",
+                "BFI2C_ORG10_entryway_shoes"
+              ]
+            },
+            {
+              "pc": 7,
+              "energy_ratio": 0.028565768152475357,
+              "cumulative_energy_ratio": 0.6049361824989319,
+              "cosine_with_mean_axis": 0.01098481472581625,
+              "projection_mean": 0.022129276767373085,
+              "projection_std": 0.5820609927177429,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG01_kitchen_after_cooking",
+                "BFI2C_ORG02_digital_photos",
+                "BFI2C_ORG08_kids_toys_evening",
+                "BFI2C_ORG06_email_inbox",
+                "BFI2C_ORG06_grocery_bags_unpacking"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG09_todo_tasks",
+                "BFI2C_ORG06_bedside_pile",
+                "BFI2C_ORG04_morning_routine_scatter",
+                "BFI2C_ORG05_closet_mixed_seasons",
+                "BFI2C_ORG10_entryway_shoes"
+              ]
+            },
+            {
+              "pc": 8,
+              "energy_ratio": 0.028137056156992912,
+              "cumulative_energy_ratio": 0.6330732107162476,
+              "cosine_with_mean_axis": 0.005051643121987581,
+              "projection_mean": 0.010176670737564564,
+              "projection_std": 0.5780044198036194,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG03_morning_routine",
+                "BFI2C_ORG01_kitchen_counter_clutter",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG04_morning_routine_scatter",
+                "BFI2C_ORG01_kitchen_after_cooking"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG05_bathroom_counter",
+                "BFI2C_ORG08_bookshelf",
+                "BFI2C_ORG06_bedside_pile",
+                "BFI2C_ORG09_digital_photos",
+                "BFI2C_ORG05_closet_mixed_seasons"
+              ]
+            },
+            {
+              "pc": 9,
+              "energy_ratio": 0.025054510682821274,
+              "cumulative_energy_ratio": 0.6581277251243591,
+              "cosine_with_mean_axis": 0.011554544791579247,
+              "projection_mean": 0.023276999592781067,
+              "projection_std": 0.5450124144554138,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG07_closet_folding",
+                "BFI2C_ORG03_digital_files_chaos",
+                "BFI2C_ORG10_computer_desktop",
+                "BFI2C_ORG10_bedside_books_cups",
+                "BFI2C_ORG08_kids_toys_evening"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG02_desk_cable_tangle",
+                "BFI2C_ORG08_bookshelf",
+                "BFI2C_ORG07_spice_cabinet_jumble",
+                "BFI2C_ORG05_bathroom_counter"
+              ]
+            },
+            {
+              "pc": 10,
+              "energy_ratio": 0.02235088311135769,
+              "cumulative_energy_ratio": 0.6804786324501038,
+              "cosine_with_mean_axis": 0.0036995445843786,
+              "projection_mean": 0.00745284091681242,
+              "projection_std": 0.5151824951171875,
+              "top_positive_projection_ids": [
+                "BFI2C_ORG02_desk_papers_pile",
+                "BFI2C_ORG04_morning_routine_scatter",
+                "BFI2C_ORG09_loose_receipts_tax",
+                "BFI2C_ORG08_bookshelf",
+                "BFI2C_ORG07_shoes_by_door"
+              ],
+              "top_negative_projection_ids": [
+                "BFI2C_ORG10_bedside_books_cups",
+                "BFI2C_ORG10_meal_planning_wing_it",
+                "BFI2C_ORG05_bathroom_counter",
+                "BFI2C_ORG08_phone_apps_everywhere",
+                "BFI2C_ORG07_spice_cabinet_jumble"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

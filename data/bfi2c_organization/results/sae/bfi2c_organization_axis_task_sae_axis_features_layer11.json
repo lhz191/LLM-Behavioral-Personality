@@ -1,0 +1,854 @@
+{
+  "config": {
+    "config_id": "bfi2c_organization",
+    "scenario_file": "/mnt/shared-storage-user/liuhaoze/llm_behavior_test/LLM-Behavioral-Personality/data/bfi2c_organization/scenarios/axis/axis_task.json",
+    "layer": 11,
+    "system_prompt": "You are an assistant. Start your response with a thought, then give your answer.",
+    "sae_path": "/mnt/shared-storage-user/liuhaoze/sae_emergent_misalignment/andyrdt_dictionary_learning/pretrained_saes/resid_post_layer_11/trainer_1",
+    "model_path": "/mnt/shared-storage-user/liuhaoze/sae_emergent_misalignment/andyrdt_dictionary_learning/models/Llama-3.1-8B-Instruct",
+    "threshold": 0.5,
+    "fields": {
+      "thought": [
+        "risky_thought",
+        "safe_thought"
+      ],
+      "response": [
+        "risky",
+        "safe"
+      ]
+    },
+    "sign": "positive = first field in FIELD_PRESETS stronger; negative = second field stronger"
+  },
+  "comparison": {
+    "mean_sae_axis_cosine": 0.03419765830039978,
+    "thought_shared_count": 3,
+    "response_shared_count": 2,
+    "shared_feature_overlap": 0,
+    "shared_feature_jaccard": 0.0,
+    "overlap_features": []
+  },
+  "axes": {
+    "thought": {
+      "n_scenarios": 40,
+      "n_features": 131072,
+      "threshold_frac": 0.5,
+      "threshold_count": 20,
+      "mean_sae_axis_norm": 1.118385672569275,
+      "n_unique_features": 25,
+      "n_shared_features": 3,
+      "shared_features": [
+        {
+          "feature": 96734,
+          "freq": 40,
+          "n": 40,
+          "mean_diff": 0.009571637958288193,
+          "abs_mean_diff": 0.009571637958288193,
+          "direction": "risky_up"
+        },
+        {
+          "feature": 93038,
+          "freq": 31,
+          "n": 40,
+          "mean_diff": 0.01965522189294138,
+          "abs_mean_diff": 0.01965522189294138,
+          "direction": "risky_up"
+        },
+        {
+          "feature": 33587,
+          "freq": 28,
+          "n": 40,
+          "mean_diff": 0.043634639254638126,
+          "abs_mean_diff": 0.043634639254638126,
+          "direction": "risky_up"
+        }
+      ]
+    },
+    "response": {
+      "n_scenarios": 40,
+      "n_features": 131072,
+      "threshold_frac": 0.5,
+      "threshold_count": 20,
+      "mean_sae_axis_norm": 0.8757580518722534,
+      "n_unique_features": 21,
+      "n_shared_features": 2,
+      "shared_features": [
+        {
+          "feature": 123331,
+          "freq": 40,
+          "n": 40,
+          "mean_diff": -0.08680191934108734,
+          "abs_mean_diff": 0.08680191934108734,
+          "direction": "safe_up"
+        },
+        {
+          "feature": 40018,
+          "freq": 21,
+          "n": 40,
+          "mean_diff": 0.16272127202578954,
+          "abs_mean_diff": 0.16272127202578954,
+          "direction": "risky_up"
+        }
+      ]
+    }
+  },
+  "per_scenario": {
+    "thought": [
+      {
+        "scenario_id": "ORG_task_01_vendor_comparison",
+        "n_diff_features": 3,
+        "features": {
+          "93038": -0.44395896792411804,
+          "33587": -0.15708617866039276,
+          "96734": -0.005818486213684082
+        }
+      },
+      {
+        "scenario_id": "ORG_task_02_incident_review",
+        "n_diff_features": 3,
+        "features": {
+          "93038": 0.3775407373905182,
+          "33587": 0.22495050728321075,
+          "96734": -0.044329047203063965
+        }
+      },
+      {
+        "scenario_id": "ORG_task_03_feedback_triage",
+        "n_diff_features": 4,
+        "features": {
+          "93038": 0.444894939661026,
+          "33587": 0.2647556662559509,
+          "24475": -0.24157655239105225,
+          "96734": 0.04917633533477783
+        }
+      },
+      {
+        "scenario_id": "ORG_task_04_migration_dependencies",
+        "n_diff_features": 6,
+        "features": {
+          "28459": -0.3961535692214966,
+          "96734": 0.3317521810531616,
+          "130929": -0.2511494755744934,
+          "436": 0.2054157853126526,
+          "33587": 0.036318302154541016,
+          "93038": 0.032311081886291504
+        }
+      },
+      {
+        "scenario_id": "ORG_task_05_messy_meeting_notes",
+        "n_diff_features": 3,
+        "features": {
+          "93038": -0.2756962180137634,
+          "24475": 0.21907556056976318,
+          "96734": 0.0033589601516723633
+        }
+      },
+      {
+        "scenario_id": "ORG_task_06_vendor_comparison",
+        "n_diff_features": 3,
+        "features": {
+          "93038": -0.5042380690574646,
+          "96734": -0.07546210289001465,
+          "33587": -0.05326223373413086
+        }
+      },
+      {
+        "scenario_id": "ORG_task_07_incident_review",
+        "n_diff_features": 3,
+        "features": {
+          "11469": 0.21937957406044006,
+          "35829": 0.20368126034736633,
+          "96734": -0.011798560619354248
+        }
+      },
+      {
+        "scenario_id": "ORG_task_08_messy_meeting_notes",
+        "n_diff_features": 3,
+        "features": {
+          "24475": -0.23847240209579468,
+          "96734": 0.09339636564254761,
+          "35829": 0.0007933378219604492
+        }
+      },
+      {
+        "scenario_id": "ORG_task_09_debug_log_triage",
+        "n_diff_features": 4,
+        "features": {
+          "26715": -0.24681788682937622,
+          "96734": -0.08361434936523438,
+          "33587": -0.038249239325523376,
+          "93038": 0.022205740213394165
+        }
+      },
+      {
+        "scenario_id": "ORG_task_10_move_checklist",
+        "n_diff_features": 3,
+        "features": {
+          "93038": 0.47099870443344116,
+          "96734": 0.16702210903167725,
+          "33587": 0.07125715911388397
+        }
+      },
+      {
+        "scenario_id": "ORG_task_11_meeting_notes_triage",
+        "n_diff_features": 5,
+        "features": {
+          "93038": -0.2831108570098877,
+          "54789": -0.23603761196136475,
+          "24475": -0.22427356243133545,
+          "96734": -0.08026409149169922,
+          "72532": -0.003206104040145874
+        }
+      },
+      {
+        "scenario_id": "ORG_task_12_error_log_debugging",
+        "n_diff_features": 5,
+        "features": {
+          "93038": 0.4331449270248413,
+          "33587": 0.2499123364686966,
+          "24475": -0.22367319464683533,
+          "96734": 0.13834142684936523,
+          "11469": -0.005069375038146973
+        }
+      },
+      {
+        "scenario_id": "ORG_task_13_apartment_comparison",
+        "n_diff_features": 4,
+        "features": {
+          "96734": 0.32225501537323,
+          "24475": -0.2758779227733612,
+          "93038": -0.16811132431030273,
+          "33587": -0.09743797779083252
+        }
+      },
+      {
+        "scenario_id": "ORG_task_14_incident_review",
+        "n_diff_features": 3,
+        "features": {
+          "93038": 0.21058721840381622,
+          "96734": 0.10867011547088623,
+          "33587": -0.05211888253688812
+        }
+      },
+      {
+        "scenario_id": "ORG_task_15_project_scope_from_brainstorm",
+        "n_diff_features": 5,
+        "features": {
+          "123331": 0.4024631083011627,
+          "96734": -0.3041977286338806,
+          "54789": -0.23832356929779053,
+          "35829": -0.2051752805709839,
+          "33587": 0.024782419204711914
+        }
+      },
+      {
+        "scenario_id": "ORG_task_16_migration_dependency_map",
+        "n_diff_features": 3,
+        "features": {
+          "96734": -0.41535964608192444,
+          "33587": -0.27756887674331665,
+          "436": 0.20942586660385132
+        }
+      },
+      {
+        "scenario_id": "ORG_task_17_feedback_triage",
+        "n_diff_features": 4,
+        "features": {
+          "96734": -0.4179270267486572,
+          "11469": -0.27320757508277893,
+          "93038": 0.2581515908241272,
+          "35829": -0.21197667717933655
+        }
+      },
+      {
+        "scenario_id": "ORG_task_18_debug_error_logs",
+        "n_diff_features": 4,
+        "features": {
+          "33587": 0.24238134920597076,
+          "114588": -0.22181978821754456,
+          "96734": 0.05181664228439331,
+          "11469": -0.046607136726379395
+        }
+      },
+      {
+        "scenario_id": "ORG_task_19_vendor_comparison",
+        "n_diff_features": 4,
+        "features": {
+          "96734": 0.20612692832946777,
+          "33587": 0.02177855372428894,
+          "11469": 0.004287213087081909,
+          "93038": 0.002691134810447693
+        }
+      },
+      {
+        "scenario_id": "ORG_task_20_incident_review",
+        "n_diff_features": 1,
+        "features": {
+          "96734": -0.10310566425323486
+        }
+      },
+      {
+        "scenario_id": "ORG_task_21_migration_dependency_map",
+        "n_diff_features": 3,
+        "features": {
+          "93038": -0.5143832564353943,
+          "96734": 0.12461638450622559,
+          "33587": -0.1244831532239914
+        }
+      },
+      {
+        "scenario_id": "ORG_task_22_feedback_synthesis",
+        "n_diff_features": 5,
+        "features": {
+          "93038": -0.502004861831665,
+          "12537": -0.29747655987739563,
+          "118335": 0.2339264303445816,
+          "96734": 0.22129905223846436,
+          "35829": -0.2089826613664627
+        }
+      },
+      {
+        "scenario_id": "ORG_task_23_incident_review",
+        "n_diff_features": 4,
+        "features": {
+          "86564": 0.27192819118499756,
+          "33587": -0.22731970250606537,
+          "24475": -0.2178668975830078,
+          "96734": 0.011456310749053955
+        }
+      },
+      {
+        "scenario_id": "ORG_task_24_vendor_comparison",
+        "n_diff_features": 5,
+        "features": {
+          "11469": -0.2078174650669098,
+          "24475": 0.20602774620056152,
+          "96734": 0.1278783082962036,
+          "93038": -0.10421943664550781,
+          "33587": -0.08058851957321167
+        }
+      },
+      {
+        "scenario_id": "ORG_task_25_meeting_notes_triage",
+        "n_diff_features": 3,
+        "features": {
+          "54789": -0.22009360790252686,
+          "96734": 0.04870182275772095,
+          "24475": -0.02638384699821472
+        }
+      },
+      {
+        "scenario_id": "ORG_task_26_migration_dependency_map",
+        "n_diff_features": 4,
+        "features": {
+          "28459": -0.2785295248031616,
+          "96734": 0.1392984390258789,
+          "33587": 0.09795783460140228,
+          "93038": -0.05463728308677673
+        }
+      },
+      {
+        "scenario_id": "ORG_task_27_feedback_session_notes",
+        "n_diff_features": 5,
+        "features": {
+          "93038": 0.5838279724121094,
+          "35829": 0.2731805741786957,
+          "24475": -0.2342657744884491,
+          "33587": 0.22163589298725128,
+          "96734": -0.09011709690093994
+        }
+      },
+      {
+        "scenario_id": "ORG_task_28_incident_review_logs",
+        "n_diff_features": 2,
+        "features": {
+          "96734": -0.274921178817749,
+          "93038": -0.10032123327255249
+        }
+      },
+      {
+        "scenario_id": "ORG_task_29_vendor_comparison",
+        "n_diff_features": 6,
+        "features": {
+          "93038": -0.2960083782672882,
+          "11469": 0.22578033804893494,
+          "35829": -0.21050579845905304,
+          "110900": 0.21009671688079834,
+          "96734": 0.08456248044967651,
+          "33587": -0.06196598708629608
+        }
+      },
+      {
+        "scenario_id": "ORG_task_30_messy_meeting_notes_triage",
+        "n_diff_features": 3,
+        "features": {
+          "54789": -0.3457617163658142,
+          "35829": -0.2134498953819275,
+          "96734": -0.18371492624282837
+        }
+      },
+      {
+        "scenario_id": "ORG_task_31_vendor_comparison",
+        "n_diff_features": 4,
+        "features": {
+          "128873": 0.2770940661430359,
+          "33587": -0.15131713449954987,
+          "96734": -0.07948416471481323,
+          "93038": 0.040739744901657104
+        }
+      },
+      {
+        "scenario_id": "ORG_task_32_incident_review",
+        "n_diff_features": 3,
+        "features": {
+          "33587": 0.36797332763671875,
+          "93038": 0.09973695874214172,
+          "96734": -0.08138668537139893
+        }
+      },
+      {
+        "scenario_id": "ORG_task_33_feedback_draft",
+        "n_diff_features": 3,
+        "features": {
+          "93038": 0.4457559883594513,
+          "33587": 0.223984494805336,
+          "96734": 0.13425254821777344
+        }
+      },
+      {
+        "scenario_id": "ORG_task_34_migration_checklist",
+        "n_diff_features": 6,
+        "features": {
+          "62814": -0.3102209270000458,
+          "93038": 0.2718246579170227,
+          "54789": -0.2664656639099121,
+          "33587": 0.23402245342731476,
+          "20316": -0.20789295434951782,
+          "96734": -0.0030698776245117188
+        }
+      },
+      {
+        "scenario_id": "ORG_task_35_bug_triage",
+        "n_diff_features": 5,
+        "features": {
+          "35829": -0.22232285141944885,
+          "33587": 0.2078777700662613,
+          "112063": 0.20451423525810242,
+          "93038": 0.002711951732635498,
+          "96734": -0.002566099166870117
+        }
+      },
+      {
+        "scenario_id": "ORG_task_36_sprint_retro_notes",
+        "n_diff_features": 4,
+        "features": {
+          "93038": 0.22415825724601746,
+          "24475": -0.2146400809288025,
+          "35829": 0.012440204620361328,
+          "96734": 0.01077413558959961
+        }
+      },
+      {
+        "scenario_id": "ORG_task_37_server_incident_triage",
+        "n_diff_features": 5,
+        "features": {
+          "33960": 0.24048638343811035,
+          "96734": 0.23130881786346436,
+          "93038": -0.2155705690383911,
+          "117707": 0.20875439047813416,
+          "33587": 0.0013512372970581055
+        }
+      },
+      {
+        "scenario_id": "ORG_task_38_vendor_comparison",
+        "n_diff_features": 3,
+        "features": {
+          "33587": -0.16487465798854828,
+          "96734": 0.03753244876861572,
+          "93038": 0.021516621112823486
+        }
+      },
+      {
+        "scenario_id": "ORG_task_39_meeting_notes_action_items",
+        "n_diff_features": 5,
+        "features": {
+          "93038": 0.44291889667510986,
+          "54789": -0.24139642715454102,
+          "100878": -0.21347296237945557,
+          "96734": 0.08871519565582275,
+          "35829": -0.02799662947654724
+        }
+      },
+      {
+        "scenario_id": "ORG_task_40_debug_log_analysis",
+        "n_diff_features": 4,
+        "features": {
+          "93038": -0.3141447901725769,
+          "33587": 0.21710313856601715,
+          "96734": -0.09230977296829224,
+          "11469": -0.013774275779724121
+        }
+      }
+    ],
+    "response": [
+      {
+        "scenario_id": "ORG_task_01_vendor_comparison",
+        "n_diff_features": 1,
+        "features": {
+          "123331": 0.014353573322296143
+        }
+      },
+      {
+        "scenario_id": "ORG_task_02_incident_review",
+        "n_diff_features": 5,
+        "features": {
+          "60000": -0.2324444055557251,
+          "40018": 0.21765005588531494,
+          "4633": -0.030916482210159302,
+          "123331": 0.015132665634155273,
+          "82574": 0.011209189891815186
+        }
+      },
+      {
+        "scenario_id": "ORG_task_03_feedback_triage",
+        "n_diff_features": 1,
+        "features": {
+          "123331": 0.12690222263336182
+        }
+      },
+      {
+        "scenario_id": "ORG_task_04_migration_dependencies",
+        "n_diff_features": 3,
+        "features": {
+          "123331": -0.2783886790275574,
+          "34566": 0.2152087539434433,
+          "28459": -0.21198666095733643
+        }
+      },
+      {
+        "scenario_id": "ORG_task_05_messy_meeting_notes",
+        "n_diff_features": 4,
+        "features": {
+          "72532": 0.2505417466163635,
+          "40018": 0.219539612531662,
+          "4633": 0.0893852710723877,
+          "123331": -0.061580538749694824
+        }
+      },
+      {
+        "scenario_id": "ORG_task_06_vendor_comparison",
+        "n_diff_features": 2,
+        "features": {
+          "91372": 0.24968980252742767,
+          "123331": -0.20005780458450317
+        }
+      },
+      {
+        "scenario_id": "ORG_task_07_incident_review",
+        "n_diff_features": 4,
+        "features": {
+          "4633": 0.2566240727901459,
+          "12317": -0.2323538064956665,
+          "123331": -0.03194165229797363,
+          "40018": 0.007041066884994507
+        }
+      },
+      {
+        "scenario_id": "ORG_task_08_messy_meeting_notes",
+        "n_diff_features": 5,
+        "features": {
+          "40018": 0.29010292887687683,
+          "123331": -0.26827025413513184,
+          "60000": -0.20508337020874023,
+          "4633": 0.06318730115890503,
+          "12317": -0.01366184651851654
+        }
+      },
+      {
+        "scenario_id": "ORG_task_09_debug_log_triage",
+        "n_diff_features": 2,
+        "features": {
+          "123331": -0.41193389892578125,
+          "40018": 0.24560293555259705
+        }
+      },
+      {
+        "scenario_id": "ORG_task_10_move_checklist",
+        "n_diff_features": 2,
+        "features": {
+          "123331": -0.13235247135162354,
+          "61020": -0.00923854112625122
+        }
+      },
+      {
+        "scenario_id": "ORG_task_11_meeting_notes_triage",
+        "n_diff_features": 6,
+        "features": {
+          "40018": 0.37161365151405334,
+          "116636": -0.2716885805130005,
+          "2741": -0.2280702292919159,
+          "60000": -0.21087375283241272,
+          "123331": -0.1782606840133667,
+          "25822": 0.026094257831573486
+        }
+      },
+      {
+        "scenario_id": "ORG_task_12_error_log_debugging",
+        "n_diff_features": 2,
+        "features": {
+          "40018": 0.2445226013660431,
+          "123331": -0.06313633918762207
+        }
+      },
+      {
+        "scenario_id": "ORG_task_13_apartment_comparison",
+        "n_diff_features": 1,
+        "features": {
+          "123331": -0.0033742785453796387
+        }
+      },
+      {
+        "scenario_id": "ORG_task_14_incident_review",
+        "n_diff_features": 4,
+        "features": {
+          "12317": -0.23168712854385376,
+          "123331": 0.07474720478057861,
+          "82574": 0.052144765853881836,
+          "40018": 0.03704136610031128
+        }
+      },
+      {
+        "scenario_id": "ORG_task_15_project_scope_from_brainstorm",
+        "n_diff_features": 2,
+        "features": {
+          "123331": -0.4271090626716614,
+          "60000": -0.21182891726493835
+        }
+      },
+      {
+        "scenario_id": "ORG_task_16_migration_dependency_map",
+        "n_diff_features": 6,
+        "features": {
+          "91372": 0.24906788766384125,
+          "60000": -0.24813717603683472,
+          "123331": -0.23080366849899292,
+          "40018": 0.2147439420223236,
+          "16227": 0.20735962688922882,
+          "40688": 0.06585168838500977
+        }
+      },
+      {
+        "scenario_id": "ORG_task_17_feedback_triage",
+        "n_diff_features": 2,
+        "features": {
+          "40018": 0.21722987294197083,
+          "123331": -0.008857131004333496
+        }
+      },
+      {
+        "scenario_id": "ORG_task_18_debug_error_logs",
+        "n_diff_features": 2,
+        "features": {
+          "37084": -0.213216170668602,
+          "123331": 0.01641637086868286
+        }
+      },
+      {
+        "scenario_id": "ORG_task_19_vendor_comparison",
+        "n_diff_features": 3,
+        "features": {
+          "91372": 0.25840258598327637,
+          "12317": 0.2183910310268402,
+          "123331": -0.04400002956390381
+        }
+      },
+      {
+        "scenario_id": "ORG_task_20_incident_review",
+        "n_diff_features": 3,
+        "features": {
+          "12317": -0.23957717418670654,
+          "40018": 0.1608377993106842,
+          "123331": 0.09609520435333252
+        }
+      },
+      {
+        "scenario_id": "ORG_task_21_migration_dependency_map",
+        "n_diff_features": 1,
+        "features": {
+          "123331": -0.2199164628982544
+        }
+      },
+      {
+        "scenario_id": "ORG_task_22_feedback_synthesis",
+        "n_diff_features": 5,
+        "features": {
+          "51658": 0.2946554720401764,
+          "38340": 0.2365759015083313,
+          "72532": 0.20776064693927765,
+          "123331": -0.172559916973114,
+          "40018": 0.054759204387664795
+        }
+      },
+      {
+        "scenario_id": "ORG_task_23_incident_review",
+        "n_diff_features": 4,
+        "features": {
+          "40018": 0.31388434767723083,
+          "4633": 0.30345842242240906,
+          "82574": 0.23166489601135254,
+          "123331": 0.19356322288513184
+        }
+      },
+      {
+        "scenario_id": "ORG_task_24_vendor_comparison",
+        "n_diff_features": 3,
+        "features": {
+          "96734": -0.2595897316932678,
+          "91372": 0.23050065338611603,
+          "123331": -0.02575826644897461
+        }
+      },
+      {
+        "scenario_id": "ORG_task_25_meeting_notes_triage",
+        "n_diff_features": 3,
+        "features": {
+          "123331": 0.4831494688987732,
+          "72532": 0.29086825251579285,
+          "4633": 0.21178802847862244
+        }
+      },
+      {
+        "scenario_id": "ORG_task_26_migration_dependency_map",
+        "n_diff_features": 3,
+        "features": {
+          "123331": -0.34366583824157715,
+          "34566": 0.24965886771678925,
+          "91372": 0.20722900331020355
+        }
+      },
+      {
+        "scenario_id": "ORG_task_27_feedback_session_notes",
+        "n_diff_features": 2,
+        "features": {
+          "123331": -0.2741267681121826,
+          "40018": 0.07543236017227173
+        }
+      },
+      {
+        "scenario_id": "ORG_task_28_incident_review_logs",
+        "n_diff_features": 4,
+        "features": {
+          "60000": -0.20502936840057373,
+          "40018": 0.19286218285560608,
+          "123331": -0.06714880466461182,
+          "12317": -0.04140228033065796
+        }
+      },
+      {
+        "scenario_id": "ORG_task_29_vendor_comparison",
+        "n_diff_features": 2,
+        "features": {
+          "91372": 0.29732370376586914,
+          "123331": -0.1201823353767395
+        }
+      },
+      {
+        "scenario_id": "ORG_task_30_messy_meeting_notes_triage",
+        "n_diff_features": 3,
+        "features": {
+          "25822": 0.22308093309402466,
+          "12317": 0.22247016429901123,
+          "123331": -0.05866628885269165
+        }
+      },
+      {
+        "scenario_id": "ORG_task_31_vendor_comparison",
+        "n_diff_features": 2,
+        "features": {
+          "4633": 0.3438844680786133,
+          "123331": -0.11525452136993408
+        }
+      },
+      {
+        "scenario_id": "ORG_task_32_incident_review",
+        "n_diff_features": 3,
+        "features": {
+          "82574": 0.204501211643219,
+          "40018": 0.06095874309539795,
+          "123331": 0.01986527442932129
+        }
+      },
+      {
+        "scenario_id": "ORG_task_33_feedback_draft",
+        "n_diff_features": 3,
+        "features": {
+          "123331": -0.15015053749084473,
+          "38340": 0.09172308444976807,
+          "40018": -0.003612130880355835
+        }
+      },
+      {
+        "scenario_id": "ORG_task_34_migration_checklist",
+        "n_diff_features": 3,
+        "features": {
+          "61020": 0.25775590538978577,
+          "12317": 0.21311131119728088,
+          "123331": -0.14017117023468018
+        }
+      },
+      {
+        "scenario_id": "ORG_task_35_bug_triage",
+        "n_diff_features": 2,
+        "features": {
+          "40018": 0.23390331864356995,
+          "123331": -0.042054831981658936
+        }
+      },
+      {
+        "scenario_id": "ORG_task_36_sprint_retro_notes",
+        "n_diff_features": 5,
+        "features": {
+          "4633": 0.2632952630519867,
+          "4172": 0.24578875303268433,
+          "123331": -0.08920550346374512,
+          "40018": 0.045760154724121094,
+          "72532": -0.028990954160690308
+        }
+      },
+      {
+        "scenario_id": "ORG_task_37_server_incident_triage",
+        "n_diff_features": 3,
+        "features": {
+          "40018": 0.2271195352077484,
+          "60000": -0.20352762937545776,
+          "123331": -0.18037450313568115
+        }
+      },
+      {
+        "scenario_id": "ORG_task_38_vendor_comparison",
+        "n_diff_features": 2,
+        "features": {
+          "91372": 0.27059316635131836,
+          "123331": -0.011091828346252441
+        }
+      },
+      {
+        "scenario_id": "ORG_task_39_meeting_notes_action_items",
+        "n_diff_features": 4,
+        "features": {
+          "2741": 0.3232685327529907,
+          "72532": 0.2128024846315384,
+          "4633": 0.09938153624534607,
+          "123331": 0.06480348110198975
+        }
+      },
+      {
+        "scenario_id": "ORG_task_40_debug_log_analysis",
+        "n_diff_features": 2,
+        "features": {
+          "123331": -0.22671139240264893,
+          "40018": -0.00984683632850647
+        }
+      }
+    ]
+  }
+}

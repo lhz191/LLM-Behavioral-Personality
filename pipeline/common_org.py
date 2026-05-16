@@ -4,31 +4,35 @@
 from __future__ import annotations
 
 import itertools
+import importlib
 import json
+import os
 import random
 import re
 import sys
 from pathlib import Path
+from types import ModuleType
 
 import numpy as np
 
 
-ROOT = Path("/mnt/shared-storage-user/liuhaoze/llm_behavior_test")
-ORG_DIR = ROOT / "conscientiousness/bfi2c/bfi2c_organization"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+WORKSPACE_ROOT = Path(os.environ.get("LLM_BEHAVIOR_WORKSPACE", REPO_ROOT.parent))
+ROOT = REPO_ROOT
+ORG_DIR = REPO_ROOT / "data/bfi2c_organization"
+SCENARIO_DIR = ORG_DIR / "scenarios"
+AXIS_SCENARIO_DIR = SCENARIO_DIR / "axis"
+TEST_SCENARIO_DIR = SCENARIO_DIR / "test"
 AXES_DIR = ORG_DIR / "results/axes"
 STEERING_DIR = ORG_DIR / "results/steering"
 
-MODELGEN_10X = ORG_DIR / "scenarios_factor_thought_modelgen_10x_v2.json"
-OLD_THOUGHT = ORG_DIR / "scenarios_thought.json"
-FP_OPEN = ORG_DIR / "scenarios_open.json"
-TASK_OPEN = (
-    ROOT
-    / "llm_specific_tasks_lhz/conscientiousness/disorganized_task(v2有效果，效果不错)/scenarios_thought_only_open.json"
-)
-TASK_V2 = (
-    ROOT
-    / "llm_specific_tasks_lhz/conscientiousness/disorganized_task(v2有效果，效果不错)/scenarios_thought_only_v2_attitude.json"
-)
+MODELGEN_10X = AXIS_SCENARIO_DIR / "axis_fp.json"
+OLD_THOUGHT = MODELGEN_10X
+FP_OPEN = AXIS_SCENARIO_DIR / "axis_fp.json"
+TASK_OPEN = AXIS_SCENARIO_DIR / "axis_task.json"
+TASK_V2 = TASK_OPEN
+ADVICE_OPEN = AXIS_SCENARIO_DIR / "axis_advice.json"
+ADVICE_CHOICE = TEST_SCENARIO_DIR / "choice_advice_task.json"
 
 FP_SYSTEM = (
     "You are the person in this situation. Start your response with a thought, "
@@ -41,6 +45,43 @@ FIELD_PRESETS = {
     "thought": ("risky_thought", "safe_thought"),
     "response": ("risky", "safe"),
 }
+
+
+def load_config(name: str) -> ModuleType:
+    module_name = name if "." in name else f"configs.{name}"
+    return importlib.import_module(module_name)
+
+
+def config_id(config: ModuleType) -> str:
+    return getattr(config, "CONFIG_ID", config.__name__.rsplit(".", 1)[-1])
+
+
+def config_data_dir(config: ModuleType) -> Path:
+    return REPO_ROOT / "data" / config_id(config)
+
+
+def config_axis_scenario_dir(config: ModuleType) -> Path:
+    return config_data_dir(config) / "scenarios/axis"
+
+
+def config_test_scenario_dir(config: ModuleType) -> Path:
+    return config_data_dir(config) / "scenarios/test"
+
+
+def config_axes_dir(config: ModuleType) -> Path:
+    return config_data_dir(config) / "results/axes"
+
+
+def config_steering_dir(config: ModuleType) -> Path:
+    return config_data_dir(config) / "results/steering"
+
+
+def config_sae_dir(config: ModuleType) -> Path:
+    return config_data_dir(config) / "results/sae"
+
+
+def item_number_field(config: ModuleType) -> str:
+    return getattr(config, "ITEM_NUMBER_FIELD", "item_number")
 
 
 def axis_system_for_file(path: Path) -> str:
@@ -143,6 +184,12 @@ def coeff_key(coeff: float) -> str:
     return f"coeff_{coeff:+.2f}"
 
 
+def coeff_label(coeffs: list[float]) -> str:
+    if not coeffs:
+        return "coeffs"
+    return f"m{abs(coeffs[0]):g}_p{abs(coeffs[-1]):g}".replace(".", "p")
+
+
 def parse_option_choice(text: str) -> str:
     lowered = text.lower()
     patterns = [
@@ -160,7 +207,7 @@ def parse_option_choice(text: str) -> str:
 
 
 def import_extractor(layer: int):
-    sae_dir = ROOT / "sae_analysis"
+    sae_dir = WORKSPACE_ROOT / "sae_analysis"
     if str(sae_dir) not in sys.path:
         sys.path.insert(0, str(sae_dir))
     sys.argv = [sys.argv[0], str(layer)]
@@ -178,6 +225,7 @@ def extract_diffs(
     layer: int,
     system_prompt: str = FP_SYSTEM,
     first_n: int | None = None,
+    item_field: str = "bfi2_item",
 ) -> tuple[list[str], list[int | None], np.ndarray, dict[str, float]]:
     ex = import_extractor(layer)
     scenarios = load_scenarios(scenario_file)
@@ -194,7 +242,7 @@ def extract_diffs(
         h_neg = ex.extract_hidden(scenario["situation"], scenario[neg_field], system_prompt=system_prompt)
         diff = (h_pos - h_neg).numpy().astype(np.float32)
         ids.append(sid)
-        items.append(scenario.get("bfi2_item"))
+        items.append(scenario.get(item_field))
         diffs.append(diff)
         norms[sid] = float(np.linalg.norm(diff))
     return ids, items, np.stack(diffs), norms

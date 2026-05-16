@@ -1,0 +1,1 @@
+"""Behavior-mode generation configs."""

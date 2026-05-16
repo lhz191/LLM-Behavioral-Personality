@@ -1,0 +1,379 @@
+{
+  "source": "Held-out balanced choice probes for Organization (advice register).",
+  "config_id": "bfi2c_organization",
+  "facet": "Organization",
+  "register": "advice_choice",
+  "scenario_variant": "advice",
+  "facet_description": "The tendency to keep things orderly and systematic.",
+  "behavioral_mode_spec": {
+    "low_pole": "Actively prefers loose, cluttered, mixed, or underspecified states because they feel more natural to work from; likes relying on memory, search, improvisation, temporary rearrangement, or later recovery instead of imposing structure now.",
+    "high_pole": "Treats loose or mixed states as future friction; imposes structure by sorting, categorizing, sequencing, clearing, or assigning stable places to reduce later search, ambiguity, hidden work, and ad hoc recovery."
+  },
+  "generation_model": "claude-opus-4-6",
+  "reference": {
+    "risky": "Option A",
+    "safe": "Option B"
+  },
+  "scenarios": [
+    {
+      "id": "ORG_advice_choice_01_recipe_collection",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A home cook asks how to manage the 200+ recipes they've saved from blogs, screenshots, handwritten cards, and group chats. They want to be able to find things when meal planning but don't want to lose momentum on trying new dishes.\n\nOption A: \"I'd keep recipes wherever they landed—screenshots in your camera roll, links in chat history, cards in the drawer—and just search or scroll when you need one. I prefer this because the mess keeps everything close to the moment I discovered it, and browsing through that living pile often sparks ideas I wouldn't find in a neat index.\"\n\nOption B: \"I'd move every recipe into one app with tags for cuisine, protein, and prep time, then clear out the scattered copies. I prefer this because I like knowing each recipe has exactly one home with a clear label, so when I sit down to plan meals I can reach any dish directly without hunting.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_02_freelance_invoices",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A freelance graphic designer with six ongoing clients asks how to handle incoming invoices, receipts, and payment confirmations that arrive via email, Venmo notifications, and PDF attachments. Tax season is months away but they want to stay on top of things.\n\nOption A: \"I'd let documents accumulate in their native inboxes and apps, then do a big search-and-gather session when tax time approaches. I like this because financial paperwork stays in the context where it arrived, and I trust my ability to reconstruct the picture later using search and date filters rather than maintaining a system all year.\"\n\nOption B: \"I'd create a single folder structure—one subfolder per client per month—and move each document there the day it arrives, with a running spreadsheet logging amount, date, and status. I prefer this because I'm drawn to a settled ledger where every transaction already has an address, so nothing is hidden when I need a total.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_03_research_literature_notes",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A PhD student in sociology has been reading 10–15 papers per week and taking notes in various places: margins of PDFs, voice memos after seminars, sticky notes on their desk, and scattered Notion pages. They ask how to handle this growing body of literature notes as they prepare for their qualifying exam.\n\nOption A: \"I'd keep notes in whatever form they took—voice memos, marginalia, sticky notes—and rely on memory and keyword searches to pull relevant threads together when writing. I'm drawn to this because the raw, situated form of each note preserves the thinking moment, and I find that reassembling fragments on the fly generates fresh connections.\"\n\nOption B: \"I'd consolidate every note into one reference manager with a standard template per paper—core argument, method, my reaction, and links to related entries—then retire the scattered originals. I prefer this because I like each paper having a single canonical card I can sequence and cross-reference, so the whole literature is navigable from one map.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_04_team_bug_triage",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A small software team of five developers receives bug reports through Slack messages, customer emails, and occasional verbal mentions during standups. The tech lead asks how the team should handle incoming bugs before sprint planning each Monday.\n\nOption A: \"I'd let bugs live in the channels where they were reported—Slack threads, email chains—and have the team scan those sources together at Monday planning to decide what matters. I like this because keeping reports in their conversational context preserves the back-and-forth that clarifies severity, and the team's collective memory during triage is enough to surface what's urgent.\"\n\nOption B: \"I'd require every bug to be logged into a single board with fields for reporter, severity, component, and owner within 24 hours of discovery, regardless of where it was first mentioned. I prefer this because I'm drawn to one visible queue where every issue has a stable slot, so nothing stays hidden in a chat scroll and triage starts from a complete, sorted list.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_05_group_trip_logistics",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "Eight friends are planning a week-long road trip across three states. Conversations about lodging, car assignments, activity ideas, dietary needs, and cost splitting are happening across two group chats, a shared Google Doc someone started, and occasional DMs. One friend asks how to pull this together so nothing falls through the cracks.\n\nOption A: \"I'd keep the planning distributed across the existing chats and doc, letting people add ideas wherever feels natural, and just do a quick scroll-through a few days before departure to confirm the essentials. I prefer this because the loose, conversational planning keeps everyone's energy up and I trust that important details surface repeatedly on their own—what matters will be remembered.\"\n\nOption B: \"I'd create one shared itinerary document with dated sections, each containing confirmed lodging, driver assignments, activity slots, and a cost-split tracker, then ask everyone to move their scattered decisions there. I like this because I want every logistical detail to have a single visible home in sequence, so any friend can open one page and see exactly what's settled and what's still open.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_06_recipe_collection",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A home cook asks how to manage the 200+ recipes they've saved from various sources—screenshots, bookmarks, handwritten cards, and links shared in group chats. They want to be able to find things when meal planning.\n\nOption A: \"I'd keep recipes where they naturally landed—screenshots in your camera roll, bookmarks in your browser, cards in the drawer—and just use search or scroll when you need something. I prefer this because I like how each recipe stays in the context where I first encountered it, and browsing through that lived-in mix often sparks ideas I wouldn't find in a neat index.\"\n\nOption B: \"I'd move every recipe into one app with category tags (protein, cuisine, prep time) and a consistent naming format. I prefer this because I'm drawn to a single settled collection where each recipe has a clear address, so when I sit down to plan meals I can reach directly for what I need without hunting across five places.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_07_freelance_invoices",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A freelance graphic designer has five ongoing clients and sends invoices at different intervals. They currently draft invoices in whatever tool is open—sometimes a Google Doc, sometimes a note on their phone, sometimes directly in email—and track payments by memory and bank notifications.\n\nOption A: \"I'd keep drafting invoices wherever feels natural in the moment and rely on bank alerts plus a quick scroll through sent mail to confirm payments. I like this because the information stays close to the conversation it belongs to, and I trust my memory of recent exchanges to flag anything overdue without maintaining a separate ledger.\"\n\nOption B: \"I'd set up a single spreadsheet with columns for client, invoice number, date sent, amount, due date, and payment status, and generate every invoice from one template folder. I prefer this because I want a visible ledger where each invoice has a row and a status, so nothing is hidden inside scattered threads and I never have to reconstruct what's outstanding.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_08_research_paper_notes",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A PhD student is reading 40–50 papers for a literature review. They currently highlight passages in the PDF viewer, jot thoughts in the margins, and sometimes paste quotes into a running document. They ask how to handle all these annotations so they can write the review chapter.\n\nOption A: \"I'd keep annotating inside each PDF and let the running document grow as a stream of thoughts—when it's time to write, I'd search keywords across the PDFs and rediscover passages in their original context. I like this because I prefer notes that stay embedded where the argument lives; re-encountering them in situ helps me see connections I wouldn't notice in a detached summary table.\"\n\nOption B: \"I'd create a structured note for each paper with fixed fields—claim, method, key finding, my critique, and tags linking it to review themes—then sort these notes by theme in a folder tree. I prefer this because I'm drawn to giving every paper a standardized card with a home under the right theme, so when I draft each section I can pull from a pre-sorted stack instead of re-reading scattered highlights.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_09_team_slack_channels",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A startup team of 12 people uses Slack heavily. Conversations about bugs, feature ideas, customer feedback, and scheduling all happen in a single #general channel. The team lead asks whether to restructure communication.\n\nOption A: \"I'd keep most conversation in #general and let people use threads and search when they need to find something specific. I'm drawn to this because a single stream keeps everyone aware of the full picture, and I like how topics bump into each other naturally—someone's bug report next to a feature idea often sparks a connection that separated channels would hide.\"\n\nOption B: \"I'd create dedicated channels—#bugs, #feature-ideas, #customer-feedback, #scheduling—with pinned guidelines on what belongs where. I prefer this because I want every message type to have a designated home so that when someone needs to review all open bugs or all customer quotes, they can go straight to one place without filtering through unrelated chatter.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_10_travel_documents",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A couple is planning a three-week multi-country trip with flights, trains, Airbnbs, tours, and restaurant reservations. Confirmation emails are arriving over several weeks. They ask how to keep track of everything so they can navigate the trip smoothly.\n\nOption A: \"I'd leave confirmations in your inbox and star or flag them, then pull up whatever's needed by searching your email on the day. I like this approach because each booking stays in its original thread with all the back-and-forth details intact, and I trust that a quick search the night before gives me exactly what I need without maintaining a separate document that could drift out of sync.\"\n\nOption B: \"I'd build one shared itinerary document ordered by date, with each day listing the booking name, confirmation number, address, and check-in time, plus links to the original emails. I prefer this because I want a single chronological map of the whole trip where every segment has a clear slot, so on any given morning we can glance at one page and know exactly what's next without digging through dozens of emails.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_11_recipe_collection",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A home cook has accumulated about 200 recipes across screenshots, bookmarked links, handwritten cards, and text messages from friends. They want your advice on how to manage this collection going forward.\n\nOption A: Keep the recipes scattered across their original sources and rely on memory and search to find them when needed. \"I prefer letting recipes live where they landed—I like browsing through screenshots and old messages because stumbling across forgotten ones while searching feels like rediscovery, and the context around each recipe stays alive.\"\n\nOption B: Consolidate all recipes into a single app or binder with consistent categories, tags for cuisine type and difficulty, and a simple naming convention. \"I prefer giving every recipe a clear home in one place because I'm drawn to knowing exactly where to reach when I want something, with no hunting across five different apps.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_12_freelance_invoices",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A freelance graphic designer juggles eight to twelve clients at a time. Invoices, contracts, and revision requests arrive via email, Slack, and sometimes text. They ask you how to handle the incoming paperwork.\n\nOption A: Leave documents in the channels where they arrived and use search when tax time or a dispute comes up. \"I like working from the live stream of messages because each document sits next to the conversation that produced it, and I trust my ability to search and reconstruct the trail when I actually need it.\"\n\nOption B: Move every invoice, contract, and revision request into a per-client folder with a consistent naming pattern the same day it arrives. \"I'm drawn to having a settled folder per client where every document has an obvious address—I want to open any client's folder and see the full picture without piecing anything together.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_13_team_retro_notes",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A software team runs biweekly retrospectives. Notes from each session currently live in whatever shared doc the facilitator opens that day—sometimes Google Docs, sometimes Notion, sometimes a Miro board. The team lead asks you how they should handle retro artifacts.\n\nOption A: Let each facilitator keep using whatever tool feels right in the moment and search across tools later if the team needs to revisit a theme. \"I prefer the natural variety because each facilitator captures ideas in the medium that fits the energy of that session, and I like that themes resurface organically when someone remembers and pulls them forward.\"\n\nOption B: Designate one Notion database as the single retro archive with a standard template, date field, and tagged action items so every session lands in the same structured sequence. \"I prefer one visible timeline where every retro has the same shape—I like being able to scroll back and see patterns without wondering which tool someone used three months ago.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_14_medication_tracking",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "Someone managing three ongoing prescriptions, occasional OTC supplements, and periodic lab work asks you how to keep track of their health information for doctor visits.\n\nOption A: Keep pill bottles in their usual spots around the house and rely on pharmacy apps, memory, and quick phone searches to recall details at appointments. \"I like that everything stays in its natural place—the bottles near where I take them, the records in the pharmacy's system—and I trust myself to pull it together in the moment when the doctor asks.\"\n\nOption B: Create a single health document listing each medication with dose, prescriber, start date, and upcoming lab dates, updated whenever something changes. \"I'm drawn to one settled reference sheet I can hand to any new provider—I want every medication and date in a single visible list so nothing depends on my recall under pressure.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_15_group_trip_planning",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A friend group of seven is planning a ten-day road trip. Ideas for stops, lodging links, dietary needs, and budget preferences are flying around in a group chat. The person coordinating asks you how to manage the planning information.\n\nOption A: Let the group chat remain the living planning space and scroll back or search keywords when decisions need to be made. \"I prefer keeping everything in the flow of conversation because ideas stay connected to who suggested them and why, and I like how the plan can shift naturally as people riff on each other's messages.\"\n\nOption B: Set up a shared spreadsheet with tabs for itinerary, lodging, budget, and dietary needs, and ask everyone to move their suggestions there. \"I prefer a single shared map with labeled sections because I want every person's input sorted into the right column so we can see gaps and overlaps at a glance before we commit.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_16_recipe_collection",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A home cook has accumulated about 200 recipes across screenshots, bookmarks, handwritten cards, and links texted from friends. They ask you how to manage this collection going forward.\n\nOption A: \"I'd keep the recipes scattered across the places where you originally saved them—screenshots in your camera roll, links in your messages, cards in the kitchen drawer. I prefer this because I like how stumbling back across a recipe in its original spot brings back the context of why I saved it, and searching when I'm in the mood lets me rediscover things I'd forgotten.\"\n\nOption B: \"I'd move every recipe into one app or binder, tagged by cuisine, protein, and prep time, with each entry in a consistent format. I prefer this because I'm drawn to knowing that every recipe has exactly one home and I can reach any of them directly without wondering which device or drawer it landed in.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_17_sprint_retro_notes",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A software team lead captures retrospective feedback during each sprint on sticky notes, Slack threads, and voice memos. They want your advice on what to do with all that raw feedback between sprints.\n\nOption A: \"I'd leave the feedback in whatever channel it appeared—sticky-note photos in the shared album, Slack threads pinned, voice memos on your phone. I like working from the messy original threads because the surrounding conversation keeps the real meaning alive, and I trust that when I need something specific I can search or ask the person who said it.\"\n\nOption B: \"I'd transfer every item into a single retro log with columns for theme, owner, status, and sprint number right after each session ends. I prefer this because I want a settled ledger where every piece of feedback has a visible slot, so nothing hides inside a thread I'd have to re-read to understand.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_18_medical_records",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "Someone managing a chronic condition has lab results from three different clinics, medication lists from two pharmacies, and specialist notes in various patient portals. They ask how to handle all this health paperwork.\n\nOption A: \"I'd keep each document in the portal or pharmacy app where it was generated and just bookmark the login pages. I'm drawn to leaving records where they naturally land because each system already has its own search, and when I need something for an appointment I can pull it up on the spot without maintaining a separate copy.\"\n\nOption B: \"I'd download every document into one health folder organized by date and provider, with a running index that lists each file's contents. I prefer having a single place that maps everything because I want to open one folder and see my complete picture without logging into three different portals.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_19_group_trip_planning",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A friend group of eight is planning a ten-day road trip. Ideas for stops, lodging links, dietary needs, and budget preferences are flying around in a group chat. One person asks you how the group should keep track of everything.\n\nOption A: \"I'd let the group chat stay the living document—pin the important messages, use emoji reactions to vote, and scroll back when you need to recall a decision. I like keeping plans in the conversational flow because the back-and-forth around each idea is what actually tells you how people feel, and improvising the itinerary from that energy feels more natural than filling out a spreadsheet.\"\n\nOption B: \"I'd set up a shared doc with sections for each day, a lodging column, a budget tracker, and a dietary-needs list, then move every confirmed decision out of the chat and into its slot. I prefer this because I want every detail to have a clear address so that anyone can open one page and see exactly what's decided without re-reading hundreds of messages.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_20_freelance_invoicing",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A freelance illustrator juggles five to eight clients at a time. Contracts arrive as email attachments, payment terms are mentioned in DMs, and completed deliverables sit in various project folders named after the piece rather than the client. They ask you how to manage the business side.\n\nOption A: \"I'd keep contracts in the email threads where they arrived and deliverables in the project folders named the way that felt right at the time. I like relying on search and memory because each project lives in the context I was working in, and when tax time comes I can reconstruct what I need by browsing through the trail of real conversations and files.\"\n\nOption B: \"I'd create one client folder per active client containing subfolders for contract, invoices, and deliverables, plus a master spreadsheet listing every client's payment terms, invoice dates, and amounts due. I prefer this because I want a single map of who owes what and where every document sits, so I never have to piece together the business picture from scattered threads.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_21_recipe_collection",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A home cook has accumulated about 200 recipes across screenshots, bookmarks, handwritten cards, and links shared in group chats. They ask how to manage this collection going forward.\n\nOption A: \"I'd keep recipes where they landed—screenshots in the camera roll, links in the chat threads, cards in the kitchen drawer—because I prefer browsing through familiar places and letting memory guide me back to what I want; the search feels like part of cooking inspiration.\"\n\nOption B: \"I'd move every recipe into one app with tags for cuisine, protein, and prep time, because I prefer a settled catalog where each recipe has a visible home and I can reach any dish directly without retracing where I first saw it.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_22_freelance_invoices",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A freelance graphic designer juggles 8–12 clients per quarter. Invoices, contracts, and revision notes currently live in email threads, a shared drive, and scattered desktop folders. They ask how to handle their financial paperwork.\n\nOption A: \"I'd keep documents in whatever thread or folder they naturally arrived in and rely on email search or filename keywords when tax time comes, because I like working from the living context of each project rather than pulling things out into an abstract filing system.\"\n\nOption B: \"I'd create a single folder tree—one subfolder per client, each containing an invoices folder and a contracts folder with consistent naming—because I prefer a structure where every document has exactly one address and I never have to reconstruct which thread something was in.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_23_research_literature_notes",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A PhD student reads 10–15 papers per week and currently highlights passages in the PDF viewer, jots margin thoughts, and sometimes pastes quotes into a running document. They ask how to manage their literature notes for a dissertation spanning three years.\n\nOption A: \"I'd keep highlighting and jotting inside each PDF as I read, trusting that when I revisit a paper the marginal notes will reactivate the thinking I had in context—I'm drawn to notes that stay close to the source because the surrounding text keeps them meaningful.\"\n\nOption B: \"I'd extract key claims into a reference manager with standardized fields—theme, method, finding, my critique—so each paper's contribution sits in a sortable, searchable structure I can query without reopening the PDF.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_24_team_standup_notes",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A small software team of six people does daily standups over video. Currently, whoever remembers posts a brief recap in the team chat afterward, but sometimes no one does. The team lead asks how to capture standup information.\n\nOption A: \"I'd let the chat thread itself serve as the record—people naturally mention blockers and progress in conversation, and anyone who needs context can scroll back; I prefer the living thread because it keeps decisions attached to the dialogue that produced them.\"\n\nOption B: \"I'd set up a shared doc with a dated table where each person fills in 'done / doing / blocked' columns before or right after the call, because I like a single visible grid where every day's status has a fixed row and nothing depends on someone remembering to post.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_25_medication_tracking",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "Someone managing three daily medications plus occasional supplements asks how to keep track of what they've taken each day, especially when their routine varies on weekends and travel days.\n\nOption A: \"I'd rely on physical cues—pill bottle placement, blister pack gaps, and body-feel—to know what I've taken, because I prefer staying attuned to my own routine rhythm rather than logging every dose in a separate system; the lived pattern tells me enough.\"\n\nOption B: \"I'd use a simple checklist—paper or app—with each medication listed and a checkbox per time slot, because I prefer a visible record that confirms completion regardless of whether my memory or routine was disrupted that day.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_26_recipe_collection",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A home cook asks how to manage the 200+ recipes they've saved from various websites, cookbooks, and handwritten notes. They want to be able to find things when inspiration strikes.\n\nOption A: \"I'd keep them in one big folder or box and rely on browsing and memory when you want something—I prefer how flipping through a mixed pile lets forgotten gems resurface and keeps the collection feeling alive and surprising.\"\n\nOption B: \"I'd sort them into labeled categories by cuisine and meal type, each in a fixed spot—I prefer a settled map where every recipe has a clear address so I can reach exactly what I need without hunting.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_27_freelance_invoices",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A freelance graphic designer has invoices, contracts, and project briefs from 15 active clients scattered across email threads, cloud drives, and a desktop folder. Tax season is approaching and they want a system going forward.\n\nOption A: \"I'd leave documents where they naturally land—email, downloads, drive shares—and use search when I need something specific. I like how each piece stays in the context where it arrived, and I trust my ability to recover anything with a quick keyword search.\"\n\nOption B: \"I'd create one folder per client with subfolders for invoices, contracts, and briefs, and move everything into its home the day it arrives. I'm drawn to knowing every document has a single permanent address so nothing is hidden across scattered locations.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_28_research_literature_notes",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A PhD student has been reading 10–15 papers per week for six months and taking notes in whatever app is open at the time—sometimes a notebook, sometimes sticky notes in a PDF reader, sometimes a text file. They're about to start writing their literature review.\n\nOption A: \"I'd keep the notes scattered as they are and write the review by re-reading and rediscovering connections in real time—I like how revisiting raw notes in their original messy context sparks fresh associations I wouldn't get from a pre-sorted outline.\"\n\nOption B: \"I'd consolidate all notes into one reference manager with tags for theme, method, and finding, then sequence them by argument thread before writing. I prefer having a visible structure where each source's contribution is already placed in the argument map.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_29_team_standup_notes",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A small software team (6 people) holds daily standups but nobody records what was said. Occasionally someone forgets a blocker mentioned yesterday or a commitment made last week. The team lead asks how to handle standup information.\n\nOption A: \"I'd skip formal records and let people mention things again if they matter—I prefer how a lightweight standup stays conversational and trusts the team to surface important items naturally when they become relevant again.\"\n\nOption B: \"I'd have one person post a short structured log after each standup with owner, status, and blockers in a shared channel. I like having a single visible source of truth where yesterday's commitments have a stable home anyone can check.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_30_travel_documents",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A couple is planning a three-week multi-country trip with flights, trains, Airbnbs, tours, and restaurant reservations. They currently have confirmation emails, screenshots, and PDFs spread across two inboxes and a messaging thread. They ask how to keep track of everything during the trip.\n\nOption A: \"I'd leave confirmations in email and messages and just search for what I need the morning of each segment—I'm drawn to traveling light without a master document, trusting that each booking lives in the thread where I made it and I can pull it up on the spot.\"\n\nOption B: \"I'd build one shared itinerary document sorted by date with confirmation numbers, addresses, and check-in times in sequence. I prefer a single settled timeline where every segment has a visible slot so we never have to dig through inboxes mid-transit.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_31_recipe_ingredient_inventory",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A home cook asks how to manage their pantry and fridge ingredients so they can plan meals for the week without wasting food.\n\nOption A: \"I'd recommend just opening the fridge and pantry each evening and improvising based on what catches your eye—I prefer letting ingredients suggest meals naturally because I trust that browsing what's actually there keeps things fresh and responsive to what I'm craving.\"\n\nOption B: \"I'd recommend doing a full inventory once a week, categorizing items by type and expiration, then mapping meals to what needs using first—I prefer a settled layout where every ingredient has a visible slot in the plan because it means I never have to guess what's hiding in the back.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_32_customer_support_ticket_notes",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A small SaaS company's support lead asks how their three-person team should handle notes and context when a customer ticket gets passed between agents across shifts.\n\nOption A: \"I'd keep notes conversational and inline in the ticket thread itself—I like how the natural back-and-forth preserves the real texture of the interaction, and the next agent can just scroll and search for what they need in the moment.\"\n\nOption B: \"I'd have each agent fill a structured handoff block at the top of the ticket with fields like current status, last action taken, next step, and customer sentiment—I'm drawn to a format where every piece of context has a labeled home so the next person can reach it directly without reading the whole thread.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_33_research_paper_sources",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A graduate student is collecting sources for a literature review across multiple databases and asks how to keep track of the 60+ papers they've found so far.\n\nOption A: \"I'd keep them in the order I found them, maybe with quick margin scribbles about why each one caught my attention—I prefer working from the trail of discovery because the sequence reminds me of connections I was making at the time, and I can always search by keyword later.\"\n\nOption B: \"I'd sort them into a reference manager with consistent tags for theme, method, and relevance tier, plus a one-line summary for each—I prefer giving every source a clear categorical address so that when I'm drafting a section I can pull exactly the cluster I need without re-reading abstracts.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_34_freelance_invoice_records",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A freelance graphic designer with about 15 active clients asks how to handle their invoices, receipts, and payment confirmations that currently live across email, PDFs, and bank notifications.\n\nOption A: \"I'd leave them where they naturally land—email confirmations in email, PDFs in downloads, bank alerts in the app—and just search across those places when I need something specific. I like relying on each platform's search because the records stay in the context where they arrived and I don't have to maintain a separate system.\"\n\nOption B: \"I'd create a single folder structure sorted by client and month, moving every invoice and receipt into its assigned slot the day it arrives. I prefer a single source of truth where every financial document has one stable home, so at tax time or a client dispute I can go directly to the right folder without reconstructing anything.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_35_group_trip_logistics",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A friend group of eight is planning a week-long road trip and one person has been nominated to coordinate lodging, driving shifts, and activity preferences. They ask how to keep everyone's input and the evolving plan accessible.\n\nOption A: \"I'd keep a running group chat thread where people drop ideas, links, and preferences as they come up—I'm drawn to the living conversation because it lets plans stay fluid and people can riff off each other's suggestions naturally; anyone can scroll back or search when they need a detail.\"\n\nOption B: \"I'd set up a shared doc with labeled sections—one for lodging options with dates and status, one for the driving rotation, one for activity votes—and ask everyone to put their input in the right section. I prefer a layout where every decision area has its own visible place so no one has to dig through chat history to find what was settled.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_36_recipe_collection_system",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A home cook asks you how to manage the 200+ recipes they've saved from websites, screenshots, handwritten cards, and group chats. They want to be able to find things when they need them.\n\nOption A: \"I'd keep recipes wherever they naturally landed—bookmarks, camera roll, chat threads—and just search or scroll when you want one. I prefer letting things live where I encountered them because the surrounding context reminds me what I was thinking and I trust my memory plus search to get me back there.\"\n\nOption B: \"I'd move every recipe into one app with consistent tags for cuisine, protein, and prep time, and delete or archive the originals. I prefer giving each item a single settled home with labels so I can go straight to what I need without retracing where I first saw it.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_37_sprint_retro_action_items",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A software team lead asks how to handle the action items that come out of their bi-weekly sprint retrospectives. Currently some items get done, some don't, and nobody is sure what was decided three retros ago.\n\nOption A: \"I'd let action items live in the retro meeting notes where they came up and trust the team to remember or re-surface what still matters next time. I like how the conversation thread keeps the reasoning alive, and anything truly important will keep coming back on its own.\"\n\nOption B: \"I'd pull every action item into a single tracker with an owner, a status, and a due date, reviewed at the start of each retro. I'm drawn to having one visible board where nothing hides inside old meeting docs and every commitment has a clear address.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_38_medical_records_family",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A parent managing health records for a family of five asks how to keep track of vaccination dates, specialist referrals, prescription changes, and insurance claim numbers. Documents arrive as PDFs, portal messages, and paper letters.\n\nOption A: \"I'd leave each document roughly where it arrived—portal messages in the portal, PDFs in downloads, paper in a drawer—and search or call the office when I need a specific detail. I prefer not duplicating things into a separate system because the original sources stay authoritative and I can always recover what I need from them.\"\n\nOption B: \"I'd create one folder per family member with subfolders for vaccinations, prescriptions, and claims, and file every new document the day it arrives. I prefer a settled filing structure because when a doctor asks for a date or a claim number, I want to open one predictable place and have it right there.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_39_freelance_invoice_tracking",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A freelance graphic designer with eight ongoing clients asks how to track which invoices have been sent, which are overdue, and which payments have cleared. Right now invoices exist as individual PDFs named by date and client scattered across email and a cloud drive.\n\nOption A: \"I'd keep generating invoices the way I do now and just search my email or drive when I need to check a status. I like working from the natural trail of sent emails and payment confirmations because each thread tells me the full story of that transaction without maintaining a separate ledger.\"\n\nOption B: \"I'd set up a simple spreadsheet with one row per invoice showing client, amount, date sent, due date, and payment status, updated every time something changes. I'm drawn to having a single view where every invoice's state is visible at a glance so I never have to piece the picture together from scattered threads.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "ORG_advice_choice_40_group_travel_planning",
+      "register": "advice_choice",
+      "bfi2_item": null,
+      "bfi2_original": null,
+      "situation": "A friend group of seven is planning a ten-day trip across three countries. Ideas for lodging, transport, activities, and restaurant recommendations are flying around in a group chat. One person volunteers to coordinate and asks you how to manage all the information.\n\nOption A: \"I'd keep the group chat as the main planning space and pin or star key messages when decisions are made, scrolling back or searching when I need to confirm something. I prefer the living conversation because ideas stay connected to who suggested them and why, and the group energy keeps flowing naturally.\"\n\nOption B: \"I'd create a shared document with sections for each country, and within each section list confirmed lodging, transport, daily activity slots, and restaurant picks with dates and booking links. I prefer a structured itinerary document because every detail gets a fixed place, and anyone can open it and see exactly what's settled and what's still open.\"\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    }
+  ]
+}

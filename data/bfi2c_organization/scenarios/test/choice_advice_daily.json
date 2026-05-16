@@ -1,0 +1,379 @@
+{
+  "source": "Held-out balanced choice probes for Organization (advice_daily register).",
+  "config_id": "bfi2c_organization",
+  "facet": "Organization",
+  "register": "advice_choice",
+  "scenario_variant": "advice_daily",
+  "facet_description": "The tendency to keep things orderly and systematic.",
+  "behavioral_mode_spec": {
+    "low_pole": "Actively prefers loose, cluttered, mixed, or underspecified states because they feel more natural to work from; likes relying on memory, search, improvisation, temporary rearrangement, or later recovery instead of imposing structure now.",
+    "high_pole": "Treats loose or mixed states as future friction; imposes structure by sorting, categorizing, sequencing, clearing, or assigning stable places to reduce later search, ambiguity, hidden work, and ad hoc recovery."
+  },
+  "generation_model": "claude-opus-4-6",
+  "reference": {
+    "risky": "Option A",
+    "safe": "Option B"
+  },
+  "scenarios": [
+    {
+      "id": "BFI2C_ORG_CHOICE01_grocery_approach",
+      "register": "advice_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I tend to buy groceries a few times a week and I'm wondering how to handle my shopping approach. Option A: I'd recommend shopping without a list, just walking the aisles and letting what catches my eye remind me what I need—I prefer trusting my memory and the store layout to prompt me, because the browsing itself keeps me connected to what's actually going on in my kitchen. Option B: I'd recommend keeping a running list on the fridge that I add to the moment something runs low—I prefer knowing exactly what I need before I leave, because a settled list means I walk in with a clear map and nothing gets missed. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE02_phone_photos",
+      "register": "advice_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "My phone has thousands of photos and I'm trying to decide how to handle them going forward. Option A: I'd recommend leaving them in the camera roll as they are and just using search or scrolling when I want something—I like how the timeline itself is a living record, and I trust that I'll recognize what I need when I see it. Option B: I'd recommend sorting new photos into labeled albums at the end of each week—I'm drawn to giving every image a clear home so that when I want a specific shot, I can go straight to its category without scrolling through everything. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE03_morning_routine",
+      "register": "advice_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I'm asking about my morning routine—I often feel rushed but I'm not sure I want to regiment it. Option A: I'd recommend keeping mornings loose and responding to how I feel each day—I prefer the freedom of improvising my sequence because it lets me adapt to my energy and nothing feels forced. Option B: I'd recommend setting a fixed sequence for my morning tasks and laying things out the night before—I prefer waking into a settled path where each step flows into the next without decisions eating into my morning. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE04_spice_cabinet",
+      "register": "advice_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "My spice cabinet is a jumble and I cook often. Should I reorganize it or just keep reaching in? Option A: I'd recommend leaving the spices where they naturally end up after cooking—I like how the ones I use most drift to the front on their own, and rummaging through them sometimes sparks ideas for flavor combinations I wouldn't have planned. Option B: I'd recommend alphabetizing or grouping spices by cuisine and labeling the shelf edges—I'm drawn to being able to reach directly for what I need without hunting, because a visible arrangement means I always know what I have. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE05_email_inbox",
+      "register": "advice_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "My email inbox has hundreds of read messages sitting there and I'm wondering what to do with them. Option A: I'd recommend keeping everything in the inbox and relying on search when I need something—I prefer the single stream because context stays together and I trust search to surface whatever I need in the moment. Option B: I'd recommend archiving handled messages into labeled folders each evening—I prefer a clean inbox where every message has a settled destination, so when I open my email I see only what still needs attention. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE06_desk_papers",
+      "register": "advice_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I work from home and my desk accumulates papers, sticky notes, and receipts throughout the week. What approach should I take? Option A: I'd recommend letting the papers stay where they land because the piles themselves are a kind of memory—I like how glancing at a cluster reminds me of what's active, and I can always dig through when something matters. Option B: I'd recommend clearing the desk at the end of each day by filing papers into a simple tray system with labeled slots—I prefer starting each morning with a clear surface where nothing is hidden under something else. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE07_digital_bookmarks",
+      "register": "advice_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I save a lot of articles and links for later reading but I'm unsure how to manage them. Option A: I'd recommend just bookmarking things into one unsorted list and rediscovering them when I browse—I like how stumbling back onto a saved link at the right moment feels more alive than working through a queue, and I trust that what matters will resurface. Option B: I'd recommend tagging each saved link by topic and reviewing the list weekly—I'm drawn to having a categorized reading library where I can pull up exactly the cluster I'm interested in without sifting through everything. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE08_household_tools",
+      "register": "advice_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I have various household tools—screwdrivers, tape, scissors, batteries—scattered in different drawers and spots. How should I handle this? Option A: I'd recommend keeping tools wherever I last used them because that way they're already near where I'll likely need them next—I prefer the lived-in distribution and I'm comfortable searching a bit when something isn't immediately at hand. Option B: I'd recommend designating one drawer or toolbox as the single home for all tools and always returning them there—I prefer knowing there's one place to look so I never have to wonder which room something ended up in. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE09_recipe_collection",
+      "register": "advice_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I collect recipes from websites, friends, and cookbooks but they end up everywhere—screenshots, scraps of paper, random apps. What would you advise? Option A: I'd recommend keeping recipes scattered across their original sources and just searching or asking around when I want one—I like how each recipe stays in the context where I found it, and the hunt itself often reminds me of variations I'd forgotten. Option B: I'd recommend consolidating all recipes into one app or binder organized by meal type—I'm drawn to having a single source of truth where I can flip to exactly what I want without retracing where I originally saved it. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE10_clothing_closet",
+      "register": "advice_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "My closet is a mix of folded piles and things draped over the door, and I'm deciding whether to change anything. Option A: I'd recommend keeping clothes in their natural mixed state—I prefer how the things I wear most stay visible and accessible on top, and I like assembling outfits by pulling from whatever I see rather than scanning a rigid arrangement. Option B: I'd recommend sorting clothes by type and hanging or folding them in designated sections—I prefer opening the closet to a clear layout where I can see all my options at once and reach directly for what fits the day. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE01_grocery_approach",
+      "register": "advice_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I tend to buy groceries by wandering the store and grabbing what looks good, but sometimes I forget key ingredients. What approach would you recommend?\n\nOption A: Keep shopping by wandering and responding to what catches your eye — I prefer this because I like how the store itself reminds me of things I need, and unexpected finds lead to better meals than anything I'd plan on paper.\n\nOption B: Write a categorized list organized by store section before you leave home — I prefer this because I like knowing every item has a place in my route, so nothing hides behind a missed aisle or a distracted moment.\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE02_phone_photos",
+      "register": "advice_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "My phone has thousands of photos from the past few years and I'm wondering whether I should organize them. What would you advise?\n\nOption A: Leave them in the camera roll as they are and rely on search or scrolling when you want something — I'm drawn to this because the timeline itself is a living record, and browsing through unsorted moments brings back context I'd lose if I filed things away.\n\nOption B: Sort them into named albums by event, person, or theme on a regular basis — I prefer this because I like each memory having a clear address so I can reach it directly without scanning through hundreds of unrelated shots.\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE03_spice_cabinet",
+      "register": "advice_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "My spice cabinet is a jumble of jars and bags — some duplicates, some unlabeled. Should I deal with it?\n\nOption A: Keep the spices roughly where they land after each cooking session — I like this because the ones I use most naturally drift to the front, and rummaging through the rest often sparks ideas for dishes I wouldn't otherwise think of.\n\nOption B: Label every container and arrange them alphabetically or by cuisine type — I prefer this because I like a cabinet where every jar has a settled spot, so I can reach for exactly what I need without opening three wrong lids.\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE04_morning_routine",
+      "register": "advice_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I've been feeling rushed in the mornings. Some people suggest a fixed routine, but I like flexibility. What approach would you recommend?\n\nOption A: Keep your mornings loose and respond to how you feel when you wake up — I'm drawn to this because I trust my body's signals to tell me what comes next, and the freedom to improvise makes mornings feel alive rather than mechanical.\n\nOption B: Set a sequenced checklist the night before with times for each step — I prefer this because I like waking into a clear track where every task already has its slot, so nothing competes for attention or gets forgotten under time pressure.\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE05_browser_tabs",
+      "register": "advice_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I usually have 40+ browser tabs open and people tell me it's chaotic. I can mostly find what I need by scanning titles. Should I change anything?\n\nOption A: Keep your tabs open and rely on scanning or search to find what you need — I like this because the open tabs feel like a living workspace where everything I might circle back to stays within reach, and closing them feels like losing a thread.\n\nOption B: Close tabs after use and bookmark them into named folders for later — I prefer this because I like a clean window where every saved link has a permanent home I can revisit without visual noise or wondering which tab held what.\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE06_mail_pile",
+      "register": "advice_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "Physical mail piles up on my counter — bills, flyers, letters. I deal with things when they become urgent. Is there a better habit?\n\nOption A: Let mail accumulate in a loose pile and handle each piece when its deadline or relevance surfaces — I prefer this because I trust urgency to surface what matters, and the pile itself is a low-effort queue that doesn't need my attention until something in it does.\n\nOption B: Sort incoming mail immediately into labeled trays — action, file, recycle — so each piece has a settled destination the moment it arrives — I like this because I want every envelope resolved into a clear category so nothing lurks unseen until it becomes a problem.\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE07_digital_notes",
+      "register": "advice_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I jot quick notes on my phone throughout the day — ideas, reminders, quotes. They end up in one long unsorted list. What would you suggest?\n\nOption A: Keep adding to the single running list and use search or scrolling when you need something — I'm drawn to this because the stream captures thoughts in the order they arrived, and flipping through it later often reconnects ideas I wouldn't have linked if they were filed apart.\n\nOption B: Move each note into a tagged notebook or category at the end of each day — I prefer this because I like every thought having a named home so I can pull up exactly the right cluster without sifting through unrelated entries.\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE08_tool_drawer",
+      "register": "advice_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "My junk drawer has become a mix of tools, batteries, tape, keys, and random hardware. I can usually find what I need after digging a bit. Should I reorganize it?\n\nOption A: Leave the drawer as a mixed catch-all and dig through it when you need something — I like this because everything stays within one arm's reach, and the slight hunt keeps me aware of what I actually have without maintaining a system I'd have to uphold.\n\nOption B: Divide the drawer with small containers, each labeled for a category — I prefer this because I like opening a drawer where every item sits in a visible compartment, so my hand goes straight to what I need without shifting anything aside.\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE09_recipe_collection",
+      "register": "advice_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I save recipes from websites, friends, and cookbooks in different places — screenshots, bookmarks, scribbled cards. When I want to cook something I remember liking, I sometimes can't find it. What would you advise?\n\nOption A: Keep saving recipes wherever feels natural in the moment and search or ask around when you want one again — I prefer this because I like how recipes live close to where I found them, and the act of rediscovering one feels like reuniting with a memory rather than pulling from a filing cabinet.\n\nOption B: Consolidate all recipes into one app or binder organized by meal type — I'm drawn to this because I like a single source of truth where every recipe has a category and a page, so cooking starts with choosing rather than hunting.\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE10_clothing_closet",
+      "register": "advice_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "My closet is a mix of clean clothes on hangers, folded piles, and a chair with yesterday's outfit. I get dressed fine most days but occasionally can't find a specific item. What approach would you recommend?\n\nOption A: Keep clothes roughly where they end up after laundry and rely on visual scanning each morning — I like this because the lived-in arrangement reflects what I actually wear, and getting dressed feels more intuitive when options are loosely visible rather than hidden in a rigid system.\n\nOption B: Assign fixed zones by garment type and return each item to its spot after washing — I prefer this because I like a closet where every piece has a home address, so getting dressed means choosing from a clear map rather than wondering where something ended up.\n\nFirst state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE01_kitchen_counter",
+      "register": "advice_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "I tend to leave my kitchen counter covered with whatever I used most recently—spices, cutting boards, mail, coffee mugs—and I'm wondering whether to change that habit. Option A: Keep letting things accumulate on the counter as you use them, because I like how everything I might need stays within arm's reach and I can grab what fits the moment without hunting through cabinets. Option B: Clear the counter after each activity and return every item to a designated spot, because I prefer a surface where nothing hides behind something else and I can see exactly what's available at a glance. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE02_phone_photos",
+      "register": "advice_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "My phone has thousands of photos in one long camera roll and I'm debating whether to sort them into albums. Option A: Leave them in the single stream and rely on scrolling or search when I want something, because I'm drawn to how the timeline feels like a living diary where surprises and forgotten moments surface naturally as I browse. Option B: Sort photos into labeled albums by theme or event on a regular basis, because I prefer knowing each image already has a home so I can go directly to what I need without scanning through unrelated shots. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE03_coat_closet",
+      "register": "advice_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "My coat closet near the front door has become a jumble of jackets, bags, scarves, and umbrellas piled together. Should I reorganize it? Option A: Keep tossing things in as they come off, because I like how the closet mirrors my actual routine—whatever I wore last is on top and ready, and I trust my hands to find what I need. Option B: Install hooks and bins so each category has a fixed zone, because I prefer opening the door to a settled arrangement where coats hang, scarves sit in one bin, and bags line up visibly. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE04_browser_tabs",
+      "register": "advice_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "I usually have 40+ browser tabs open at once and I'm asking whether I should manage them differently. Option A: Let tabs stay open and multiply as my interests branch, because I like how the tab bar becomes a living workspace where related threads cluster near each other and I can rediscover connections by scanning. Option B: Close tabs after reading and save anything important to labeled bookmark folders, because I prefer a clean browser where every saved link has a category and I can retrieve it by name instead of scrolling through a crowded bar. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE05_bedside_table",
+      "register": "advice_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "My bedside table is stacked with books, chargers, glasses, lip balm, notebooks, and random receipts. I'm wondering if I should deal with it. Option A: Let the pile stay as-is and just shift things around when I need something, because I'm drawn to having my nightly essentials all within reach in whatever order they landed—it feels like a personal nest. Option B: Pare it down to a few items and give each one a consistent spot on the surface, because I prefer waking up to a clear table where I can reach for anything without knocking something else over. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE06_grocery_list",
+      "register": "advice_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "When I go grocery shopping I usually just wander the aisles and grab what looks good. Should I start making a structured list? Option A: Keep shopping by feel and memory, because I like how walking the store lets me improvise meals based on what catches my eye and I trust myself to remember the essentials. Option B: Write a list organized by store section before leaving home, because I prefer moving through the store with a clear sequence so nothing gets missed and I don't double back. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE07_desk_cables",
+      "register": "advice_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "The cables behind my desk are a tangled mess—power cords, USB cables, headphone wires all intertwined. What should I do? Option A: Leave them tangled and just fish out whichever cable I need in the moment, because I like that they're all accessible in one loose bundle and I can rearrange or swap devices without undoing any system. Option B: Route each cable through clips or sleeves and label both ends, because I prefer a setup where every cord has a visible path and I can trace or unplug any single one without disturbing the rest. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE08_laundry_folding",
+      "register": "advice_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "After doing laundry I usually dump clean clothes on a chair and pick outfits from the pile during the week. Should I change this? Option A: Keep pulling from the clean pile as needed, because I'm drawn to how it feels effortless—clothes stay loosely available and I assemble outfits by what's on top, which keeps things spontaneous. Option B: Fold and put away each load immediately into assigned drawers, because I prefer opening a drawer and seeing sorted stacks where every garment has a place and I can compose an outfit without searching. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE09_spice_rack",
+      "register": "advice_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "My spice collection is scattered across two shelves, a drawer, and the counter—some in original containers, some in mismatched jars. Should I unify them? Option A: Leave spices wherever they ended up, because I like how the ones I use most migrate to the front naturally and I enjoy rummaging through the collection to rediscover flavors I forgot I had. Option B: Transfer everything into matching labeled jars arranged alphabetically on one rack, because I prefer scanning a single organized row where every spice has a visible name and a fixed position I can reach without guessing. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE10_car_interior",
+      "register": "advice_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "My car's back seat and center console tend to collect water bottles, jackets, receipts, and random items throughout the week. Should I address this? Option A: Let things accumulate and do a quick sweep only when it gets truly unmanageable, because I like how the car feels like a mobile extension of my day—everything I might need is already in there somewhere and I can improvise. Option B: Clear out the car every evening and keep a small organizer in the console for essentials, because I prefer getting into a reset space each morning where every item is either in its slot or gone. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE01_kitchen_counter_after_cooking",
+      "register": "advice_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I just finished cooking dinner and the counter has cutting boards, spice jars, used utensils, and vegetable scraps spread out. I'm wondering whether to deal with it now or later. Option A: Leave the counter as-is and deal with it when you next need the space—I prefer letting things stay where they landed because the residue of activity feels natural and I trust myself to clear what I need in the moment. Option B: Wipe down surfaces, return each item to its designated spot, and bag the scraps immediately—I'm drawn to resetting the kitchen to its clean baseline because I like knowing every surface is ready and every tool is in its home. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE02_receipts_in_wallet",
+      "register": "advice_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "My wallet is stuffed with receipts from the past two weeks—gas, groceries, a couple of restaurants. I'm trying to decide what to do with them. Option A: Keep the receipts loosely stuffed in the wallet and fish out what I need if a return or expense question comes up—I like relying on search and memory because the pile stays low-effort and I can usually find what matters when it matters. Option B: Sort the receipts into labeled envelopes by category each weekend and discard anything older than 30 days—I prefer giving each receipt a clear category and timeline so I always know exactly where to look without rummaging. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE03_shoes_by_front_door",
+      "register": "advice_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "Every day I kick off my shoes somewhere near the front door—sometimes by the mat, sometimes under the bench, sometimes halfway down the hall. Should I change this habit? Option A: Keep dropping shoes wherever feels natural when I walk in—I'm drawn to the ease of just releasing them in the moment because I always know roughly where they ended up and it keeps my arrival frictionless. Option B: Place a shoe rack by the door and slot each pair into its own space every time—I prefer a visible home for each pair so I can reach for exactly what I want without scanning the floor. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE04_craft_supplies_after_project",
+      "register": "advice_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I do watercolor painting on weekends and my table ends up covered in paint tubes, brushes in jars, palette smears, and reference photos. I'm wondering what to do when I finish a session. Option A: Leave everything spread on the table until the next session—I like how the scattered setup keeps my creative context alive and lets me pick up exactly where I left off without rebuilding the workspace. Option B: Rinse brushes, cap tubes, and return each supply to its labeled drawer after every session—I prefer resetting the table to a blank state because I like starting fresh with every tool in a known place. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE05_laundry_clean_pile",
+      "register": "advice_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I tend to pull clean laundry out of the dryer and dump it on a chair, then pick outfits from the pile each morning. A friend suggested I fold and put everything away immediately. What should I do? Option A: Keep pulling from the clean pile on the chair—I prefer this because I like how my most-worn items naturally float to the top and I can improvise outfits without opening drawers. Option B: Fold and shelve each item into its designated drawer slot right after drying—I'm drawn to knowing every garment has a fixed address so I can go directly to what I want without sorting through a heap. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE06_browser_tabs_end_of_day",
+      "register": "advice_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "By the end of each workday I have 30-40 browser tabs open—articles, references, half-read threads. I'm asking whether I should close them or leave them. Option A: Leave all tabs open and let them accumulate across days—I like how the open tabs form a living landscape of my interests and I trust myself to scan and rediscover what's relevant when I need it. Option B: At day's end, bookmark each tab into a dated folder and close everything—I prefer starting each morning with a cleared browser because I like having a labeled archive I can search instead of a wall of tiny tab titles. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE07_gym_bag_after_workout",
+      "register": "advice_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "After I work out, I drop my gym bag by the bedroom door with sweaty clothes, a water bottle, headphones, and my lock still inside. I'm wondering if I should unpack it each time. Option A: Leave the bag packed and just swap out the dirty clothes next time I go—I prefer keeping everything bundled together because it feels like one grab-and-go unit and I trust myself to handle the swap at the last minute. Option B: Unpack the bag completely each time—hang the clothes to air, return the bottle to the kitchen, headphones to their hook—I like giving each item its home so the bag is always a clean shell ready to be loaded fresh. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE08_mail_and_packages",
+      "register": "advice_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I bring in the mail and any packages and set them on the dining table. Over the week, envelopes, flyers, and opened boxes pile up. What's the best approach? Option A: Let the mail accumulate on the table and sort through it only when the pile gets in the way—I like how the stack stays close at hand and I can browse it casually when something catches my eye. Option B: Open, sort, and file or recycle each piece the day it arrives—I prefer clearing the table daily because I'm drawn to a surface that stays empty and a filing spot where every document has a permanent place. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE09_desk_sticky_notes",
+      "register": "advice_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I jot reminders and ideas on sticky notes and they end up scattered across my desk, monitor, and keyboard area. Should I keep doing this or change my system? Option A: Keep scattering sticky notes wherever they land—I'm drawn to how the visible clutter keeps ideas in peripheral view and I like rediscovering a note at just the right moment. Option B: At the end of each day, transfer every note into a single categorized list and discard the stickies—I prefer consolidating into one structured list because I like having a single source of truth I can scan without hunting across surfaces. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE10_car_interior_clutter",
+      "register": "advice_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "My car's back seat and passenger footwell collect jackets, reusable bags, water bottles, and random items throughout the week. I'm wondering whether to clear it out regularly. Option A: Let the items accumulate and only clear the car when I need the seat for a passenger—I like how the car becomes a mobile extension of my life where useful things are always within reach and I can improvise with whatever's there. Option B: Every time I park at home, carry everything inside and return each item to its household spot—I prefer an empty car interior because I'm drawn to opening the door to a clean, settled space where nothing competes for attention. First state whether you choose Option A or Option B and explain in detail why you would advise that approach. Then give the full advice.",
+      "risky": "Option A",
+      "safe": "Option B"
+    }
+  ]
+}

@@ -1,0 +1,1068 @@
+{
+  "config": {
+    "config_id": "bfi2c_organization",
+    "layer": 11,
+    "scenario_file": "/mnt/shared-storage-user/liuhaoze/llm_behavior_test/LLM-Behavioral-Personality/data/bfi2c_organization/scenarios/axis/axis_task.json",
+    "fields": [
+      "thought",
+      "response"
+    ],
+    "item_field": "bfi2_item",
+    "system_prompt": "You are an assistant. Start your response with a thought, then give your answer.",
+    "split_half_samples": 5000,
+    "seed": 13,
+    "pca_mode": "both",
+    "n_components": 10
+  },
+  "comparison": {
+    "overall": {
+      "n": {
+        "thought": 40,
+        "response": 40
+      },
+      "axis_norm": {
+        "thought": 1.3797078132629395,
+        "response": 0.989788293838501
+      },
+      "mean_norm": {
+        "thought": 2.342782515287399,
+        "response": 1.458101499080658
+      },
+      "split_half": {
+        "thought": 0.9086283344984054,
+        "response": 0.9416170547485352
+      },
+      "pairwise_mean": {
+        "thought": 0.32710792772376385,
+        "response": 0.44367654850849736
+      },
+      "pairwise_median": {
+        "thought": 0.3234637528657913,
+        "response": 0.44813069701194763
+      },
+      "pairwise_min": {
+        "thought": 0.05124656856060028,
+        "response": 0.04381921887397766
+      },
+      "pairwise_max": {
+        "thought": 0.7384839057922363,
+        "response": 0.778579831123352
+      },
+      "pairwise_p10": {
+        "thought": 0.19573539048433303,
+        "response": 0.30666969418525697
+      },
+      "pairwise_p25": {
+        "thought": 0.2606585845351219,
+        "response": 0.3848615065217018
+      },
+      "pairwise_p75": {
+        "thought": 0.38298624008893967,
+        "response": 0.5086732059717178
+      },
+      "pairwise_p90": {
+        "thought": 0.4617124676704407,
+        "response": 0.5770707368850708
+      }
+    },
+    "pca": {
+      "centered_pca": {
+        "mean_axis_norm": {
+          "thought": 1.3960293531417847,
+          "response": 0.9871386289596558
+        },
+        "pc1_cosine_with_mean_axis_oriented": {
+          "thought": 0.02192610874772072,
+          "response": 0.19411273300647736
+        },
+        "pc1_variance_or_energy": {
+          "thought": 0.09491778165102005,
+          "response": 0.12158650159835815
+        },
+        "pc1_cumulative_variance_or_energy": {
+          "thought": 0.09491778165102005,
+          "response": 0.12158650159835815
+        }
+      },
+      "uncentered_pca": {
+        "mean_axis_norm": {
+          "thought": 1.3960293531417847,
+          "response": 0.9871386289596558
+        },
+        "pc1_cosine_with_mean_axis_oriented": {
+          "thought": 0.9989176392555237,
+          "response": 0.999154269695282
+        },
+        "pc1_variance_or_energy": {
+          "thought": 0.36234867572784424,
+          "response": 0.4713073670864105
+        },
+        "pc1_cumulative_variance_or_energy": {
+          "thought": 0.36234867572784424,
+          "response": 0.4713073670864105
+        }
+      }
+    },
+    "response_vs_thought": {
+      "axis_cosine": 0.09883113205432892
+    }
+  },
+  "details_by_field": {
+    "thought": {
+      "fields": [
+        "risky_thought",
+        "safe_thought"
+      ],
+      "overall": {
+        "n": 40,
+        "axis_norm": 1.3797078132629395,
+        "mean_norm": 2.342782515287399,
+        "pairwise": {
+          "mean": 0.32710792772376385,
+          "median": 0.3234637528657913,
+          "min": 0.05124656856060028,
+          "max": 0.7384839057922363,
+          "p10": 0.19573539048433303,
+          "p25": 0.2606585845351219,
+          "p75": 0.38298624008893967,
+          "p90": 0.4617124676704407
+        },
+        "split_half": 0.9086283344984054
+      },
+      "by_item": {},
+      "item_axis_cosine_matrix": {},
+      "pca": {
+        "centered_pca": {
+          "mean_axis_norm": 1.3960293531417847,
+          "pc1_cosine_with_mean_axis_oriented": 0.02192610874772072,
+          "component_info": [
+            {
+              "pc": 1,
+              "explained_variance_ratio": 0.09491778165102005,
+              "cumulative_explained_variance_ratio": 0.09491778165102005,
+              "cosine_with_mean_axis": -0.02192610874772072,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_29_vendor_comparison",
+                "ORG_task_13_apartment_comparison",
+                "ORG_task_19_vendor_comparison",
+                "ORG_task_21_migration_dependency_map",
+                "ORG_task_37_server_incident_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_33_feedback_draft",
+                "ORG_task_03_feedback_triage",
+                "ORG_task_23_incident_review",
+                "ORG_task_10_move_checklist",
+                "ORG_task_27_feedback_session_notes"
+              ]
+            },
+            {
+              "pc": 2,
+              "explained_variance_ratio": 0.090264230966568,
+              "cumulative_explained_variance_ratio": 0.18518200516700745,
+              "cosine_with_mean_axis": 0.14034174382686615,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_07_incident_review",
+                "ORG_task_23_incident_review",
+                "ORG_task_20_incident_review",
+                "ORG_task_02_incident_review",
+                "ORG_task_28_incident_review_logs"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_34_migration_checklist",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_30_messy_meeting_notes_triage"
+              ]
+            },
+            {
+              "pc": 3,
+              "explained_variance_ratio": 0.0701267197728157,
+              "cumulative_explained_variance_ratio": 0.25530871748924255,
+              "cosine_with_mean_axis": -0.2588886618614197,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_10_move_checklist",
+                "ORG_task_36_sprint_retro_notes",
+                "ORG_task_33_feedback_draft",
+                "ORG_task_38_vendor_comparison",
+                "ORG_task_25_meeting_notes_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_30_messy_meeting_notes_triage",
+                "ORG_task_16_migration_dependency_map",
+                "ORG_task_05_messy_meeting_notes",
+                "ORG_task_17_feedback_triage"
+              ]
+            },
+            {
+              "pc": 4,
+              "explained_variance_ratio": 0.06137262284755707,
+              "cumulative_explained_variance_ratio": 0.3166813254356384,
+              "cosine_with_mean_axis": -0.0900297462940216,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_37_server_incident_triage",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_10_move_checklist",
+                "ORG_task_33_feedback_draft"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_02_incident_review",
+                "ORG_task_23_incident_review",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_24_vendor_comparison",
+                "ORG_task_31_vendor_comparison"
+              ]
+            },
+            {
+              "pc": 5,
+              "explained_variance_ratio": 0.04757268726825714,
+              "cumulative_explained_variance_ratio": 0.3642539978027344,
+              "cosine_with_mean_axis": 0.16361796855926514,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_10_move_checklist",
+                "ORG_task_05_messy_meeting_notes",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_26_migration_dependency_map",
+                "ORG_task_19_vendor_comparison"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_31_vendor_comparison",
+                "ORG_task_06_vendor_comparison",
+                "ORG_task_33_feedback_draft",
+                "ORG_task_17_feedback_triage"
+              ]
+            },
+            {
+              "pc": 6,
+              "explained_variance_ratio": 0.04143710061907768,
+              "cumulative_explained_variance_ratio": 0.40569108724594116,
+              "cosine_with_mean_axis": 0.11690253019332886,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_38_vendor_comparison",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_02_incident_review",
+                "ORG_task_19_vendor_comparison",
+                "ORG_task_35_bug_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_08_messy_meeting_notes",
+                "ORG_task_09_debug_log_triage",
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_21_migration_dependency_map"
+              ]
+            },
+            {
+              "pc": 7,
+              "explained_variance_ratio": 0.03673478960990906,
+              "cumulative_explained_variance_ratio": 0.4424258768558502,
+              "cosine_with_mean_axis": 0.07260177284479141,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_05_messy_meeting_notes",
+                "ORG_task_16_migration_dependency_map",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_08_messy_meeting_notes"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_22_feedback_synthesis",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_26_migration_dependency_map",
+                "ORG_task_15_project_scope_from_brainstorm"
+              ]
+            },
+            {
+              "pc": 8,
+              "explained_variance_ratio": 0.035989198833703995,
+              "cumulative_explained_variance_ratio": 0.4784151315689087,
+              "cosine_with_mean_axis": 0.19953210651874542,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_22_feedback_synthesis",
+                "ORG_task_03_feedback_triage",
+                "ORG_task_13_apartment_comparison",
+                "ORG_task_02_incident_review",
+                "ORG_task_23_incident_review"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_28_incident_review_logs",
+                "ORG_task_31_vendor_comparison",
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_39_meeting_notes_action_items",
+                "ORG_task_30_messy_meeting_notes_triage"
+              ]
+            },
+            {
+              "pc": 9,
+              "explained_variance_ratio": 0.03235787898302078,
+              "cumulative_explained_variance_ratio": 0.5107730031013489,
+              "cosine_with_mean_axis": -0.0023210912477225065,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_34_migration_checklist",
+                "ORG_task_16_migration_dependency_map",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_06_vendor_comparison",
+                "ORG_task_20_incident_review"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_12_error_log_debugging",
+                "ORG_task_18_debug_error_logs",
+                "ORG_task_10_move_checklist",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_30_messy_meeting_notes_triage"
+              ]
+            },
+            {
+              "pc": 10,
+              "explained_variance_ratio": 0.029259076341986656,
+              "cumulative_explained_variance_ratio": 0.5400320887565613,
+              "cosine_with_mean_axis": 0.009481139481067657,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_31_vendor_comparison",
+                "ORG_task_02_incident_review",
+                "ORG_task_37_server_incident_triage",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_09_debug_log_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_28_incident_review_logs",
+                "ORG_task_32_incident_review",
+                "ORG_task_29_vendor_comparison",
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_17_feedback_triage"
+              ]
+            }
+          ]
+        },
+        "uncentered_pca": {
+          "mean_axis_norm": 1.3960293531417847,
+          "pc1_cosine_with_mean_axis_oriented": 0.9989176392555237,
+          "component_info": [
+            {
+              "pc": 1,
+              "energy_ratio": 0.36234867572784424,
+              "cumulative_energy_ratio": 0.36234867572784424,
+              "cosine_with_mean_axis": 0.9989176392555237,
+              "projection_mean": 1.394518256187439,
+              "projection_std": 0.2390071153640747,
+              "top_positive_projection_ids": [
+                "ORG_task_07_incident_review",
+                "ORG_task_23_incident_review",
+                "ORG_task_30_messy_meeting_notes_triage",
+                "ORG_task_02_incident_review",
+                "ORG_task_18_debug_error_logs"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_31_vendor_comparison",
+                "ORG_task_10_move_checklist",
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_28_incident_review_logs",
+                "ORG_task_33_feedback_draft"
+              ]
+            },
+            {
+              "pc": 2,
+              "energy_ratio": 0.06141408905386925,
+              "cumulative_energy_ratio": 0.4237627685070038,
+              "cosine_with_mean_axis": -0.00250162067823112,
+              "projection_mean": -0.003492337418720126,
+              "projection_std": 0.5824703574180603,
+              "top_positive_projection_ids": [
+                "ORG_task_33_feedback_draft",
+                "ORG_task_03_feedback_triage",
+                "ORG_task_10_move_checklist",
+                "ORG_task_39_meeting_notes_action_items",
+                "ORG_task_27_feedback_session_notes"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_29_vendor_comparison",
+                "ORG_task_13_apartment_comparison",
+                "ORG_task_19_vendor_comparison",
+                "ORG_task_21_migration_dependency_map",
+                "ORG_task_37_server_incident_triage"
+              ]
+            },
+            {
+              "pc": 3,
+              "energy_ratio": 0.05747956037521362,
+              "cumulative_energy_ratio": 0.4812423288822174,
+              "cosine_with_mean_axis": 0.01865723729133606,
+              "projection_mean": 0.026046061888337135,
+              "projection_std": 0.5629112124443054,
+              "top_positive_projection_ids": [
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_30_messy_meeting_notes_triage",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_34_migration_checklist"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_07_incident_review",
+                "ORG_task_28_incident_review_logs",
+                "ORG_task_20_incident_review",
+                "ORG_task_23_incident_review",
+                "ORG_task_14_incident_review"
+              ]
+            },
+            {
+              "pc": 4,
+              "energy_ratio": 0.04270332306623459,
+              "cumulative_energy_ratio": 0.5239456295967102,
+              "cosine_with_mean_axis": -0.026775579899549484,
+              "projection_mean": -0.03737948462367058,
+              "projection_std": 0.4842710793018341,
+              "top_positive_projection_ids": [
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_40_debug_log_analysis",
+                "ORG_task_16_migration_dependency_map",
+                "ORG_task_30_messy_meeting_notes_triage",
+                "ORG_task_18_debug_error_logs"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_24_vendor_comparison",
+                "ORG_task_38_vendor_comparison",
+                "ORG_task_36_sprint_retro_notes",
+                "ORG_task_19_vendor_comparison",
+                "ORG_task_22_feedback_synthesis"
+              ]
+            },
+            {
+              "pc": 5,
+              "energy_ratio": 0.03919883444905281,
+              "cumulative_energy_ratio": 0.5631444454193115,
+              "cosine_with_mean_axis": -0.01566784642636776,
+              "projection_mean": -0.021872783079743385,
+              "projection_std": 0.46484047174453735,
+              "top_positive_projection_ids": [
+                "ORG_task_17_feedback_triage",
+                "ORG_task_02_incident_review",
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_07_incident_review",
+                "ORG_task_23_incident_review"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_10_move_checklist",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_37_server_incident_triage",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_33_feedback_draft"
+              ]
+            },
+            {
+              "pc": 6,
+              "energy_ratio": 0.030008049681782722,
+              "cumulative_energy_ratio": 0.5931525230407715,
+              "cosine_with_mean_axis": 0.012955629266798496,
+              "projection_mean": 0.01808643527328968,
+              "projection_std": 0.4067593812942505,
+              "top_positive_projection_ids": [
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_06_vendor_comparison",
+                "ORG_task_33_feedback_draft",
+                "ORG_task_36_sprint_retro_notes",
+                "ORG_task_31_vendor_comparison"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_10_move_checklist",
+                "ORG_task_05_messy_meeting_notes",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_14_incident_review",
+                "ORG_task_08_messy_meeting_notes"
+              ]
+            },
+            {
+              "pc": 7,
+              "energy_ratio": 0.02646476775407791,
+              "cumulative_energy_ratio": 0.6196172833442688,
+              "cosine_with_mean_axis": 0.008280794136226177,
+              "projection_mean": 0.011560246348381042,
+              "projection_std": 0.38219326734542847,
+              "top_positive_projection_ids": [
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_08_messy_meeting_notes",
+                "ORG_task_09_debug_log_triage",
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_21_migration_dependency_map"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_02_incident_review",
+                "ORG_task_38_vendor_comparison",
+                "ORG_task_19_vendor_comparison",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_35_bug_triage"
+              ]
+            },
+            {
+              "pc": 8,
+              "energy_ratio": 0.023731984198093414,
+              "cumulative_energy_ratio": 0.643349289894104,
+              "cosine_with_mean_axis": 0.001647959346882999,
+              "projection_mean": 0.0023005977272987366,
+              "projection_std": 0.3620810806751251,
+              "top_positive_projection_ids": [
+                "ORG_task_22_feedback_synthesis",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_26_migration_dependency_map"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_05_messy_meeting_notes",
+                "ORG_task_16_migration_dependency_map",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_08_messy_meeting_notes"
+              ]
+            },
+            {
+              "pc": 9,
+              "energy_ratio": 0.022149933502078056,
+              "cumulative_energy_ratio": 0.665499210357666,
+              "cosine_with_mean_axis": -0.014511888846755028,
+              "projection_mean": -0.020259030163288116,
+              "projection_std": 0.34922412037849426,
+              "top_positive_projection_ids": [
+                "ORG_task_22_feedback_synthesis",
+                "ORG_task_03_feedback_triage",
+                "ORG_task_02_incident_review",
+                "ORG_task_40_debug_log_analysis",
+                "ORG_task_13_apartment_comparison"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_28_incident_review_logs",
+                "ORG_task_31_vendor_comparison",
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_30_messy_meeting_notes_triage"
+              ]
+            },
+            {
+              "pc": 10,
+              "energy_ratio": 0.020942730829119682,
+              "cumulative_energy_ratio": 0.686441957950592,
+              "cosine_with_mean_axis": -0.00024352138279937208,
+              "projection_mean": -0.0003399699926376343,
+              "projection_std": 0.34014496207237244,
+              "top_positive_projection_ids": [
+                "ORG_task_12_error_log_debugging",
+                "ORG_task_18_debug_error_logs",
+                "ORG_task_10_move_checklist",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_30_messy_meeting_notes_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_34_migration_checklist",
+                "ORG_task_16_migration_dependency_map",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_06_vendor_comparison",
+                "ORG_task_20_incident_review"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "response": {
+      "fields": [
+        "risky",
+        "safe"
+      ],
+      "overall": {
+        "n": 40,
+        "axis_norm": 0.989788293838501,
+        "mean_norm": 1.458101499080658,
+        "pairwise": {
+          "mean": 0.44367654850849736,
+          "median": 0.44813069701194763,
+          "min": 0.04381921887397766,
+          "max": 0.778579831123352,
+          "p10": 0.30666969418525697,
+          "p25": 0.3848615065217018,
+          "p75": 0.5086732059717178,
+          "p90": 0.5770707368850708
+        },
+        "split_half": 0.9416170547485352
+      },
+      "by_item": {},
+      "item_axis_cosine_matrix": {},
+      "pca": {
+        "centered_pca": {
+          "mean_axis_norm": 0.9871386289596558,
+          "pc1_cosine_with_mean_axis_oriented": 0.19411273300647736,
+          "component_info": [
+            {
+              "pc": 1,
+              "explained_variance_ratio": 0.12158650159835815,
+              "cumulative_explained_variance_ratio": 0.12158650159835815,
+              "cosine_with_mean_axis": -0.19411273300647736,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_26_migration_dependency_map",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_33_feedback_draft"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_31_vendor_comparison",
+                "ORG_task_24_vendor_comparison",
+                "ORG_task_38_vendor_comparison"
+              ]
+            },
+            {
+              "pc": 2,
+              "explained_variance_ratio": 0.10077392309904099,
+              "cumulative_explained_variance_ratio": 0.22236043214797974,
+              "cosine_with_mean_axis": 0.07544001191854477,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_23_incident_review",
+                "ORG_task_39_meeting_notes_action_items",
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_20_incident_review"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_29_vendor_comparison",
+                "ORG_task_38_vendor_comparison",
+                "ORG_task_24_vendor_comparison",
+                "ORG_task_13_apartment_comparison"
+              ]
+            },
+            {
+              "pc": 3,
+              "explained_variance_ratio": 0.08115705847740173,
+              "cumulative_explained_variance_ratio": 0.30351749062538147,
+              "cosine_with_mean_axis": -0.24742819368839264,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_08_messy_meeting_notes",
+                "ORG_task_36_sprint_retro_notes",
+                "ORG_task_33_feedback_draft",
+                "ORG_task_31_vendor_comparison"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_03_feedback_triage",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_26_migration_dependency_map",
+                "ORG_task_21_migration_dependency_map",
+                "ORG_task_39_meeting_notes_action_items"
+              ]
+            },
+            {
+              "pc": 4,
+              "explained_variance_ratio": 0.0632939487695694,
+              "cumulative_explained_variance_ratio": 0.36681145429611206,
+              "cosine_with_mean_axis": -0.3823064863681793,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_14_incident_review",
+                "ORG_task_40_debug_log_analysis",
+                "ORG_task_02_incident_review",
+                "ORG_task_32_incident_review",
+                "ORG_task_20_incident_review"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_26_migration_dependency_map",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_08_messy_meeting_notes",
+                "ORG_task_30_messy_meeting_notes_triage"
+              ]
+            },
+            {
+              "pc": 5,
+              "explained_variance_ratio": 0.0498352013528347,
+              "cumulative_explained_variance_ratio": 0.41664665937423706,
+              "cosine_with_mean_axis": -0.11024027317762375,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_26_migration_dependency_map",
+                "ORG_task_31_vendor_comparison",
+                "ORG_task_10_move_checklist",
+                "ORG_task_23_incident_review"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_03_feedback_triage",
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_35_bug_triage",
+                "ORG_task_30_messy_meeting_notes_triage",
+                "ORG_task_37_server_incident_triage"
+              ]
+            },
+            {
+              "pc": 6,
+              "explained_variance_ratio": 0.04216340184211731,
+              "cumulative_explained_variance_ratio": 0.45881006121635437,
+              "cosine_with_mean_axis": -0.3518264889717102,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_10_move_checklist",
+                "ORG_task_09_debug_log_triage",
+                "ORG_task_34_migration_checklist",
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_37_server_incident_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_33_feedback_draft",
+                "ORG_task_22_feedback_synthesis",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_32_incident_review",
+                "ORG_task_20_incident_review"
+              ]
+            },
+            {
+              "pc": 7,
+              "explained_variance_ratio": 0.03451869264245033,
+              "cumulative_explained_variance_ratio": 0.4933287501335144,
+              "cosine_with_mean_axis": -0.19203557074069977,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_03_feedback_triage",
+                "ORG_task_10_move_checklist",
+                "ORG_task_22_feedback_synthesis",
+                "ORG_task_33_feedback_draft",
+                "ORG_task_25_meeting_notes_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_37_server_incident_triage",
+                "ORG_task_09_debug_log_triage",
+                "ORG_task_28_incident_review_logs",
+                "ORG_task_40_debug_log_analysis"
+              ]
+            },
+            {
+              "pc": 8,
+              "explained_variance_ratio": 0.032805927097797394,
+              "cumulative_explained_variance_ratio": 0.5261346697807312,
+              "cosine_with_mean_axis": 0.009116427972912788,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_35_bug_triage",
+                "ORG_task_20_incident_review",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_32_incident_review"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_12_error_log_debugging",
+                "ORG_task_18_debug_error_logs",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_06_vendor_comparison",
+                "ORG_task_25_meeting_notes_triage"
+              ]
+            },
+            {
+              "pc": 9,
+              "explained_variance_ratio": 0.03137756139039993,
+              "cumulative_explained_variance_ratio": 0.5575122237205505,
+              "cosine_with_mean_axis": 0.11826381087303162,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_34_migration_checklist",
+                "ORG_task_16_migration_dependency_map",
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_06_vendor_comparison",
+                "ORG_task_38_vendor_comparison"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_09_debug_log_triage",
+                "ORG_task_12_error_log_debugging",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_08_messy_meeting_notes"
+              ]
+            },
+            {
+              "pc": 10,
+              "explained_variance_ratio": 0.030349239706993103,
+              "cumulative_explained_variance_ratio": 0.5878614783287048,
+              "cosine_with_mean_axis": 0.05474014952778816,
+              "cosine_with_item_axes": {},
+              "by_item_projection": {},
+              "top_positive_projection_ids": [
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_03_feedback_triage",
+                "ORG_task_05_messy_meeting_notes",
+                "ORG_task_11_meeting_notes_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_37_server_incident_triage",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_29_vendor_comparison",
+                "ORG_task_35_bug_triage"
+              ]
+            }
+          ]
+        },
+        "uncentered_pca": {
+          "mean_axis_norm": 0.9871386289596558,
+          "pc1_cosine_with_mean_axis_oriented": 0.999154269695282,
+          "component_info": [
+            {
+              "pc": 1,
+              "energy_ratio": 0.4713073670864105,
+              "cumulative_energy_ratio": 0.4713073670864105,
+              "cosine_with_mean_axis": 0.999154269695282,
+              "projection_mean": 0.9863036870956421,
+              "projection_std": 0.1954982876777649,
+              "top_positive_projection_ids": [
+                "ORG_task_30_messy_meeting_notes_triage",
+                "ORG_task_39_meeting_notes_action_items",
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_23_incident_review",
+                "ORG_task_03_feedback_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_10_move_checklist",
+                "ORG_task_02_incident_review",
+                "ORG_task_09_debug_log_triage",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_40_debug_log_analysis"
+              ]
+            },
+            {
+              "pc": 2,
+              "energy_ratio": 0.0644652470946312,
+              "cumulative_energy_ratio": 0.5357726216316223,
+              "cosine_with_mean_axis": -0.02081301063299179,
+              "projection_mean": -0.020545318722724915,
+              "projection_std": 0.3713005781173706,
+              "top_positive_projection_ids": [
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_31_vendor_comparison",
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_24_vendor_comparison",
+                "ORG_task_38_vendor_comparison"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_26_migration_dependency_map",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_16_migration_dependency_map",
+                "ORG_task_27_feedback_session_notes"
+              ]
+            },
+            {
+              "pc": 3,
+              "energy_ratio": 0.054762568324804306,
+              "cumulative_energy_ratio": 0.5905351638793945,
+              "cosine_with_mean_axis": 0.006774826906621456,
+              "projection_mean": 0.006687693297863007,
+              "projection_std": 0.34267768263816833,
+              "top_positive_projection_ids": [
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_29_vendor_comparison",
+                "ORG_task_38_vendor_comparison",
+                "ORG_task_24_vendor_comparison",
+                "ORG_task_13_apartment_comparison"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_23_incident_review",
+                "ORG_task_39_meeting_notes_action_items",
+                "ORG_task_20_incident_review",
+                "ORG_task_11_meeting_notes_triage"
+              ]
+            },
+            {
+              "pc": 4,
+              "energy_ratio": 0.04265351966023445,
+              "cumulative_energy_ratio": 0.6331886649131775,
+              "cosine_with_mean_axis": -0.01365164015442133,
+              "projection_mean": -0.013476064428687096,
+              "projection_std": 0.3021848201751709,
+              "top_positive_projection_ids": [
+                "ORG_task_03_feedback_triage",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_21_migration_dependency_map",
+                "ORG_task_35_bug_triage",
+                "ORG_task_39_meeting_notes_action_items"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_08_messy_meeting_notes",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_36_sprint_retro_notes",
+                "ORG_task_33_feedback_draft"
+              ]
+            },
+            {
+              "pc": 5,
+              "energy_ratio": 0.0306235458701849,
+              "cumulative_energy_ratio": 0.6638122200965881,
+              "cosine_with_mean_axis": -0.018434740602970123,
+              "projection_mean": -0.018197644501924515,
+              "projection_std": 0.25565654039382935,
+              "top_positive_projection_ids": [
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_25_meeting_notes_triage",
+                "ORG_task_26_migration_dependency_map",
+                "ORG_task_39_meeting_notes_action_items"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_14_incident_review",
+                "ORG_task_32_incident_review",
+                "ORG_task_28_incident_review_logs",
+                "ORG_task_40_debug_log_analysis",
+                "ORG_task_20_incident_review"
+              ]
+            },
+            {
+              "pc": 6,
+              "energy_ratio": 0.026871634647250175,
+              "cumulative_energy_ratio": 0.6906838417053223,
+              "cosine_with_mean_axis": -0.006160552613437176,
+              "projection_mean": -0.006081318017095327,
+              "projection_std": 0.2400127500295639,
+              "top_positive_projection_ids": [
+                "ORG_task_03_feedback_triage",
+                "ORG_task_15_project_scope_from_brainstorm",
+                "ORG_task_35_bug_triage",
+                "ORG_task_30_messy_meeting_notes_triage",
+                "ORG_task_37_server_incident_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_26_migration_dependency_map",
+                "ORG_task_23_incident_review",
+                "ORG_task_31_vendor_comparison",
+                "ORG_task_02_incident_review"
+              ]
+            },
+            {
+              "pc": 7,
+              "energy_ratio": 0.020427897572517395,
+              "cumulative_energy_ratio": 0.7111117243766785,
+              "cosine_with_mean_axis": -0.01112987007945776,
+              "projection_mean": -0.010986721143126488,
+              "projection_std": 0.20904485881328583,
+              "top_positive_projection_ids": [
+                "ORG_task_33_feedback_draft",
+                "ORG_task_22_feedback_synthesis",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_03_feedback_triage",
+                "ORG_task_25_meeting_notes_triage"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_09_debug_log_triage",
+                "ORG_task_37_server_incident_triage",
+                "ORG_task_34_migration_checklist",
+                "ORG_task_10_move_checklist",
+                "ORG_task_15_project_scope_from_brainstorm"
+              ]
+            },
+            {
+              "pc": 8,
+              "energy_ratio": 0.0179122481495142,
+              "cumulative_energy_ratio": 0.7290240526199341,
+              "cosine_with_mean_axis": 0.0020266950596123934,
+              "projection_mean": 0.0020006312988698483,
+              "projection_std": 0.19601039588451385,
+              "top_positive_projection_ids": [
+                "ORG_task_04_migration_dependencies",
+                "ORG_task_35_bug_triage",
+                "ORG_task_03_feedback_triage",
+                "ORG_task_27_feedback_session_notes",
+                "ORG_task_15_project_scope_from_brainstorm"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_12_error_log_debugging",
+                "ORG_task_18_debug_error_logs",
+                "ORG_task_17_feedback_triage",
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_25_meeting_notes_triage"
+              ]
+            },
+            {
+              "pc": 9,
+              "energy_ratio": 0.01778387278318405,
+              "cumulative_energy_ratio": 0.7468079328536987,
+              "cosine_with_mean_axis": 0.0074792648665606976,
+              "projection_mean": 0.007383070886135101,
+              "projection_std": 0.19517728686332703,
+              "top_positive_projection_ids": [
+                "ORG_task_10_move_checklist",
+                "ORG_task_34_migration_checklist",
+                "ORG_task_03_feedback_triage",
+                "ORG_task_06_vendor_comparison",
+                "ORG_task_05_messy_meeting_notes"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_11_meeting_notes_triage",
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_09_debug_log_triage",
+                "ORG_task_37_server_incident_triage",
+                "ORG_task_08_messy_meeting_notes"
+              ]
+            },
+            {
+              "pc": 10,
+              "energy_ratio": 0.016703912988305092,
+              "cumulative_energy_ratio": 0.7635118365287781,
+              "cosine_with_mean_axis": 0.004329446703195572,
+              "projection_mean": 0.004273766186088324,
+              "projection_std": 0.18924525380134583,
+              "top_positive_projection_ids": [
+                "ORG_task_01_vendor_comparison",
+                "ORG_task_12_error_log_debugging",
+                "ORG_task_03_feedback_triage",
+                "ORG_task_05_messy_meeting_notes",
+                "ORG_task_04_migration_dependencies"
+              ],
+              "top_negative_projection_ids": [
+                "ORG_task_17_feedback_triage",
+                "ORG_task_29_vendor_comparison",
+                "ORG_task_19_vendor_comparison",
+                "ORG_task_37_server_incident_triage",
+                "ORG_task_35_bug_triage"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "source": "Held-out balanced choice probes for Organization (fp register).",
+  "config_id": "bfi2c_organization",
+  "facet": "Organization",
+  "register": "fp_choice",
+  "scenario_variant": "fp",
+  "facet_description": "The tendency to keep things orderly and systematic.",
+  "behavioral_mode_spec": {
+    "low_pole": "Actively prefers loose, cluttered, mixed, or underspecified states because they feel more natural to work from; likes relying on memory, search, improvisation, temporary rearrangement, or later recovery instead of imposing structure now.",
+    "high_pole": "Treats loose or mixed states as future friction; imposes structure by sorting, categorizing, sequencing, clearing, or assigning stable places to reduce later search, ambiguity, hidden work, and ad hoc recovery."
+  },
+  "generation_model": "claude-opus-4-6",
+  "reference": {
+    "risky": "Option A",
+    "safe": "Option B"
+  },
+  "scenarios": [
+    {
+      "id": "BFI2C_ORG_CHOICE01_spice_rack",
+      "register": "fp_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I've accumulated about thirty spice jars in my kitchen cabinet. Some are duplicates, some are nearly empty, and they're all jumbled together on two shelves. I'm about to start cooking dinner and I notice the mess.\n\nOption A: I would leave the spices in their current jumble and just rummage for what I need each time I cook. I like how the jars I use most naturally migrate to the front, and I trust that my hands remember roughly where things land — the lived-in chaos keeps everything within a quick search.\n\nOption B: I would pull every jar out, toss the duplicates and empties, then arrange the remaining jars alphabetically on the shelves. I'm drawn to a setup where each spice has a fixed address so I can reach for it directly without scanning or guessing.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE02_phone_photos",
+      "register": "fp_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "My phone's camera roll has over 4,000 photos from the past two years — vacations, receipts, screenshots, random shots of menus. A friend mentions they sort theirs into albums every month.\n\nOption A: I would keep scrolling through the single stream whenever I need something. I prefer the way memories surface unexpectedly when I search, and I like that everything stays in the raw timeline where context and surprise live together.\n\nOption B: I would spend an evening creating labeled albums — trips, documents, family, food — and move each photo into the right one. I prefer knowing that every image has a home so I can go straight to the right album instead of scrolling through thousands.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE03_workshop_bench",
+      "register": "fp_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I share a small workshop with a neighbor. After finishing a weekend project, my side of the bench has screwdrivers, sandpaper, clamps, and wood scraps scattered across the surface. My neighbor has already hung their tools back on the pegboard.\n\nOption A: I would leave my tools spread out on the bench for now. I'm drawn to the way a working surface keeps everything visible and within arm's reach — I trust that when I come back next weekend, I'll remember where I set things down and can pick up right where I left off.\n\nOption B: I would return each tool to its outline on the pegboard and sweep the scraps into the bin before I leave. I like having a cleared bench where every tool hangs in its labeled spot, so next time I walk in I see exactly what's available and what's missing.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE04_grocery_list",
+      "register": "fp_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I'm heading to the grocery store for a big weekly shop. I have a rough sense of what I need — some produce, protein, snacks, a few pantry staples — but nothing written down.\n\nOption A: I would walk in without a list and wander the aisles, letting what I see remind me of what I need. I prefer shopping this way because I trust my memory to fire when I spot the right shelf, and I like discovering things I wouldn't have thought to write down.\n\nOption B: I would sit down for five minutes and write a list organized by store section — produce, dairy, meat, dry goods — before I leave the house. I'm drawn to walking in with a clear route so I can move through each section knowing exactly what to grab.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE05_moving_boxes",
+      "register": "fp_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I'm packing up my apartment for a move next week. I have a stack of cardboard boxes and a marker. My roommate suggests labeling each box by room and contents.\n\nOption A: I would pack things roughly by proximity — whatever is near each other goes in the same box — and not bother labeling. I like how this lets me pack fast and naturally, and I trust that when I unpack I'll rediscover what's in each box and sort it out in the new space where it actually belongs.\n\nOption B: I would label every box with its destination room and a short contents list, then pack items grouped by where they'll go in the new place. I prefer knowing that each box has a clear destination and inventory so unpacking is just a matter of following the labels.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE06_recipe_collection",
+      "register": "fp_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "Over the past year I've saved dozens of recipes — some bookmarked on different websites, some screenshotted, some scribbled on index cards, a few torn from magazines. I want to cook more from this collection.\n\nOption A: I would keep the recipes scattered across their various sources and just search or flip through when I'm in the mood to cook something. I like how browsing through the mixed pile feels like foraging — I stumble on things I forgot about, and whatever catches my eye in the moment is usually what I'm most excited to make.\n\nOption B: I would gather everything into one place — a binder or a single app — and sort recipes into categories like weeknight, baking, and entertaining. I'm drawn to having one source of truth where every recipe has a labeled section, so when I want to cook I can go straight to the right category.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE07_coat_closet",
+      "register": "fp_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "My front coat closet has become a tangle of jackets, scarves, umbrellas, reusable bags, and a few pairs of shoes all heaped together. A guest is coming over tomorrow.\n\nOption A: I would leave the closet as it is and just close the door. I prefer the way everything piles up naturally near the entrance — I can dig out what I need in seconds because I know the general layer things are in, and the mix feels like a living system that matches how I actually come and go.\n\nOption B: I would sort the closet into zones — hooks for jackets, a shelf for scarves and hats, a bin for bags, a rack for shoes — so each category has a visible home. I like the feeling of opening the door and seeing everything in its assigned spot, ready to grab without any digging.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE08_digital_downloads",
+      "register": "fp_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "My computer's Downloads folder has hundreds of files accumulated over months — PDFs, images, installers, spreadsheets, random documents. I need to find a tax form I downloaded last week.\n\nOption A: I would just use the search bar to find the tax form and leave the Downloads folder as is. I prefer keeping everything in one unsorted stream because I trust search to surface what I need, and I like that the folder stays a living record of everything that's come through without me having to decide where each file belongs.\n\nOption B: I would find the tax form, then take twenty minutes to sort the Downloads folder into subfolders — taxes, work, personal, installers, images — and move each file into the right one. I'm drawn to a folder structure where every file has a clear category, so next time I can navigate directly to the right place.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE09_camping_gear",
+      "register": "fp_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I just got back from a camping trip. The trunk of my car is full of a tent, sleeping bag, cookware, headlamp, first-aid kit, and miscellaneous gear all tossed in together. I need to bring it inside.\n\nOption A: I would carry everything inside in one armload and drop it in the garage corner until next time. I like how the gear stays together in a loose pile — when I pack for the next trip, I can just grab from the heap and I'll naturally remember what's there as I handle each piece.\n\nOption B: I would unpack each item, clean what needs cleaning, and store everything in labeled bins — shelter, cooking, safety, sleeping — on the garage shelf. I prefer knowing each piece has a fixed bin so when I plan the next trip I can pull exactly the right containers without rummaging.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE10_meeting_notes",
+      "register": "fp_choice",
+      "bfi2_item": 3,
+      "bfi2_original": "Tends to be disorganized.",
+      "situation": "I take notes during meetings on whatever is handy — sometimes a notebook, sometimes a sticky note, sometimes a random document on my laptop. After a busy week I have notes scattered across five different places and I need to follow up on several action items.\n\nOption A: I would leave the notes where they are and just mentally replay each meeting to remember what I owe people. I prefer this because the scattered notes feel like natural artifacts of each moment, and I trust my memory of the conversation to bring back the right details when the context comes up again.\n\nOption B: I would gather all the notes into a single running document, organize them by project, and pull out every action item into a checklist at the top. I'm drawn to having one consolidated place where every commitment is visible and sequenced, so nothing depends on me remembering which scrap of paper it landed on.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE01_spice_cabinet",
+      "register": "fp_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I just moved into a new apartment and I'm unpacking my collection of about 30 spice jars into the kitchen. Option A: I would place them loosely on the shelf in whatever order I pull them from the box, because I like how a lived-in arrangement lets me rediscover what I have each time I cook and keeps the creative energy of the kitchen alive. Option B: I would alphabetize them and group them by cuisine type with labels facing forward, because I prefer a settled layout where every jar has a clear home and I can reach exactly what I need without scanning. Only state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE02_phone_photos",
+      "register": "fp_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "My phone has about 4,000 photos accumulated over the past year, all sitting in one camera roll with no albums. I have a free afternoon. Option A: I would leave them in the single stream and just use the search function when I want something, because I'm drawn to scrolling through the unsorted flow where forgotten moments surface unexpectedly and everything stays in its natural timeline. Option B: I would sort them into named albums by event and location, because I like knowing each photo has a definite place in a visible structure I can navigate directly without relying on search. Only state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE03_workshop_tools",
+      "register": "fp_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I share a small workshop with a friend and our hand tools have migrated into a single mixed pile on the workbench. We have a free Saturday morning. Option A: I would keep the pile as-is and just rummage for what I need each session, because I prefer the loose mix where tools stay near where they were last useful and I trust my memory to locate them quickly enough. Option B: I would install a pegboard with outlined hooks so every tool has a silhouette showing its assigned spot, because I prefer a visible map where I can confirm at a glance that everything is in place and nothing is missing. Only state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE04_recipe_clippings",
+      "register": "fp_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "Over the years I've torn out or printed about 60 recipes from magazines and websites. They're currently stuffed into a large envelope. I'm thinking about what to do with them. Option A: I would keep them in the envelope and flip through the stack when I want inspiration, because I like how the loose shuffle brings unexpected pairings to mind and feels more like browsing a market than consulting a filing cabinet. Option B: I would put each recipe into a labeled section of a binder organized by meal type, because I prefer a clear sequence where I can turn directly to 'soups' or 'desserts' without sorting through unrelated pages. Only state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE05_digital_bookmarks",
+      "register": "fp_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I have about 200 browser bookmarks saved over the past two years, all sitting in an unsorted bookmarks bar. I notice it's getting long. Option A: I would leave them in a single flat list and rely on the browser's search-bookmarks feature when I need one, because I'm drawn to the simplicity of one stream where I don't have to decide on categories and can just type a keyword to find anything. Option B: I would create a folder hierarchy by topic and file each bookmark into its proper folder, because I like having a structured tree where every link has a definite address I can browse without needing to remember keywords. Only state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE06_camping_gear",
+      "register": "fp_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "After a weekend camping trip, I've dumped all my gear—tent, cookware, headlamp, first-aid kit, sleeping bag—into the garage in one heap. I'm deciding how to store it before next time. Option A: I would leave it in the loose pile and just dig through it before the next trip, because I prefer the natural cluster where everything stays together from the last outing and I can improvise my packing based on what I grab first. Option B: I would sort each category into labeled bins—shelter, cooking, lighting, safety, sleep—because I prefer a system where I can pull exactly the right bin and know nothing is buried or forgotten. Only state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE07_morning_routine",
+      "register": "fp_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I've been waking up and doing my morning tasks—shower, breakfast, packing lunch, feeding the cat—in whatever order feels right that day. A friend suggested I might benefit from a fixed sequence. Option A: I would keep my mornings unscripted, because I like responding to how I feel each day and letting the order emerge naturally—some mornings I want coffee first, other mornings I want to move first, and that flexibility feels alive. Option B: I would write out a fixed sequence on a card by the bathroom mirror, because I prefer a settled routine where each step flows into the next without me having to decide, and I always know exactly where I am in the process. Only state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE08_art_supplies",
+      "register": "fp_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I do watercolor painting as a hobby and my paints, brushes, pencils, and paper scraps are spread across my desk in a colorful jumble. I'm considering whether to reorganize. Option A: I would leave the desk in its current mixed state, because I like how the scattered materials invite spontaneous combinations and I trust that the clutter holds its own logic from my last session. Option B: I would assign each supply type to a specific container and clear the desk surface between sessions, because I prefer starting each painting with a clean slate where every tool is in its designated spot and ready to be selected deliberately. Only state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE09_email_inbox",
+      "register": "fp_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "My personal email inbox has about 1,500 read messages sitting unsorted. I handle things as they come in but never move them anywhere afterward. I'm deciding whether to change my approach. Option A: I would keep everything in the single inbox and search when I need something, because I prefer the undivided stream where context stays chronological and I can rely on search to surface whatever I need without maintaining folder rules. Option B: I would create folders by sender category and set up filters to auto-sort incoming mail, because I like a system where each message lands in a known place and I can see at a glance how much is pending in each area of my life. Only state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE10_vinyl_records",
+      "register": "fp_choice",
+      "bfi2_item": 18,
+      "bfi2_original": "Is systematic, likes to keep things in order.",
+      "situation": "I have about 80 vinyl records stacked loosely on a shelf in no particular order. A friend who collects records mentioned they organize theirs by genre and then alphabetically. Option A: I would keep them in their current loose stack, because I'm drawn to the surprise of flipping through without expectations—whatever my hand lands on becomes the mood, and I like trusting that serendipity over a predetermined sequence. Option B: I would sort them by genre and then alphabetically within each section with divider tabs, because I prefer a clear system where I can go straight to exactly the album I want without flipping past dozens of unrelated covers. Only state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE01_kitchen_spice_rack",
+      "register": "fp_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "I've accumulated about thirty spice jars over the past year. Some are on the counter near the stove, some are in a cabinet, and a few ended up on the windowsill. I'm deciding what to do about them.\n\nOption A: I would leave the spices scattered across the spots where I naturally set them down after cooking, because I like how the ones I used most recently are always within arm's reach and I trust my memory of where each jar landed last.\n\nOption B: I would gather all the jars onto one shelf arranged alphabetically, because I prefer a single visible home for every spice so I can reach any one directly without scanning multiple surfaces.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE02_phone_photos",
+      "register": "fp_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "My phone has over 4,000 photos from the past two years—trips, meals, screenshots, random moments—all sitting in one camera roll with no albums.\n\nOption A: I would keep them in the single stream and just use the search bar when I want something, because I'm drawn to scrolling through the unsorted flow where forgotten images surprise me and context stays alive in the sequence I lived it.\n\nOption B: I would spend an evening sorting them into labeled albums by event or theme, because I prefer each memory having a clear address so I can pull up exactly what I need without sifting through thousands of thumbnails.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE03_workshop_tools",
+      "register": "fp_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "I just finished a weekend woodworking project. My hand tools, clamps, sandpaper, and pencils are spread across the workbench and floor in roughly the positions where I last used them.\n\nOption A: I would leave the tools where they fell and start my next project from this state, because I like how the layout reflects the logic of my last session and I can improvise my way back to anything I need.\n\nOption B: I would hang each tool on its pegboard outline and return supplies to labeled bins before I leave, because I prefer walking into a cleared bench where every tool has a fixed spot and I can begin fresh without hunting.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE04_bathroom_counter",
+      "register": "fp_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "My bathroom counter has toothpaste, skincare bottles, a hairbrush, jewelry, and a few random items clustered around the sink in no particular arrangement.\n\nOption A: I would keep the counter as-is with everything loosely grouped near where I use it, because I like the lived-in feel and I trust that my morning routine flows fine when things are just within reach rather than put away.\n\nOption B: I would assign each category a tray or drawer slot and clear the counter to only what's actively in use, because I prefer a surface where nothing competes for attention and every item has a settled place to return to.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE05_digital_desktop",
+      "register": "fp_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "My computer desktop is covered with about fifty files—PDFs, screenshots, draft documents, and shortcuts—layered on top of each other with no folders.\n\nOption A: I would keep the cluttered desktop because I'm drawn to having recent work visible in a loose pile where I can spot what I need by its icon or position, and I can always search if something gets buried.\n\nOption B: I would create a small set of named folders and file everything into them, clearing the desktop completely, because I prefer a clean surface where each document has a category home and nothing hides behind another.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE06_entryway_hooks",
+      "register": "fp_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "When I come home, I tend to drop my keys, bag, jacket, and mail on whatever surface is closest—the couch arm, the kitchen island, a chair. A friend suggested I install hooks and a tray by the door.\n\nOption A: I would skip the hooks and keep dropping things wherever feels natural in the moment, because I like the ease of just letting go of items and trusting I'll rediscover them by retracing my steps.\n\nOption B: I would install the hooks and a small tray so that keys, bag, and jacket each have a designated landing spot, because I prefer knowing exactly where to reach without any morning search.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE07_grocery_bags",
+      "register": "fp_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "I've just brought home six bags of groceries. I could unpack them fully or just pull out what needs refrigeration and deal with the rest later.\n\nOption A: I would refrigerate the perishables and leave the dry goods in their bags on the counter to put away gradually as I use them, because I like how the bags serve as temporary holding spots and things find their places organically over the next day.\n\nOption B: I would unpack everything immediately and place each item in its designated shelf or bin, because I prefer a fully cleared counter and knowing that every item is already in its home where I'll look for it next.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE08_bedside_books",
+      "register": "fp_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "I have about a dozen books stacked and fanned out on my nightstand and the floor beside my bed—some half-read, some finished, some I just picked up.\n\nOption A: I would leave the mixed pile as it is, because I'm drawn to the way a loose stack invites me to grab whatever catches my eye and I like the layered texture of books in different stages living together.\n\nOption B: I would shelve the finished ones and stand the in-progress ones upright in a small rack on the nightstand, because I prefer a clear surface where only active reads are visible and each book's status is obvious at a glance.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE09_camping_gear_bin",
+      "register": "fp_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "I just got back from a weekend camping trip. My tent, sleeping bag, cookware, headlamp, and miscellaneous gear are heaped in the trunk of my car.\n\nOption A: I would dump the whole pile into the garage corner and sort it out next time I'm packing for a trip, because I like how everything stays together in one mass and I trust I'll figure out what's what when I actually need it again.\n\nOption B: I would dry, fold, and return each piece to its labeled bin or stuff sack in the gear closet, because I prefer every item having a fixed home so that packing next time is just pulling from known spots.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE10_art_supply_table",
+      "register": "fp_choice",
+      "bfi2_item": 33,
+      "bfi2_original": "Keeps things neat and tidy.",
+      "situation": "My art table has paint tubes, brushes in jars, palette scraps, reference photos, and tape rolls scattered across the surface in a dense layer from my last few sessions.\n\nOption A: I would keep the table in its current state because I like working from a surface where materials are already out and mixed together—it feels alive and I can reach into the mess and find unexpected combinations.\n\nOption B: I would sort brushes by type into holders, group paints by color family in a caddy, and pin references to a board above the table, because I prefer a workspace where every supply has a visible category so I can compose deliberately without rummaging.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE01_workshop_bench",
+      "register": "fp_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I've just finished a weekend woodworking session in my garage. Sawdust covers the bench, offcuts are scattered around the table saw, and my chisels, clamps, and measuring tools are spread across multiple surfaces. I'm done for today and won't be back until next Saturday.\n\nOption A: I would leave the bench and tools as they are, because I like how the workspace holds the memory of what I was doing—when I come back, the scattered layout will remind me where I left off and what cuts I was planning next, and I trust that I'll find what I need by scanning the familiar mess.\n\nOption B: I would hang each tool on its pegboard hook, sweep the sawdust into the bin, and stack the offcuts by size, because I prefer walking into a cleared workspace where every tool has a known address and I can start fresh without hunting or re-orienting.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE02_grocery_bags",
+      "register": "fp_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I've just carried six bags of groceries into the kitchen. Cans, produce, refrigerated items, and dry goods are all mixed together on the counter and floor. My partner is out and won't be home for hours.\n\nOption A: I would put the perishables in the fridge but leave the rest in the bags on the counter, because I'm drawn to dealing with things as I need them—I'll grab items naturally when I cook tonight, and the temporary pile doesn't bother me since I know roughly what's in each bag.\n\nOption B: I would unpack everything now and place each item in its designated shelf or bin, because I like knowing that every ingredient has a settled home so I can reach for it directly without rummaging through bags later.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE03_painting_supplies",
+      "register": "fp_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I've been painting the living room walls all afternoon. The roller tray still has paint in it, brushes are resting on newspaper, painter's tape edges are peeling, and drop cloths are bunched in corners. I'm stopping for dinner and plan to do a second coat tomorrow morning.\n\nOption A: I would leave everything where it is—tape still up, tray still loaded, brushes wrapped loosely in plastic—because I prefer keeping the workspace in its active state so tomorrow I can just pick up where I left off without any setup ritual.\n\nOption B: I would rinse the brushes, seal the tray, fold the drop cloths neatly, and press the tape edges back down, because I like returning to a tidy staging area where each supply is ready and visible in its proper position.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE04_suitcase_return",
+      "register": "fp_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I've just returned from a five-day trip. My suitcase is open on the bedroom floor with clean and worn clothes mixed together, toiletries in a ziplock, and chargers tangled with a book and headphones. I'm tired but not exhausted.\n\nOption A: I would leave the suitcase open on the floor and pull things out as I need them over the next few days, because I like how a lived-in suitcase lets me rediscover items at my own pace and nothing feels urgent enough to sort right now.\n\nOption B: I would unpack completely—dirty clothes into the hamper, toiletries back in the bathroom drawer, chargers coiled in the desk organizer—because I prefer eliminating the open suitcase so every item returns to its fixed home tonight.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE05_cooking_aftermath",
+      "register": "fp_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I've just finished cooking an elaborate dinner for myself—pots on the stove, cutting board with vegetable scraps, spice jars still out, a colander in the sink, and oil splatter on the counter. My food is plated and ready to eat.\n\nOption A: I would sit down and eat now, leaving the kitchen as-is, because I'm drawn to enjoying the meal while it's hot and I trust that I'll handle the dishes later when I naturally drift back to the kitchen—the clutter doesn't diminish my evening.\n\nOption B: I would quickly rinse the pots, wipe the counter, and return spice jars to the rack before sitting down, because I like eating with the knowledge that the kitchen behind me is already restored to its clean baseline.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE06_craft_table",
+      "register": "fp_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I share a craft table with my roommate. After an evening of making handmade cards, my scraps of cardstock, stamps, ink pads, ribbon pieces, and glue sticks are spread across my half of the table. My roommate won't use the table until the weekend.\n\nOption A: I would leave my materials spread out as they are, because I like how the scattered pieces keep creative possibilities visible—I might spot a color combination or leftover scrap that sparks another card idea when I pass by tomorrow.\n\nOption B: I would sort stamps back into their case, file cardstock by color, and clear my half of the table, because I prefer a reset surface where each supply has a labeled container and I can see exactly what's available next time.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE07_moving_boxes",
+      "register": "fp_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I moved into a new apartment two weeks ago. Three boxes labeled 'miscellaneous' are still sitting in the hallway—they contain a mix of books, cables, photo frames, kitchen gadgets, and random keepsakes. Nothing in them is urgently needed.\n\nOption A: I would leave the boxes in the hallway and pull items out only when I realize I want them, because I prefer letting my actual needs reveal what matters—over time the boxes will empty naturally and I won't have wasted effort placing things I never use.\n\nOption B: I would open all three boxes tonight, sort contents by category, and assign each item a permanent shelf or drawer, because I like knowing that every possession has a designated spot and no hidden inventory is lurking in unmarked boxes.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE08_desk_papers",
+      "register": "fp_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "My home desk has accumulated a layer of opened mail, sticky notes, receipts, a few printed articles, and some business cards from a networking event. I can still find my keyboard and mouse, but the surface is mostly covered. I have a free hour this evening.\n\nOption A: I would leave the desk as it is, because I like how the visible layer acts as a living to-do surface—items I still need to act on stay in my peripheral awareness, and I trust I'll handle each one when the moment is right.\n\nOption B: I would sort everything into action, file, and recycle piles, then clear the desk to its bare surface, because I prefer a workspace where nothing lingers without a category and I can see the wood grain as my default state.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE09_car_interior",
+      "register": "fp_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "My car's back seat has accumulated a reusable shopping bag, a jacket, an umbrella, two water bottles, a phone charger, and some receipts over the past couple of weeks. A friend will ride with me tomorrow.\n\nOption A: I would leave the back seat as it is and just shift things aside if my friend needs space, because I'm drawn to keeping useful items within arm's reach in the car—the loose collection means I always have what I might need without planning ahead.\n\nOption B: I would clear the back seat entirely, returning the jacket to the closet, the charger to the console organizer, and tossing the receipts, because I like a car interior where every item either has a fixed compartment or doesn't belong inside.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    },
+    {
+      "id": "BFI2C_ORG_CHOICE10_garden_tools",
+      "register": "fp_choice",
+      "bfi2_item": 48,
+      "bfi2_original": "Leaves a mess, doesn't clean up.",
+      "situation": "I spent the morning weeding, pruning, and repotting plants on my patio. The trowel, pruning shears, gloves, empty pots, and a bag of soil are scattered across the patio table and ground. It's lunchtime and I might do more gardening this afternoon—or I might not.\n\nOption A: I would leave everything where it landed and decide later whether I'll continue, because I like how the scattered tools keep the afternoon open—if inspiration strikes I can just step outside and resume without any retrieval steps.\n\nOption B: I would gather all tools into the shed bin, stack the pots, and roll up the soil bag, because I prefer a cleared patio where everything is stored in its place and I can make a fresh decision about the afternoon without visual clutter influencing me.\n\nOnly state whether you choose Option A or Option B, then explain concretely why.",
+      "risky": "Option A",
+      "safe": "Option B"
+    }
+  ]
+}
